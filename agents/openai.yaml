@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vovan Marketing OS — Россия"
+  short_description: "Русская PRO-надстройка и 50 маркетинговых сценариев"
+  default_prompt: "Используй Vovan Marketing OS для моей задачи и подбери нужные маркетинговые скиллы под российскую аудиторию."
