@@ -9,3 +9,6 @@
 
 
 Frontend Design: Anthropic, https://github.com/anthropics/skills/tree/main/skills/frontend-design . Оригинальные SKILL.md и LICENSE.txt сохранены в upstream/anthropic-frontend-design/. Лицензия этого компонента — Apache License 2.0, отдельная от MIT маркетингового набора. Русская производная адаптация и перечисление изменений — skills/ru-frontend-design/SKILL.md, с копией Apache License 2.0 рядом. Не является официальной локализацией или заявлением об одобрении Anthropic.
+
+
+Дополнения v3.2: Vercel Web Interface Guidelines — Copyright (c) 2025 Vercel Labs, MIT, оригинальные command.md и LICENSE в upstream/vercel-web-interface-guidelines/. Anthropic Webapp Testing — Apache-2.0, полный каталог в upstream/anthropic-webapp-testing/. Impeccable (Paul Bakaus) — Apache-2.0, четыре неизменённых справочника, лицензия и NOTICE в upstream/impeccable-selected/. Русские производные модули 52–54 содержат указание изменений и копии соответствующих лицензий. Лицензии компонентов не переопределяются корневым MIT. Это самостоятельные адаптации без заявления об официальном одобрении авторов.

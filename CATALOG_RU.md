@@ -1,6 +1,6 @@
-# Каталог — 51 русский модуль
+# Каталог — 54 русских модуля
 
-Каждая русская инструкция — рабочая адаптация соответствующего оригинального скилла, а не построчный перевод всех англоязычных справочников. Подробные оригиналы сохранены полностью. PRO v3.1 — дополнительная надстройка, поэтому теперь рабочих русских модулей 51 (50 маркетинговых и Frontend Design) плюс один управляющий скилл.
+Каждая русская инструкция — рабочая адаптация соответствующего оригинального скилла, а не построчный перевод всех англоязычных справочников. 50 маркетинговых оригиналов и Anthropic-модули сохранены полностью; для Vercel сохранён набор правил, для Impeccable — четыре выбранных справочника. PRO v3.2 — дополнительная надстройка, поэтому теперь рабочих русских модулей 54 (50 маркетинговых и 4 модуля дизайна/проверки) плюс один управляющий скилл.
 
 Все относительные ссылки рассчитаны на сохранение структуры комплекта. При работе отдельным файлом используй Vovan_Marketing_OS_RU_PHONE.txt — он содержит все русские инструкции.
 
@@ -57,3 +57,6 @@
 | 49 | [Контент для VK, Telegram и сообществ](skills/ru-social/SKILL.md) | [social](upstream/marketingskills/skills/social/SKILL.md) |
 | 50 | [Маркетинговое видео на русском](skills/ru-video/SKILL.md) | [video](upstream/marketingskills/skills/video/SKILL.md) |
 | 51 | [Frontend Design — дизайн и реализация](skills/ru-frontend-design/SKILL.md) | [Anthropic frontend-design](upstream/anthropic-frontend-design/SKILL.md) |
+| 52 | [Аудит интерфейса](skills/ru-web-design-audit/SKILL.md) | [Vercel Web Interface Guidelines](upstream/vercel-web-interface-guidelines/command.md) |
+| 53 | [Проверка сайта и форм](skills/ru-webapp-testing/SKILL.md) | [Anthropic webapp-testing](upstream/anthropic-webapp-testing/SKILL.md) |
+| 54 | [Доработка дизайна](skills/ru-design-polish/SKILL.md) | [Impeccable: выбранные подходы](upstream/impeccable-selected/README.md) |

@@ -1,13 +1,13 @@
 {
   "name": "Vovan Marketing OS RU",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "prepared_at": "2026-09-20",
   "upstream_repository": "https://github.com/coreyhaines31/marketingskills",
   "upstream_commit": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
   "upstream_skill_count": 50,
-  "ru_skill_count": 51,
+  "ru_skill_count": 54,
   "master_skill_count": 1,
-  "license": "Marketing Skills: MIT; Frontend Design: Apache-2.0; user PRO rights unchanged. See NOTICE.md.",
+  "license": "Component-specific MIT / Apache-2.0; user PRO rights unchanged. See NOTICE.md.",
   "adaptation_type": "50 Russian working adaptations; complete unmodified English upstream included",
   "user_source_sha256": "154f5a37627aa0cd8194d2d220e51e9392b56d9a048f63a10422e6708ab8ad03",
   "upstream_files": {
@@ -683,11 +683,26 @@
       "original": "anthropics/skills/frontend-design",
       "adapted": "ru-frontend-design",
       "module_number": 51
+    },
+    {
+      "original": "vercel-labs/web-interface-guidelines",
+      "adapted": "ru-web-design-audit",
+      "module_number": 52
+    },
+    {
+      "original": "anthropics/skills/webapp-testing",
+      "adapted": "ru-webapp-testing",
+      "module_number": 53
+    },
+    {
+      "original": "pbakaus/impeccable selected references",
+      "adapted": "ru-design-polish",
+      "module_number": 54
     }
   ],
   "marketing_ru_skill_count": 50,
-  "frontend_ru_skill_count": 1,
-  "total_original_skill_count": 51,
+  "frontend_ru_skill_count": 4,
+  "total_original_skill_count": 52,
   "frontend_source": {
     "repository": "https://github.com/anthropics/skills",
     "commit": "34040c9c568585f6929bedeaad110ad08f079624",
@@ -696,5 +711,48 @@
       "SKILL.md": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
       "LICENSE.txt": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
     }
-  }
+  },
+  "original_skill_count_note": "52 complete upstream skill folders: 50 Marketing Skills plus Anthropic frontend-design and webapp-testing. Two additional Russian modules use the Vercel rule set and selected Impeccable references; these are not full installed upstream skills.",
+  "additional_sources": [
+    {
+      "repository": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "e3d624baaf29dc1fc645aff3e38f03e564d2d6b1",
+      "snapshot_directory": "upstream/vercel-web-interface-guidelines",
+      "license": "MIT",
+      "files": {
+        "command.md": "5a775e6411f790f518dbc9c1fa7c50a89e6873502d9a3530a6eb223a590bcfe8",
+        "LICENSE": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
+      }
+    },
+    {
+      "repository": "https://github.com/anthropics/skills",
+      "commit": "34040c9c568585f6929bedeaad110ad08f079624",
+      "snapshot_directory": "upstream/anthropic-webapp-testing",
+      "license": "Apache-2.0",
+      "files": {
+        "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+        "SKILL.md": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+        "scripts/with_server.py": "b0dcf4918935b795f4eda9821579b9902119235ff4447f687a30286e7d0925fd",
+        "examples/console_logging.py": "ea46877289acb82da7e7ce59d0bc37c8977cd57e2a006d0c88d7a1c625bf95da",
+        "examples/static_html_automation.py": "9d533aafb875ee3ab8b8ebf8f5b9003ac8d999da3d09b285cce252e623140064",
+        "examples/element_discovery.py": "d63c89604a22f8845d724e95dda45db49b1bf57c25ce0a83afbb7b8da3d402f0"
+      }
+    },
+    {
+      "repository": "https://github.com/pbakaus/impeccable",
+      "commit": "f2c7051853848826aac2f4646581d62a732155ad",
+      "snapshot_directory": "upstream/impeccable-selected",
+      "license": "Apache-2.0",
+      "files": {
+        "README.md": "1fc4a382336785f58e008159fe2c62070cfa46ef8c99b20e802ec5eaee936d03",
+        "LICENSE": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
+        "audit.md": "51acdbb8b7093f4cd394b2d7a17f0410f45387bf96926b37ca21402485bc5785",
+        "adapt.md": "fe0f1e0a642575737711ad93f22482b8469c021ffd587f94910893683cb8f316",
+        "NOTICE.md": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb",
+        "polish.md": "c504e12ea076fd1a57b8c9ece79fbb532c54226b2b6298c5c62fa889ae1dd34d",
+        "harden.md": "6674a6fc1eb681f2ad266dc0a3a71cec29dc4dcd3a1ff91195d2302582fa7c58"
+      }
+    }
+  ],
+  "selected_reference_module_count": 2
 }

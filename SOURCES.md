@@ -23,3 +23,12 @@
 
 
 Frontend Design: исходный код и полная лицензия прочитаны 20.09.2026 в https://github.com/anthropics/skills/tree/main/skills/frontend-design . Точный commit зафиксирован в SOURCE_MANIFEST.json. Русская версия дополняет оригинальные принципы предметного дизайна, типографики, композиции и проверки мобильной версии связью с PRO-надстройкой.
+
+
+## Дополнения v3.2 — проверены 20.09.2026
+
+- Vercel skill: https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines . Правила и лицензия, сохранённые для адаптации: https://github.com/vercel-labs/web-interface-guidelines .
+- Anthropic Webapp Testing: https://github.com/anthropics/skills/tree/main/skills/webapp-testing .
+- Impeccable: https://github.com/pbakaus/impeccable , выбранные skill/reference/audit.md, polish.md, adapt.md, harden.md. Это выборочная адаптация, не полный установленный Impeccable.
+
+Точные версии и SHA256 локальных снимков — SOURCE_MANIFEST.json. Обновление добавляет процедуры, не свидетельство того, что какой-либо пользовательский сайт уже прошёл тесты. Актуальные стандарты, API и условия проверяются при применении.
