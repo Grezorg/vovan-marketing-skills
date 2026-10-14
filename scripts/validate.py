@@ -44,6 +44,8 @@ for p in (ROOT/'scripts').glob('*.py'):
  except SyntaxError as e:errors.append('Синтаксис '+p.name+': '+str(e))
 spec=importlib.util.spec_from_file_location('vovan_router',ROOT/'scripts/os.py')
 mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
+check(mod.version_status(sys['version'])['status']=='согласовано','Проверка версии и ключевых ресурсов не пройдена.')
+check(mod.version_status('0.0.0')['status']=='расхождение','Старый контекст навыка не обнаружен.')
 cases={'Сделай 7 карточек товара по фото':'product-cards','Создай лендинг для услуги':'sites','Проверь текущий сайт':'sites','Создай бота записи':'software','Напомни завтра о проекте':'automations','Продолжи проект AtlasMind':'memory','Улучши наши навыки':'skill-management','Сравни телефоны по отзывам':'research','Создай таблицу экономики':'documents','Разработай рекламу услуги':'marketing','Смонтируй видео':'media'}
 for q,expected in cases.items():
  r=mod.route(q);check(r['primary']==expected,'Маршрут '+q+': '+r['primary'])

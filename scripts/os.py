@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Выбирать и читать русские процедуры Vovan OS."""
-import argparse,json
+import argparse,json,hashlib,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
 ROUTES=[
@@ -45,6 +45,32 @@ MODULE_RULES={
 'ru-probabilistic-review':['прогноз','винрейт','экспресс'],
 'ru-comparative-research':['сравни','сравнение']}
 def catalog():return json.loads((ROOT/'references/catalog.json').read_text())
+def version_status(expected_version=None):
+ """Проверять сохранённые ресурсы, не считать описание навыка источником версии."""
+ errors=[];version=None
+ try:
+  system=json.loads((ROOT/'references/system.json').read_text())
+  version=system['version']
+  if not isinstance(version,str) or not re.fullmatch(r'\d+\.\d+\.\d+',version):
+   raise ValueError('Некорректная версия сборки.')
+  skill=(ROOT/'SKILL.md').read_text()
+  marker=re.search(r'^Версия сборки: `([^`]+)`\.$',skill,re.M)
+  if not marker or marker.group(1)!=version:errors.append('Версии SKILL.md и system.json не совпадают.')
+  if len(catalog())!=system['counts']['subject_modules']:errors.append('Каталог не соответствует составу сборки.')
+  manifest=json.loads((ROOT/'SOURCE_MANIFEST.json').read_text())
+  if manifest['version']!=version:errors.append('Версия манифеста не совпадает с system.json.')
+  entries={e['path']:e for e in manifest['files']}
+  for name in ['SKILL.md','references/system.json','references/catalog.json','scripts/os.py']:
+   data=(ROOT/name).read_bytes();entry=entries.get(name)
+   if not entry or len(data)!=entry['bytes'] or hashlib.sha256(data).hexdigest()!=entry['sha256']:
+    errors.append('Нарушена целостность: '+name)
+ except (OSError,ValueError,KeyError,TypeError) as e:
+  errors.append('Не удалось проверить сборку: '+str(e))
+ mismatch=expected_version is not None and expected_version!=version
+ status='ошибка' if errors else ('расхождение' if mismatch else 'согласовано')
+ return {'status':status,'installed_version':version,'loaded_version':expected_version,
+         'errors':errors,'action':'Заново прочитать текущие ресурсы; не смешивать версии.' if status!='согласовано' else 'Использовать проверенную установленную сборку.',
+         'cache_cleared':False}
 def route(query):
  q=query.casefold()
  scores=[(sum(w in q for w in words),d) for d,words in ROUTES]
@@ -79,9 +105,16 @@ def main():
  g.add_argument('--exact',help='Найти по идентификатору или названию')
  g.add_argument('--stats',action='store_true',help='Показать состав')
  g.add_argument('--commands',action='store_true',help='Показать команды')
+ g.add_argument('--version',action='store_true',help='Проверить версию и ключевые ресурсы')
+ p.add_argument('--expected-version',help='Версия из прочитанного навыка; использовать с --version')
  p.add_argument('--kind',choices=['skills'])
  p.add_argument('--limit',type=int,default=12)
  a=p.parse_args()
+ if a.expected_version and not a.version:p.error('--expected-version применять с --version')
+ if a.version:
+  out=version_status(a.expected_version)
+  print(json.dumps(out,ensure_ascii=False,indent=2))
+  raise SystemExit(1 if out['status']=='ошибка' else (2 if out['status']=='расхождение' else 0))
  if a.route:out=route(a.route)
  elif a.stats:out=json.loads((ROOT/'references/system.json').read_text())
  elif a.commands:out=json.loads((ROOT/'references/commands.json').read_text())

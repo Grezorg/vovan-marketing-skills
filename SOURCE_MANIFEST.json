@@ -1,5 +1,5 @@
 {
-  "version": "4.0.1",
+  "version": "4.0.2",
   "date": "2026-10-14",
   "language": "ru",
   "files": [
@@ -35,8 +35,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "6bc7b922ba4057426d20b5f668e08433eeb8329b448985560480496285d7c825",
-      "bytes": 7873
+      "sha256": "c9a9b348a7aaddfbf156f436500d8e3739ecb042af6ab8fd9a0e961ce19580a7",
+      "bytes": 9504
     },
     {
       "path": "SOURCES.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Vovan_Marketing_OS_RU_PHONE.txt",
-      "sha256": "55d5f6dc32a985646930936f05701b5acca0b3bd3d7950e5ff287265266790d0",
-      "bytes": 412154
+      "sha256": "bc222c270772f9b0ff4d2a731192e73d2598d4bcc665aa898e87795af3e52a70",
+      "bytes": 414650
     },
     {
       "path": "agents/openai.yaml",
@@ -120,8 +120,8 @@
     },
     {
       "path": "references/core/dispatcher.md",
-      "sha256": "5929d8e6955a4d8c775e7eaad2b083e005038100fdc2a2c81604a70a2e1233ba",
-      "bytes": 1785
+      "sha256": "e763fdb6d42e79982a7272432c0462041a01f63e0c2154fff2a4b1d6040848a5",
+      "bytes": 2650
     },
     {
       "path": "references/core/documents.md",
@@ -645,13 +645,13 @@
     },
     {
       "path": "references/system.json",
-      "sha256": "1319f5df19e1fa26633e548809677687b14135c26562d03b85a47e2c7c7f1c31",
+      "sha256": "e0a6f187577fe23def221222c4616b553eb9af70544474fb12091599458c6488",
       "bytes": 1047
     },
     {
       "path": "references/validation-results.json",
-      "sha256": "6af9a3bda34922b06ef0b13fc20d9bbaf29d34381e17476f64d901a1092ae266",
-      "bytes": 1091
+      "sha256": "32ffead518e4e9c46a3819587be06b02991828b4c895d8a2b4f55b7c5b44c260",
+      "bytes": 1289
     },
     {
       "path": "scripts/check_integrity.py",
@@ -660,8 +660,8 @@
     },
     {
       "path": "scripts/os.py",
-      "sha256": "e71c6b8aa373633b09a11ca3c00e4c0bba9027891edb2ea49c386a779a689f8c",
-      "bytes": 7810
+      "sha256": "af0c992aace47dc023cf41c7edade2243f064db662898d79bf05a9c7f42b9ad0",
+      "bytes": 10525
     },
     {
       "path": "scripts/state.py",
@@ -670,8 +670,8 @@
     },
     {
       "path": "scripts/validate.py",
-      "sha256": "6964547df691caaaddc38e4eac7ec739a20ccf9daf12a4740f4a0e11dad8f305",
-      "bytes": 5095
+      "sha256": "1f91e9a57f88ac3901c4357b77a2f87df73916b87454f5de14b3175162d2af2e",
+      "bytes": 5406
     }
   ],
   "excluded": [
