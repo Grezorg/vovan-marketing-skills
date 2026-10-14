@@ -1,62 +1,80 @@
-# Каталог — 54 русских модуля
+# Каталог русских процедур
 
-Каждая русская инструкция — рабочая адаптация соответствующего оригинального скилла, а не построчный перевод всех англоязычных справочников. 50 маркетинговых оригиналов и Anthropic-модули сохранены полностью; для Vercel сохранён набор правил, для Impeccable — четыре выбранных справочника. PRO v3.2 — дополнительная надстройка, поэтому теперь рабочих русских модулей 54 (50 маркетинговых и 4 модуля дизайна/проверки) плюс один управляющий скилл.
+В комплекте 54 сохранённых маркетинговых и дизайнерских модуля, 20 дополнительных процедур, 18 модулей ядра и 6 русских справочников. Читать выборочно. Технические идентификаторы не переводятся.
 
-Все относительные ссылки рассчитаны на сохранение структуры комплекта. При работе отдельным файлом используй Vovan_Marketing_OS_RU_PHONE.txt — он содержит все русские инструкции.
-
-| № | Русский модуль | Оригинал |
+| № | Процедура | Направление |
 |---|---|---|
-| 1 | [Проверяемые маркетинговые эксперименты](skills/ru-ab-testing/SKILL.md) | [ab-testing](upstream/marketingskills/skills/ab-testing/SKILL.md) |
-| 2 | [Рекламные креативы и их проверка](skills/ru-ad-creative/SKILL.md) | [ad-creative](upstream/marketingskills/skills/ad-creative/SKILL.md) |
-| 3 | [Платная реклама для российского рынка](skills/ru-ads/SKILL.md) | [ads](upstream/marketingskills/skills/ads/SKILL.md) |
-| 4 | [Видимость в поиске с ИИ](skills/ru-ai-seo/SKILL.md) | [ai-seo](upstream/marketingskills/skills/ai-seo/SKILL.md) |
-| 5 | [Яндекс Метрика и связь с продажами](skills/ru-analytics/SKILL.md) | [analytics](upstream/marketingskills/skills/analytics/SKILL.md) |
-| 6 | [Продвижение карточки приложения](skills/ru-aso/SKILL.md) | [aso](upstream/marketingskills/skills/aso/SKILL.md) |
-| 7 | [Какой маркетинг приносит продажи](skills/ru-attribution/SKILL.md) | [attribution](upstream/marketingskills/skills/attribution/SKILL.md) |
-| 8 | [Удержание и предотвращение ухода](skills/ru-churn-prevention/SKILL.md) | [churn-prevention](upstream/marketingskills/skills/churn-prevention/SKILL.md) |
-| 9 | [Совместный маркетинг и партнёрства](skills/ru-co-marketing/SKILL.md) | [co-marketing](upstream/marketingskills/skills/co-marketing/SKILL.md) |
-| 10 | [Первое деловое обращение](skills/ru-cold-email/SKILL.md) | [cold-email](upstream/marketingskills/skills/cold-email/SKILL.md) |
-| 11 | [Сообщество вокруг пользы](skills/ru-community-marketing/SKILL.md) | [community-marketing](upstream/marketingskills/skills/community-marketing/SKILL.md) |
-| 12 | [Исследование конкурентов](skills/ru-competitor-profiling/SKILL.md) | [competitor-profiling](upstream/marketingskills/skills/competitor-profiling/SKILL.md) |
-| 13 | [Сравнительные страницы и альтернативы](skills/ru-competitors/SKILL.md) | [competitors](upstream/marketingskills/skills/competitors/SKILL.md) |
-| 14 | [Контент-стратегия под спрос](skills/ru-content-strategy/SKILL.md) | [content-strategy](upstream/marketingskills/skills/content-strategy/SKILL.md) |
-| 15 | [Редактура русского маркетингового текста](skills/ru-copy-editing/SKILL.md) | [copy-editing](upstream/marketingskills/skills/copy-editing/SKILL.md) |
-| 16 | [Продающие тексты на русском](skills/ru-copywriting/SKILL.md) | [copywriting](upstream/marketingskills/skills/copywriting/SKILL.md) |
-| 17 | [Конверсия лендинга и форм](skills/ru-cro/SKILL.md) | [cro](upstream/marketingskills/skills/cro/SKILL.md) |
-| 18 | [Исследование российских покупателей](skills/ru-customer-research/SKILL.md) | [customer-research](upstream/marketingskills/skills/customer-research/SKILL.md) |
-| 19 | [Каталоги, карты и профили компании](skills/ru-directory-submissions/SKILL.md) | [directory-submissions](upstream/marketingskills/skills/directory-submissions/SKILL.md) |
-| 20 | [Email-цепочки для российских клиентов](skills/ru-emails/SKILL.md) | [emails](upstream/marketingskills/skills/emails/SKILL.md) |
-| 21 | [Мероприятия и вебинары](skills/ru-events/SKILL.md) | [events](upstream/marketingskills/skills/events/SKILL.md) |
-| 22 | [Полезные бесплатные инструменты](skills/ru-free-tools/SKILL.md) | [free-tools](upstream/marketingskills/skills/free-tools/SKILL.md) |
-| 23 | [Маркетинговые изображения для РФ](skills/ru-image/SKILL.md) | [image](upstream/marketingskills/skills/image/SKILL.md) |
-| 24 | [Работа с блогерами и авторами](skills/ru-influencer-marketing/SKILL.md) | [influencer-marketing](upstream/marketingskills/skills/influencer-marketing/SKILL.md) |
-| 25 | [Запуск продукта в России](skills/ru-launch/SKILL.md) | [launch](upstream/marketingskills/skills/launch/SKILL.md) |
-| 26 | [Лид-магниты с полезным результатом](skills/ru-lead-magnets/SKILL.md) | [lead-magnets](upstream/marketingskills/skills/lead-magnets/SKILL.md) |
-| 27 | [Совет маркетинговых подходов](skills/ru-marketing-council/SKILL.md) | [marketing-council](upstream/marketingskills/skills/marketing-council/SKILL.md) |
-| 28 | [Маркетинговые идеи для РФ](skills/ru-marketing-ideas/SKILL.md) | [marketing-ideas](upstream/marketingskills/skills/marketing-ideas/SKILL.md) |
-| 29 | [Повторяемые маркетинговые процессы](skills/ru-marketing-loops/SKILL.md) | [marketing-loops](upstream/marketingskills/skills/marketing-loops/SKILL.md) |
-| 30 | [Маркетинговый план для российского бизнеса](skills/ru-marketing-plan/SKILL.md) | [marketing-plan](upstream/marketingskills/skills/marketing-plan/SKILL.md) |
-| 31 | [Психология выбора без псевдонауки](skills/ru-marketing-psychology/SKILL.md) | [marketing-psychology](upstream/marketingskills/skills/marketing-psychology/SKILL.md) |
-| 32 | [Оффер под российский спрос](skills/ru-offers/SKILL.md) | [offers](upstream/marketingskills/skills/offers/SKILL.md) |
-| 33 | [Первая польза после регистрации](skills/ru-onboarding/SKILL.md) | [onboarding](upstream/marketingskills/skills/onboarding/SKILL.md) |
-| 34 | [Экран оплаты и переход на тариф](skills/ru-paywalls/SKILL.md) | [paywalls](upstream/marketingskills/skills/paywalls/SKILL.md) |
-| 35 | [Всплывающие формы и предложения](skills/ru-popups/SKILL.md) | [popups](upstream/marketingskills/skills/popups/SKILL.md) |
-| 36 | [Цены, тарифы и экономика](skills/ru-pricing/SKILL.md) | [pricing](upstream/marketingskills/skills/pricing/SKILL.md) |
-| 37 | [Контекст продукта и позиционирование](skills/ru-product-marketing/SKILL.md) | [product-marketing](upstream/marketingskills/skills/product-marketing/SKILL.md) |
-| 38 | [Полезные страницы из данных](skills/ru-programmatic-seo/SKILL.md) | [programmatic-seo](upstream/marketingskills/skills/programmatic-seo/SKILL.md) |
-| 39 | [Поиск потенциальных клиентов](skills/ru-prospecting/SKILL.md) | [prospecting](upstream/marketingskills/skills/prospecting/SKILL.md) |
-| 40 | [PR и работа с российскими медиа](skills/ru-public-relations/SKILL.md) | [public-relations](upstream/marketingskills/skills/public-relations/SKILL.md) |
-| 41 | [Рекомендации и партнёрские продажи](skills/ru-referrals/SKILL.md) | [referrals](upstream/marketingskills/skills/referrals/SKILL.md) |
-| 42 | [Связь маркетинга и отдела продаж](skills/ru-revops/SKILL.md) | [revops](upstream/marketingskills/skills/revops/SKILL.md) |
-| 43 | [Материалы для продаж](skills/ru-sales-enablement/SKILL.md) | [sales-enablement](upstream/marketingskills/skills/sales-enablement/SKILL.md) |
-| 44 | [Структурированные данные](skills/ru-schema/SKILL.md) | [schema](upstream/marketingskills/skills/schema/SKILL.md) |
-| 45 | [SEO-аудит для российского поиска](skills/ru-seo-audit/SKILL.md) | [seo-audit](upstream/marketingskills/skills/seo-audit/SKILL.md) |
-| 46 | [Регистрация без лишних препятствий](skills/ru-signup/SKILL.md) | [signup](upstream/marketingskills/skills/signup/SKILL.md) |
-| 47 | [Архитектура русскоязычного сайта](skills/ru-site-architecture/SKILL.md) | [site-architecture](upstream/marketingskills/skills/site-architecture/SKILL.md) |
-| 48 | [SMS и короткие уведомления](skills/ru-sms/SKILL.md) | [sms](upstream/marketingskills/skills/sms/SKILL.md) |
-| 49 | [Контент для VK, Telegram и сообществ](skills/ru-social/SKILL.md) | [social](upstream/marketingskills/skills/social/SKILL.md) |
-| 50 | [Маркетинговое видео на русском](skills/ru-video/SKILL.md) | [video](upstream/marketingskills/skills/video/SKILL.md) |
-| 51 | [Frontend Design — дизайн и реализация](skills/ru-frontend-design/SKILL.md) | [Anthropic frontend-design](upstream/anthropic-frontend-design/SKILL.md) |
-| 52 | [Аудит интерфейса](skills/ru-web-design-audit/SKILL.md) | [Vercel Web Interface Guidelines](upstream/vercel-web-interface-guidelines/command.md) |
-| 53 | [Проверка сайта и форм](skills/ru-webapp-testing/SKILL.md) | [Anthropic webapp-testing](upstream/anthropic-webapp-testing/SKILL.md) |
-| 54 | [Доработка дизайна](skills/ru-design-polish/SKILL.md) | [Impeccable: выбранные подходы](upstream/impeccable-selected/README.md) |
+| 1 | [Проверяемые маркетинговые эксперименты](skills/ru-ab-testing/SKILL.md) | Маркетинг |
+| 2 | [Рекламные креативы и их проверка](skills/ru-ad-creative/SKILL.md) | Маркетинг |
+| 3 | [Платная реклама для российского рынка](skills/ru-ads/SKILL.md) | Маркетинг |
+| 4 | [Видимость в поиске с ИИ](skills/ru-ai-seo/SKILL.md) | Маркетинг |
+| 5 | [Яндекс Метрика и связь с продажами](skills/ru-analytics/SKILL.md) | Маркетинг |
+| 6 | [Надёжные интеграции API](skills/ru-api-integration/SKILL.md) | Программы |
+| 7 | [Продвижение карточки приложения](skills/ru-aso/SKILL.md) | Маркетинг |
+| 8 | [Какой маркетинг приносит продажи](skills/ru-attribution/SKILL.md) | Маркетинг |
+| 9 | [Голос бренда из реальных примеров](skills/ru-brand-voice/SKILL.md) | Маркетинг |
+| 10 | [Удержание и предотвращение ухода](skills/ru-churn-prevention/SKILL.md) | Маркетинг |
+| 11 | [Совместный маркетинг и партнёрства](skills/ru-co-marketing/SKILL.md) | Маркетинг |
+| 12 | [Первое деловое обращение](skills/ru-cold-email/SKILL.md) | Маркетинг |
+| 13 | [Сообщество вокруг пользы](skills/ru-community-marketing/SKILL.md) | Маркетинг |
+| 14 | [Сравнение вариантов по доказательствам](skills/ru-comparative-research/SKILL.md) | Исследования |
+| 15 | [Исследование конкурентов](skills/ru-competitor-profiling/SKILL.md) | Маркетинг |
+| 16 | [Сравнительные страницы и альтернативы](skills/ru-competitors/SKILL.md) | Маркетинг |
+| 17 | [Контент-стратегия под спрос](skills/ru-content-strategy/SKILL.md) | Маркетинг |
+| 18 | [Редактура русского маркетингового текста](skills/ru-copy-editing/SKILL.md) | Маркетинг |
+| 19 | [Продающие тексты на русском](skills/ru-copywriting/SKILL.md) | Маркетинг |
+| 20 | [Конверсия лендинга и форм](skills/ru-cro/SKILL.md) | Маркетинг |
+| 21 | [Исследование российских покупателей](skills/ru-customer-research/SKILL.md) | Маркетинг |
+| 22 | [Данные, схемы и миграции](skills/ru-database/SKILL.md) | Программы |
+| 23 | [54. Доработка дизайна](skills/ru-design-polish/SKILL.md) | Сайты |
+| 24 | [Каталоги, карты и профили компании](skills/ru-directory-submissions/SKILL.md) | Маркетинг |
+| 25 | [Развёртывание и проверка сервера](skills/ru-docker-deploy/SKILL.md) | Программы |
+| 26 | [Создание и проверка документов](skills/ru-document-check/SKILL.md) | Документы |
+| 27 | [Email-цепочки для российских клиентов](skills/ru-emails/SKILL.md) | Маркетинг |
+| 28 | [Мероприятия и вебинары](skills/ru-events/SKILL.md) | Маркетинг |
+| 29 | [Полезные бесплатные инструменты](skills/ru-free-tools/SKILL.md) | Маркетинг |
+| 30 | [51. Frontend Design — российская адаптация](skills/ru-frontend-design/SKILL.md) | Сайты |
+| 31 | [Реализация интерфейса и скорость](skills/ru-frontend-implementation/SKILL.md) | Сайты |
+| 32 | [Изменения GitHub без потери работы](skills/ru-github-workflow/SKILL.md) | Программы |
+| 33 | [Маркетинговые изображения для РФ](skills/ru-image/SKILL.md) | Маркетинг |
+| 34 | [Создание и точные правки изображений](skills/ru-image-production/SKILL.md) | Медиа |
+| 35 | [Работа с блогерами и авторами](skills/ru-influencer-marketing/SKILL.md) | Маркетинг |
+| 36 | [Запуск продукта в России](skills/ru-launch/SKILL.md) | Маркетинг |
+| 37 | [Лид-магниты с полезным результатом](skills/ru-lead-magnets/SKILL.md) | Маркетинг |
+| 38 | [Проверка исследований и научных утверждений](skills/ru-literature-review/SKILL.md) | Исследования |
+| 39 | [Совет маркетинговых подходов](skills/ru-marketing-council/SKILL.md) | Маркетинг |
+| 40 | [Маркетинговые идеи для РФ](skills/ru-marketing-ideas/SKILL.md) | Маркетинг |
+| 41 | [Повторяемые маркетинговые процессы](skills/ru-marketing-loops/SKILL.md) | Маркетинг |
+| 42 | [Маркетинговый план для российского бизнеса](skills/ru-marketing-plan/SKILL.md) | Маркетинг |
+| 43 | [Психология выбора без псевдонауки](skills/ru-marketing-psychology/SKILL.md) | Маркетинг |
+| 44 | [Монтаж видео и обработка звука](skills/ru-media-editing/SKILL.md) | Медиа |
+| 45 | [Сравнение ИИ и навыков на одинаковых задачах](skills/ru-model-evaluation/SKILL.md) | Проверка |
+| 46 | [Оффер под российский спрос](skills/ru-offers/SKILL.md) | Маркетинг |
+| 47 | [Первая польза после регистрации](skills/ru-onboarding/SKILL.md) | Маркетинг |
+| 48 | [Экран оплаты и переход на тариф](skills/ru-paywalls/SKILL.md) | Маркетинг |
+| 49 | [Всплывающие формы и предложения](skills/ru-popups/SKILL.md) | Маркетинг |
+| 50 | [Цены, тарифы и экономика](skills/ru-pricing/SKILL.md) | Маркетинг |
+| 51 | [Проверка вероятностных прогнозов](skills/ru-probabilistic-review/SKILL.md) | Исследования |
+| 52 | [Карточки товара по эталону](skills/ru-product-cards/SKILL.md) | Карточки товара |
+| 53 | [Контекст продукта и позиционирование](skills/ru-product-marketing/SKILL.md) | Маркетинг |
+| 54 | [Полезные страницы из данных](skills/ru-programmatic-seo/SKILL.md) | Маркетинг |
+| 55 | [Поиск потенциальных клиентов](skills/ru-prospecting/SKILL.md) | Маркетинг |
+| 56 | [PR и работа с российскими медиа](skills/ru-public-relations/SKILL.md) | Маркетинг |
+| 57 | [Боты и приложения на Python](skills/ru-python-bot/SKILL.md) | Программы |
+| 58 | [Рекомендации и партнёрские продажи](skills/ru-referrals/SKILL.md) | Маркетинг |
+| 59 | [Проверки по риску и поведению](skills/ru-reliable-testing/SKILL.md) | Проверка |
+| 60 | [Видео из кода через Remotion](skills/ru-remotion/SKILL.md) | Медиа |
+| 61 | [Связь маркетинга и отдела продаж](skills/ru-revops/SKILL.md) | Маркетинг |
+| 62 | [Материалы для продаж](skills/ru-sales-enablement/SKILL.md) | Маркетинг |
+| 63 | [Структурированные данные](skills/ru-schema/SKILL.md) | Маркетинг |
+| 64 | [Защита данных и внешних действий](skills/ru-security/SKILL.md) | Программы |
+| 65 | [SEO-аудит для российского поиска](skills/ru-seo-audit/SKILL.md) | Маркетинг |
+| 66 | [Регистрация без лишних препятствий](skills/ru-signup/SKILL.md) | Маркетинг |
+| 67 | [Архитектура русскоязычного сайта](skills/ru-site-architecture/SKILL.md) | Маркетинг |
+| 68 | [SMS и короткие уведомления](skills/ru-sms/SKILL.md) | Маркетинг |
+| 69 | [Контент для VK, Telegram и сообществ](skills/ru-social/SKILL.md) | Маркетинг |
+| 70 | [Расчёты и модели в таблицах](skills/ru-spreadsheet-economics/SKILL.md) | Документы |
+| 71 | [Сценарий и непрерывность видеосцен](skills/ru-storyboard/SKILL.md) | Медиа |
+| 72 | [Маркетинговое видео на русском](skills/ru-video/SKILL.md) | Маркетинг |
+| 73 | [52. Аудит интерфейса](skills/ru-web-design-audit/SKILL.md) | Сайты |
+| 74 | [53. Проверка сайта и форм](skills/ru-webapp-testing/SKILL.md) | Сайты |

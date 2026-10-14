@@ -1,0 +1,76 @@
+{
+  "commands": [
+    {
+      "say": "Сделай карточки товара",
+      "core": "product-cards"
+    },
+    {
+      "say": "Создай изображение",
+      "core": "media"
+    },
+    {
+      "say": "Создай видео",
+      "core": "media"
+    },
+    {
+      "say": "Собери сайт",
+      "core": "sites"
+    },
+    {
+      "say": "Подготовь документ",
+      "core": "documents"
+    },
+    {
+      "say": "Найди и сравни варианты",
+      "core": "research"
+    },
+    {
+      "say": "Собери рекламную кампанию",
+      "core": "marketing"
+    },
+    {
+      "say": "Составь план",
+      "core": "planning"
+    },
+    {
+      "say": "Проверь результат",
+      "core": "quality"
+    },
+    {
+      "say": "Сохрани состояние проекта",
+      "core": "memory"
+    },
+    {
+      "say": "Продолжи проект",
+      "core": "memory"
+    },
+    {
+      "say": "Запомни полезный приём",
+      "core": "learning"
+    },
+    {
+      "say": "Покажи усвоенные правила",
+      "core": "learning"
+    },
+    {
+      "say": "Настрой повторяющуюся задачу",
+      "core": "automations"
+    },
+    {
+      "say": "Создай наш навык",
+      "core": "skill-management"
+    },
+    {
+      "say": "Улучши наши навыки",
+      "core": "skill-management"
+    },
+    {
+      "say": "Проверь доступные возможности",
+      "core": "integrations"
+    },
+    {
+      "say": "Покажи фактические затраты",
+      "core": "context-budget"
+    }
+  ]
+}

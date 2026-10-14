@@ -32,6 +32,6 @@ description: "Находить информационный повод и гот
 
 ## Углубление и продолжение
 
-Для подробных методов, шаблонов и частных случаев открыть [оригинал public-relations](../../upstream/marketingskills/skills/public-relations/SKILL.md) и только нужные связанные материалы. Не выдавать прочтение заголовка за изучение всех references. Российский контекст определяет выбор каналов, примеров, оплаты и проверку местных требований. Не заменять исходные методы механической подстановкой названий сервисов.
+Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
 Продолжение по необходимости: [content-strategy](../ru-content-strategy/SKILL.md), [competitor-profiling](../ru-competitor-profiling/SKILL.md), [events](../ru-events/SKILL.md), [co-marketing](../ru-co-marketing/SKILL.md).

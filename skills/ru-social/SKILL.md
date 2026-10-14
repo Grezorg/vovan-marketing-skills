@@ -32,6 +32,6 @@ description: "Создавать стратегию, посты и календ�
 
 ## Углубление и продолжение
 
-Для подробных методов, шаблонов и частных случаев открыть [оригинал social](../../upstream/marketingskills/skills/social/SKILL.md) и только нужные связанные материалы. Не выдавать прочтение заголовка за изучение всех references. Российский контекст определяет выбор каналов, примеров, оплаты и проверку местных требований. Не заменять исходные методы механической подстановкой названий сервисов.
+Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
 Продолжение по необходимости: [content-strategy](../ru-content-strategy/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [image](../ru-image/SKILL.md), [video](../ru-video/SKILL.md), [community-marketing](../ru-community-marketing/SKILL.md).

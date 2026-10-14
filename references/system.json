@@ -1,0 +1,27 @@
+{
+  "name": "Vovan OS",
+  "version": "4.0.0",
+  "language": "ru",
+  "updated_at": "2026-10-14",
+  "repository": "https://github.com/Grezorg/vovan-marketing-skills",
+  "counts": {
+    "subject_modules": 74,
+    "retained_marketing_design_modules": 54,
+    "new_consolidated_modules": 20,
+    "core_modules": 18,
+    "russian_guides": 6,
+    "commands": 18
+  },
+  "runtime": {
+    "automatic_hooks": false,
+    "background_learning": false,
+    "module_loading": "Чтение нужных обычных файлов",
+    "automations": "Только реальные задачи по конкретному поручению",
+    "secrets": "Не хранить в репозитории",
+    "personal_state": "Отдельно от публичного источника"
+  },
+  "source_revisions": {
+    "marketing": "dc82ebac49e3686838e95c9346f1b5469fc19331",
+    "ecc": "b92f181b3b748d1abbc2afd94af6aa7d8c8fca29"
+  }
+}

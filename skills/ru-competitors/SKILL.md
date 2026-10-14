@@ -32,6 +32,6 @@ description: "Создавать страницы сравнения проду�
 
 ## Углубление и продолжение
 
-Для подробных методов, шаблонов и частных случаев открыть [оригинал competitors](../../upstream/marketingskills/skills/competitors/SKILL.md) и только нужные связанные материалы. Не выдавать прочтение заголовка за изучение всех references. Российский контекст определяет выбор каналов, примеров, оплаты и проверку местных требований. Не заменять исходные методы механической подстановкой названий сервисов.
+Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
 Продолжение по необходимости: [competitor-profiling](../ru-competitor-profiling/SKILL.md), [seo-audit](../ru-seo-audit/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [site-architecture](../ru-site-architecture/SKILL.md).

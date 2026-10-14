@@ -32,6 +32,6 @@ description: "Исследовать аудиторию, отзывы, инте�
 
 ## Углубление и продолжение
 
-Для подробных методов, шаблонов и частных случаев открыть [оригинал customer-research](../../upstream/marketingskills/skills/customer-research/SKILL.md) и только нужные связанные материалы. Не выдавать прочтение заголовка за изучение всех references. Российский контекст определяет выбор каналов, примеров, оплаты и проверку местных требований. Не заменять исходные методы механической подстановкой названий сервисов.
+Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
 Продолжение по необходимости: [product-marketing](../ru-product-marketing/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [offers](../ru-offers/SKILL.md), [competitor-profiling](../ru-competitor-profiling/SKILL.md).

@@ -32,3 +32,18 @@
 | Доработать готовый внешний вид / мобильную версию | [54: design-polish](../skills/ru-design-polish/SKILL.md) | Исправления внутри текущего стиля; новый стиль — модуль 51 |
 
 Для полного лендинга после реализации: проверить UI → пройти главный сценарий → исправить существенные дефекты → повторить затронутые проверки. Если проверка уже выполнена в модуле 51, использовать её результаты. Только стратегия/тексты не запускают технические процедуры. В Tilda без кода опираться на доступный редактор/страницу и честно ограничивать выводы.
+
+
+## Дополнительные результаты
+| Задача | Процедура |
+|---|---|
+| Точная серия по фото | [Карточки товара](../skills/ru-product-cards/SKILL.md) |
+| Правки изображения | [Изображения](../skills/ru-image-production/SKILL.md) |
+| Связанные видеосцены | [Раскадровка](../skills/ru-storyboard/SKILL.md) |
+| Монтаж готовых файлов | [Монтаж](../skills/ru-media-editing/SKILL.md) |
+| Анимация из кода | [Remotion](../skills/ru-remotion/SKILL.md) |
+| Бот или приложение | [Python](../skills/ru-python-bot/SKILL.md), [API](../skills/ru-api-integration/SKILL.md) |
+| Данные и сервер | [База](../skills/ru-database/SKILL.md), [Деплой](../skills/ru-docker-deploy/SKILL.md) |
+| Документ и расчёт | [Документы](../skills/ru-document-check/SKILL.md), [Таблицы](../skills/ru-spreadsheet-economics/SKILL.md) |
+| Сравнить модели или навыки | [Оценка](../skills/ru-model-evaluation/SKILL.md) |
+| Проверить вероятностную модель | [Прогнозы](../skills/ru-probabilistic-review/SKILL.md) |

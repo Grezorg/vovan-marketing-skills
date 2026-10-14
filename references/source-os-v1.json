@@ -1,0 +1,47 @@
+{
+  "repository": "https://github.com/affaan-m/ECC",
+  "commit": "b92f181b3b748d1abbc2afd94af6aa7d8c8fca29",
+  "version": "2.2.3",
+  "installed_at": "2026-10-14",
+  "installation_type": "ChatGPT Work personal ECC skill with all canonical modules in a bundled source archive",
+  "counts": {
+    "skills": 311,
+    "agents": 71,
+    "commands": 97,
+    "rules": 122
+  },
+  "upstream_files_verified_sha256": 1361,
+  "runtime": {
+    "entry_skill": "ecc",
+    "guidance_and_catalog": "available",
+    "upstream_source": "all_canonical_workflow_modules_and_supporting_runtime_sources",
+    "claude_code_cli": "not_installed",
+    "codex_cli": "not_installed",
+    "native_plugin_registration": false,
+    "automatic_hooks": false,
+    "background_learning_observer": false,
+    "external_mcp_connections": "not_configured_by_this_installation"
+  },
+  "source_scope": {
+    "included_directories": [
+      ".claude-plugin",
+      ".codex",
+      ".codex-plugin",
+      "agents",
+      "commands",
+      "config",
+      "hooks",
+      "manifests",
+      "mcp-configs",
+      "rules",
+      "schemas",
+      "scripts",
+      "skills",
+      "src",
+      "workflows"
+    ],
+    "excluded": "Git history, duplicated platform copies, upstream test suite, bulk translated documentation and promotional images; original clone remains available locally and official source is pinned by commit"
+  },
+  "purpose": "Происхождение прежней версии; исходники доступны по зафиксированному коммиту.",
+  "active": false
+}

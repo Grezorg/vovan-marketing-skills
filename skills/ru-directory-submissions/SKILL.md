@@ -32,6 +32,6 @@ description: "Выбирать и готовить размещение росс
 
 ## Углубление и продолжение
 
-Для подробных методов, шаблонов и частных случаев открыть [оригинал directory-submissions](../../upstream/marketingskills/skills/directory-submissions/SKILL.md) и только нужные связанные материалы. Не выдавать прочтение заголовка за изучение всех references. Российский контекст определяет выбор каналов, примеров, оплаты и проверку местных требований. Не заменять исходные методы механической подстановкой названий сервисов.
+Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
 Продолжение по необходимости: [seo-audit](../ru-seo-audit/SKILL.md), [product-marketing](../ru-product-marketing/SKILL.md), [public-relations](../ru-public-relations/SKILL.md), [analytics](../ru-analytics/SKILL.md).
