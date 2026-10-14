@@ -1,6 +1,6 @@
 {
   "name": "Vovan OS",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "language": "ru",
   "updated_at": "2026-10-14",
   "repository": "https://github.com/Grezorg/vovan-marketing-skills",
@@ -23,5 +23,6 @@
   "source_revisions": {
     "marketing": "dc82ebac49e3686838e95c9346f1b5469fc19331",
     "ecc": "b92f181b3b748d1abbc2afd94af6aa7d8c8fca29"
-  }
+  },
+  "packaging": "Один SKILL.md; 74 русские предметные страницы в references/modules/."
 }

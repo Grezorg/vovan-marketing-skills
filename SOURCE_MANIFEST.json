@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.0.1",
   "date": "2026-10-14",
   "language": "ru",
   "files": [
@@ -15,8 +15,8 @@
     },
     {
       "path": "CATALOG_RU.md",
-      "sha256": "6f6af517aefa983c17fde4e8c640b4a5965ec6769ebf40a44733ff920f8fff9d",
-      "bytes": 9530
+      "sha256": "1853b09483488208d0fb670166ce5392fc61fc04472b27946db6c51217c07d6b",
+      "bytes": 9974
     },
     {
       "path": "LICENSE",
@@ -35,8 +35,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "dea9466300492090a67d0aed9acb03b784096f9f1ca7ab7aac645348595ccbe0",
-      "bytes": 7366
+      "sha256": "6bc7b922ba4057426d20b5f668e08433eeb8329b448985560480496285d7c825",
+      "bytes": 7873
     },
     {
       "path": "SOURCES.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Vovan_Marketing_OS_RU_PHONE.txt",
-      "sha256": "abe0c535dc56b2c0b8a7e1d8bf919ab31a6ddcd4fe576af644b06762f261cf7b",
-      "bytes": 415954
+      "sha256": "55d5f6dc32a985646930936f05701b5acca0b3bd3d7950e5ff287265266790d0",
+      "bytes": 412154
     },
     {
       "path": "agents/openai.yaml",
@@ -74,9 +74,34 @@
       "bytes": 1071
     },
     {
+      "path": "licenses/ru-design-polish-LICENSE.txt",
+      "sha256": "72bdc6c2866074f26236c6313f44acb6e26dd58e605aa7aa8158f4ab7ef9b069",
+      "bytes": 10767
+    },
+    {
+      "path": "licenses/ru-design-polish-NOTICE.md",
+      "sha256": "1b347de5ccbdc461dce1fd4d0a8d4e517c30d0dbd3b693cec5db2e651dbd668c",
+      "bytes": 504
+    },
+    {
+      "path": "licenses/ru-frontend-design-LICENSE.txt",
+      "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+      "bytes": 10175
+    },
+    {
+      "path": "licenses/ru-web-design-audit-LICENSE.txt",
+      "sha256": "77cd4cd8ef5f5618b75c441dca55f2b94b2efa9738ce448b7c24904600e19863",
+      "bytes": 1069
+    },
+    {
+      "path": "licenses/ru-webapp-testing-LICENSE.txt",
+      "sha256": "14099b9c79d031b9d4b32c736a4e20f2b941f52dd79500532d62d26dd716110c",
+      "bytes": 11346
+    },
+    {
       "path": "references/catalog.json",
-      "sha256": "2c22de662b416db2cfde369f205099b423fb4a82fa5201f97f6105ad86359e2c",
-      "bytes": 53918
+      "sha256": "5267906b9775e1b4aaf78bebfbdac6b2f949088ff71732fba925fee896c57e28",
+      "bytes": 54362
     },
     {
       "path": "references/commands.json",
@@ -145,8 +170,8 @@
     },
     {
       "path": "references/core/product-cards.md",
-      "sha256": "76b53b4874d577b8e887380c1264dc255f36a285a2c456d1acb9f8828af44209",
-      "bytes": 979
+      "sha256": "abdc6182a07054a506984b9b05419e175f1df5996d0c28d61200b6e7ab59be9b",
+      "bytes": 985
     },
     {
       "path": "references/core/quality.md",
@@ -210,13 +235,383 @@
     },
     {
       "path": "references/merge-map.json",
-      "sha256": "ddd6ee2b94648ace78a91e40e2c535d48cf7ca6993fbac1fcc7b4158d6dbaa23",
-      "bytes": 40300
+      "sha256": "0166c78c5d18bdff392ab7e357a368c882384fc6acbb1d9c888a17c11cbfb178",
+      "bytes": 41194
+    },
+    {
+      "path": "references/modules/ru-ab-testing.md",
+      "sha256": "f5f10e8f10052d6adc5d209314e138050b1ae4c2ce0a73fe3c320a7b9b2114fe",
+      "bytes": 4158
+    },
+    {
+      "path": "references/modules/ru-ad-creative.md",
+      "sha256": "b32d20c82bbff97e3181c9e379fa36461ea6414cba2e940e7ca4ea9143da0313",
+      "bytes": 3720
+    },
+    {
+      "path": "references/modules/ru-ads.md",
+      "sha256": "2d7f8e3f18242d22c3a7ac8b69961951673ba214a9d42bab00f3309a25f7e1c5",
+      "bytes": 4014
+    },
+    {
+      "path": "references/modules/ru-ai-seo.md",
+      "sha256": "82a9d84bbefa6e509324a52e800c4097a23be46fba2ce7eed1fc3d3ca47ccc04",
+      "bytes": 3960
+    },
+    {
+      "path": "references/modules/ru-analytics.md",
+      "sha256": "a39a4c3726f81b240787ec55ada3d26443f0416845aee492003139d340447069",
+      "bytes": 3920
+    },
+    {
+      "path": "references/modules/ru-api-integration.md",
+      "sha256": "1af63260b1ac2ce77e29fa8dc2d1f87d94f9fb7d9b18d6e82d0f02d0647c7a81",
+      "bytes": 2724
+    },
+    {
+      "path": "references/modules/ru-aso.md",
+      "sha256": "29c4785ed0ddcaad0b0dbc98e67536dedb814d5900f8abdd0a64079fa68b14db",
+      "bytes": 3756
+    },
+    {
+      "path": "references/modules/ru-attribution.md",
+      "sha256": "23e213dee9f1752cc5eefbff8c8c1c8c54c33a1525464a0b9bad90614043b427",
+      "bytes": 3908
+    },
+    {
+      "path": "references/modules/ru-brand-voice.md",
+      "sha256": "56dfcb02d8b116672a4a08d78f4ab9481d065c4d8fbeebc3af972fdd1c93fcec",
+      "bytes": 2348
+    },
+    {
+      "path": "references/modules/ru-churn-prevention.md",
+      "sha256": "3600d3167e0e86620c76f433c7dae1e35b87d171da4bf5e60b2b40e5c344a120",
+      "bytes": 3768
+    },
+    {
+      "path": "references/modules/ru-co-marketing.md",
+      "sha256": "87dc23566dc39bfacf46adfcde3529fcc718608d8b4b57852a82223f858ca945",
+      "bytes": 3803
+    },
+    {
+      "path": "references/modules/ru-cold-email.md",
+      "sha256": "ced8486400005e447e59d496578a190b6a5aed6a04093c46249a94394d407bf0",
+      "bytes": 3792
+    },
+    {
+      "path": "references/modules/ru-community-marketing.md",
+      "sha256": "c5312cce98cc5547a234d53db85936d5f7a58df947cea28b594665b3a021ceb1",
+      "bytes": 3769
+    },
+    {
+      "path": "references/modules/ru-comparative-research.md",
+      "sha256": "e7344a208aa902cee57f5f13d52f5079499abd78dce139354abe5353ad429828",
+      "bytes": 2619
+    },
+    {
+      "path": "references/modules/ru-competitor-profiling.md",
+      "sha256": "7441df15806702b8e70551576e19da67f4af48832cdfeaf5509981ae0097e0dd",
+      "bytes": 3963
+    },
+    {
+      "path": "references/modules/ru-competitors.md",
+      "sha256": "b594f1cc3e68501f3097c68885f61f1ba96d75c0047a23e4cc5d450bfaffae32",
+      "bytes": 3691
+    },
+    {
+      "path": "references/modules/ru-content-strategy.md",
+      "sha256": "b3bf1b0191f34ba0ac8f269d51d786467290108da4cf7ce89ffb206003f3c336",
+      "bytes": 3817
+    },
+    {
+      "path": "references/modules/ru-copy-editing.md",
+      "sha256": "9493b38190419bc7612eb3699b9032440b4c608c1916c0a8781a5c8e15fa6a05",
+      "bytes": 3740
+    },
+    {
+      "path": "references/modules/ru-copywriting.md",
+      "sha256": "5d5c36d47aace29eba05143bfab3930d73a2908d110266330471d43d1d1f0ac2",
+      "bytes": 3883
+    },
+    {
+      "path": "references/modules/ru-cro.md",
+      "sha256": "e6cf23af97f4e8a671e689b841a8cb7d9e3bf9325dc4643f54d4b88755a62d9a",
+      "bytes": 3994
+    },
+    {
+      "path": "references/modules/ru-customer-research.md",
+      "sha256": "31a50115d645a2a6a2ba2644ff33681fed51d9d41278b956db858ee985a78615",
+      "bytes": 4296
+    },
+    {
+      "path": "references/modules/ru-database.md",
+      "sha256": "160e19085b47fe08fbf055e16dc2834630ac8d70a3d2ecbcf8c55d09508e12fc",
+      "bytes": 2538
+    },
+    {
+      "path": "references/modules/ru-design-polish.md",
+      "sha256": "ee8be14d5e021c7d248426ac6c3df212d22e4560577e138165ef000e3ec81d84",
+      "bytes": 9527
+    },
+    {
+      "path": "references/modules/ru-directory-submissions.md",
+      "sha256": "d6df859a6c2ea7f35387c95d3991643302a6977745d6cf1e12a2b01079ef471e",
+      "bytes": 3768
+    },
+    {
+      "path": "references/modules/ru-docker-deploy.md",
+      "sha256": "185b7f274467eb6fa70c67121af5b53ca47d354ba1c2ed2be129464f6aff7bce",
+      "bytes": 2474
+    },
+    {
+      "path": "references/modules/ru-document-check.md",
+      "sha256": "29811dbfe171c48781d4fee493f0689a889336d88624369b610a90de02f92784",
+      "bytes": 2531
+    },
+    {
+      "path": "references/modules/ru-emails.md",
+      "sha256": "ba7872066d5e8e8129c95d7c46acb0878e290375591c1aa9efe24019783eab44",
+      "bytes": 3732
+    },
+    {
+      "path": "references/modules/ru-events.md",
+      "sha256": "fa433bf018cd5f5351b6f4d66237549572ea52ef295aba34abfad8fa8e41f2ad",
+      "bytes": 3707
+    },
+    {
+      "path": "references/modules/ru-free-tools.md",
+      "sha256": "4b1f1bbe3058b68f816a0d1534226fdc2d15165fd85cf32f41fd3dd07fc390f5",
+      "bytes": 3798
+    },
+    {
+      "path": "references/modules/ru-frontend-design.md",
+      "sha256": "087df817bcf5df3a6ccbbe0b0bbba3397f88b26af48bb97f7ba8269bfb816e27",
+      "bytes": 15192
+    },
+    {
+      "path": "references/modules/ru-frontend-implementation.md",
+      "sha256": "74e0ba1e661cdc6acae4cde4416a9cb79b8dfbade438eab50ecd3cdfceb61398",
+      "bytes": 2688
+    },
+    {
+      "path": "references/modules/ru-github-workflow.md",
+      "sha256": "46ced9a0d223473a70c333235a72422f9b8cf74c761068937ff131416fe51ba1",
+      "bytes": 2513
+    },
+    {
+      "path": "references/modules/ru-image-production.md",
+      "sha256": "7c31dc97555a2878a461889f43f36f9c1ab25631528133c95bdf6e0007814c71",
+      "bytes": 2722
+    },
+    {
+      "path": "references/modules/ru-image.md",
+      "sha256": "33a5b68372d81423c04d60b2dae8c407f18e6b86624d1d068de3ffcbbd351da4",
+      "bytes": 3788
+    },
+    {
+      "path": "references/modules/ru-influencer-marketing.md",
+      "sha256": "2f80499d5ceebf34c0d66ddeed1fb2c4bd6fb8fe868f1d13dc4f7910851758a1",
+      "bytes": 3767
+    },
+    {
+      "path": "references/modules/ru-launch.md",
+      "sha256": "9ec4618d4457e8e66d6c332e632271bbb66433a158af077aea76937f5473d868",
+      "bytes": 3707
+    },
+    {
+      "path": "references/modules/ru-lead-magnets.md",
+      "sha256": "8b3c824f3b813c08051dd022255116e2f5dd8047d3ab8b7a34ca4a6122c72947",
+      "bytes": 3627
+    },
+    {
+      "path": "references/modules/ru-literature-review.md",
+      "sha256": "993f5a7d3536f718465d62c84524e35f9d2662cd65da596fd35d82c949243e7e",
+      "bytes": 2673
+    },
+    {
+      "path": "references/modules/ru-marketing-council.md",
+      "sha256": "6bb53747e870ad19aac6b6bad822a6eb39073a8295079f096b01ba5678152681",
+      "bytes": 3885
+    },
+    {
+      "path": "references/modules/ru-marketing-ideas.md",
+      "sha256": "670efd0aa759f08b99f77e644f876aabc498894721c1ced1836818f9b1b32050",
+      "bytes": 3760
+    },
+    {
+      "path": "references/modules/ru-marketing-loops.md",
+      "sha256": "878f2a30c29cfcb5ec03743ea8cdf37c4f63b4268774e35d0365c9509d1b55e6",
+      "bytes": 4166
+    },
+    {
+      "path": "references/modules/ru-marketing-plan.md",
+      "sha256": "7dbcd6e8244a13de5ed2d2eb890aa9d0d2e0c0d33cefb02d60a1a0d6e528c11b",
+      "bytes": 4381
+    },
+    {
+      "path": "references/modules/ru-marketing-psychology.md",
+      "sha256": "889e8e4b5b81b8f32741ebefdbffb788f2598c25d14942132f68cff0c4dc939a",
+      "bytes": 3882
+    },
+    {
+      "path": "references/modules/ru-media-editing.md",
+      "sha256": "70fc1592ddc5d5e45c108c588c5a13bd06a9d644a2ba6f1d576c39a0c3ac7751",
+      "bytes": 2510
+    },
+    {
+      "path": "references/modules/ru-model-evaluation.md",
+      "sha256": "ecc07745f3ae4fe67745ac89fea028b23e072e7e9c3d74f26e0c6fcdcf374156",
+      "bytes": 2426
+    },
+    {
+      "path": "references/modules/ru-offers.md",
+      "sha256": "bba560abdfcc68b57bb3d9967df0e35eaf51c3cb07981ae0ac7ed2716b006cb7",
+      "bytes": 3765
+    },
+    {
+      "path": "references/modules/ru-onboarding.md",
+      "sha256": "316862389de2443fd42a7c4522df87785e9e9909dc1192f6595eaf7c7d835d6c",
+      "bytes": 3780
+    },
+    {
+      "path": "references/modules/ru-paywalls.md",
+      "sha256": "db4e157e20779164b5203a42012b9b4bb36e21cc789cf9822c8528cfd101b4b9",
+      "bytes": 3544
+    },
+    {
+      "path": "references/modules/ru-popups.md",
+      "sha256": "812687064fbe78ec8561e682174c923535df34c4e9b28ddc542c1dfe8d125604",
+      "bytes": 3508
+    },
+    {
+      "path": "references/modules/ru-pricing.md",
+      "sha256": "e8e79dd014dd114e62cb3bb2deddb03339d0314d0ccfc0e394ff6552fd24cbad",
+      "bytes": 3872
+    },
+    {
+      "path": "references/modules/ru-probabilistic-review.md",
+      "sha256": "41155819b413490c46eb70ba0453c0548182156e74c21b07e76ca90ef6680a1c",
+      "bytes": 2583
+    },
+    {
+      "path": "references/modules/ru-product-cards.md",
+      "sha256": "0b418576eab4240694a953ef1a57fa29b3a9b29c2721ba56d26738ca591655c3",
+      "bytes": 3564
+    },
+    {
+      "path": "references/modules/ru-product-marketing.md",
+      "sha256": "46656a942cc0ae6b911cffdffc5e092f194149e8894edd21e4e9fb5ff7c91e7f",
+      "bytes": 3978
+    },
+    {
+      "path": "references/modules/ru-programmatic-seo.md",
+      "sha256": "20983336acd24d44b17379ddaa655d03d207aaacc77be956f129c2ae918fe760",
+      "bytes": 3775
+    },
+    {
+      "path": "references/modules/ru-prospecting.md",
+      "sha256": "b7e0e6cdcb52ebe6cd02178e328df5e95f61f0e243131914a96c628a72dd15c0",
+      "bytes": 3801
+    },
+    {
+      "path": "references/modules/ru-public-relations.md",
+      "sha256": "ff1fa53d4af6ccf708eef92bec4bfbaa4a1808471121f47876e869f65ba543d9",
+      "bytes": 3944
+    },
+    {
+      "path": "references/modules/ru-python-bot.md",
+      "sha256": "3b13029cff501b170d52d1ed0a9cf9f02b61624f3dc1cbfd7e0223812560614d",
+      "bytes": 2564
+    },
+    {
+      "path": "references/modules/ru-referrals.md",
+      "sha256": "89bee677b0496501a9a3a8599cbc602994ac5f9f28e29adef7a81081077369b6",
+      "bytes": 3617
+    },
+    {
+      "path": "references/modules/ru-reliable-testing.md",
+      "sha256": "5af44e6a3ddcac2030769edb370e98185b50e9f67584a3c983b59f9daed3aa71",
+      "bytes": 2578
+    },
+    {
+      "path": "references/modules/ru-remotion.md",
+      "sha256": "9fbe31690218c9cef4123631103d256eb18f0b9c56f1ef58d114253b5aceee8a",
+      "bytes": 2433
+    },
+    {
+      "path": "references/modules/ru-revops.md",
+      "sha256": "c0fb9aae1eaed34ef465389277d77cf835596eb52a3ab0804403396ae0e6fb9d",
+      "bytes": 3717
+    },
+    {
+      "path": "references/modules/ru-sales-enablement.md",
+      "sha256": "222ad1b38eca9f0434b9b96633904e0520b372b2dbae5c7a5a7e1fd8430b079d",
+      "bytes": 3765
+    },
+    {
+      "path": "references/modules/ru-schema.md",
+      "sha256": "9e70f87000756e93dc9ea1f75f0961b131671b4658caf08d00145ba083f1016e",
+      "bytes": 3415
+    },
+    {
+      "path": "references/modules/ru-security.md",
+      "sha256": "0506414e8c7b0413e840b34f20f5d4bfcb802635cb50fc545d152d507c8685ea",
+      "bytes": 2541
+    },
+    {
+      "path": "references/modules/ru-seo-audit.md",
+      "sha256": "762449789d00120c4fedfddeae0ce720cbd572e8de83689b6015fa9a71bb80b4",
+      "bytes": 3973
+    },
+    {
+      "path": "references/modules/ru-signup.md",
+      "sha256": "70c2f054ce561096cf58280523a4bd91654e326a939e2b34ac05c0939b7cdadb",
+      "bytes": 3644
+    },
+    {
+      "path": "references/modules/ru-site-architecture.md",
+      "sha256": "d88127e13f7dba1315948e8a9eee65a770c56c5fd5019b16c5033767c096c969",
+      "bytes": 3714
+    },
+    {
+      "path": "references/modules/ru-sms.md",
+      "sha256": "cecbfa7e46fc832884e7455cecc66361f27ee75c2b97ad2e574569dac30b8733",
+      "bytes": 3731
+    },
+    {
+      "path": "references/modules/ru-social.md",
+      "sha256": "b7828b0f6ee2c17f1016217a74f61767d28b595da62908b82c63e66566d62c21",
+      "bytes": 3773
+    },
+    {
+      "path": "references/modules/ru-spreadsheet-economics.md",
+      "sha256": "953a72400507b2592251bab08e9b009f67062b962dda04ca50184edb260dfd3b",
+      "bytes": 2378
+    },
+    {
+      "path": "references/modules/ru-storyboard.md",
+      "sha256": "550d6b021dc43882a185ed1569a7581810bf578b3fe51b7a5217de79075b930f",
+      "bytes": 2467
+    },
+    {
+      "path": "references/modules/ru-video.md",
+      "sha256": "50855b544667279895d75fced46b598c750f759346ca80d922a43221f987a1a4",
+      "bytes": 3880
+    },
+    {
+      "path": "references/modules/ru-web-design-audit.md",
+      "sha256": "94609930f47f6527e42d41722f4da7184d7ab37804cbd9f326a0de939d73c1d6",
+      "bytes": 9324
+    },
+    {
+      "path": "references/modules/ru-webapp-testing.md",
+      "sha256": "eb7b77ea9cc5862c6d7f9f0ad2c3d6e31365e3755b47d6181f20e0b56bb1ecd9",
+      "bytes": 8721
     },
     {
       "path": "references/pro-v3.md",
-      "sha256": "b81b740640b1db96c6f46318ddba55b06986e4942eb428e09af175b476d44a4b",
-      "bytes": 38219
+      "sha256": "1b1bb0b8556611a4bad9a7de9758fda06139e76a80073f0e31248ec40faad2d4",
+      "bytes": 38243
     },
     {
       "path": "references/project-context-template.md",
@@ -225,8 +620,8 @@
     },
     {
       "path": "references/routing.md",
-      "sha256": "5cf6525de5809037173a607bb7949531be01eb69af382d411e3f89705288ca55",
-      "bytes": 8105
+      "sha256": "e86f6ce9e9ccac8e987be302e1189789fdf368147017977fdc7f7e4f63c3fbe9",
+      "bytes": 7569
     },
     {
       "path": "references/ru-context.md",
@@ -250,8 +645,8 @@
     },
     {
       "path": "references/system.json",
-      "sha256": "ac0b6c1b8b73955ef4913ced49947e4a7d14c9c21af71775c3a0ec3b8a706ce5",
-      "bytes": 930
+      "sha256": "1319f5df19e1fa26633e548809677687b14135c26562d03b85a47e2c7c7f1c31",
+      "bytes": 1047
     },
     {
       "path": "references/validation-results.json",
@@ -265,8 +660,8 @@
     },
     {
       "path": "scripts/os.py",
-      "sha256": "0bafe0dd977b718673dc1d7ae3dc763f1a0ab7135b51a0df7b6577cd53a29624",
-      "bytes": 7798
+      "sha256": "e71c6b8aa373633b09a11ca3c00e4c0bba9027891edb2ea49c386a779a689f8c",
+      "bytes": 7810
     },
     {
       "path": "scripts/state.py",
@@ -275,403 +670,8 @@
     },
     {
       "path": "scripts/validate.py",
-      "sha256": "e3b919542435fc48e2eff7d23e2358fd65cc737025f18fcdf55f5433288d008c",
-      "bytes": 5081
-    },
-    {
-      "path": "skills/ru-ab-testing/SKILL.md",
-      "sha256": "345449b0ae037c46ccaf00ae84b98547be8891265448206484bd4240cce9fb1c",
-      "bytes": 4236
-    },
-    {
-      "path": "skills/ru-ad-creative/SKILL.md",
-      "sha256": "f0e6c044398204f704632630e177070743b7c5702127af22f2c1fc756133ebd0",
-      "bytes": 3807
-    },
-    {
-      "path": "skills/ru-ads/SKILL.md",
-      "sha256": "4d4d374485aa66df641ddb3da54238c84fdb47f1c8d7bd2a4c6aed26167f3923",
-      "bytes": 4092
-    },
-    {
-      "path": "skills/ru-ai-seo/SKILL.md",
-      "sha256": "f0559100491a0d1a683c1694238f603e439f5dc15858ae3b72e4a210c8f55c36",
-      "bytes": 4038
-    },
-    {
-      "path": "skills/ru-analytics/SKILL.md",
-      "sha256": "fc2e5942629a54d397844d365023290435a11bb34c5a7769964a9a543868546f",
-      "bytes": 3998
-    },
-    {
-      "path": "skills/ru-api-integration/SKILL.md",
-      "sha256": "1af63260b1ac2ce77e29fa8dc2d1f87d94f9fb7d9b18d6e82d0f02d0647c7a81",
-      "bytes": 2724
-    },
-    {
-      "path": "skills/ru-aso/SKILL.md",
-      "sha256": "4383107d9c6460e85c570a7294059810199d571a58b095d108759c0c46223848",
-      "bytes": 3834
-    },
-    {
-      "path": "skills/ru-attribution/SKILL.md",
-      "sha256": "68439a8ade0ec6c6a80c122672588b994deea0c348fc96d260f04857f33c3497",
-      "bytes": 3986
-    },
-    {
-      "path": "skills/ru-brand-voice/SKILL.md",
-      "sha256": "56dfcb02d8b116672a4a08d78f4ab9481d065c4d8fbeebc3af972fdd1c93fcec",
-      "bytes": 2348
-    },
-    {
-      "path": "skills/ru-churn-prevention/SKILL.md",
-      "sha256": "e952ffd147f1b56d19d74b29c2489bd871cfd892aa43460e8f2a08c4fd638649",
-      "bytes": 3855
-    },
-    {
-      "path": "skills/ru-co-marketing/SKILL.md",
-      "sha256": "a220de855009e07ae38ce6e5283d275822646435f606a346a25d2302b33710ab",
-      "bytes": 3881
-    },
-    {
-      "path": "skills/ru-cold-email/SKILL.md",
-      "sha256": "0590491f05c41b94cfcaec86a95c1dd9a6564fff20ed1773b9d768b5fe458cc9",
-      "bytes": 3861
-    },
-    {
-      "path": "skills/ru-community-marketing/SKILL.md",
-      "sha256": "1c70c17975a98bdb4d7c5d959b8a60d4cdb9f9b0d76f8d036b362671c3172d05",
-      "bytes": 3847
-    },
-    {
-      "path": "skills/ru-comparative-research/SKILL.md",
-      "sha256": "e7344a208aa902cee57f5f13d52f5079499abd78dce139354abe5353ad429828",
-      "bytes": 2619
-    },
-    {
-      "path": "skills/ru-competitor-profiling/SKILL.md",
-      "sha256": "17ba7ac9f8b00183f5ed3249a4b72b6d8e5fce321200c59e81441f4114415912",
-      "bytes": 4041
-    },
-    {
-      "path": "skills/ru-competitors/SKILL.md",
-      "sha256": "d973836c1490f17e026c1480e507a447b69ee095299335cc67bf3658ff501354",
-      "bytes": 3769
-    },
-    {
-      "path": "skills/ru-content-strategy/SKILL.md",
-      "sha256": "b122e9db2a3d2c856128a3a6641db02070290e71d1444053f6ff036a9a6d2b9d",
-      "bytes": 3904
-    },
-    {
-      "path": "skills/ru-copy-editing/SKILL.md",
-      "sha256": "ae15d04b995ebe4548bec5a5c882203073c91743245309e550dc635461bf61b3",
-      "bytes": 3809
-    },
-    {
-      "path": "skills/ru-copywriting/SKILL.md",
-      "sha256": "9186a56298cdde00f779a3fa041f906bb9f13eff43008eac991a8dffdf6efa5b",
-      "bytes": 3961
-    },
-    {
-      "path": "skills/ru-cro/SKILL.md",
-      "sha256": "49122b60e70cfdabd154aa7ad8e1d46197a8b8f3906904ea46772ae4be5d72c0",
-      "bytes": 4081
-    },
-    {
-      "path": "skills/ru-customer-research/SKILL.md",
-      "sha256": "21c9e453f738baaeeba7ead101dfb542acd2492057b831e1baf70dda8dd2ef5b",
-      "bytes": 4374
-    },
-    {
-      "path": "skills/ru-database/SKILL.md",
-      "sha256": "160e19085b47fe08fbf055e16dc2834630ac8d70a3d2ecbcf8c55d09508e12fc",
-      "bytes": 2538
-    },
-    {
-      "path": "skills/ru-design-polish/LICENSE.txt",
-      "sha256": "72bdc6c2866074f26236c6313f44acb6e26dd58e605aa7aa8158f4ab7ef9b069",
-      "bytes": 10767
-    },
-    {
-      "path": "skills/ru-design-polish/NOTICE.md",
-      "sha256": "1b347de5ccbdc461dce1fd4d0a8d4e517c30d0dbd3b693cec5db2e651dbd668c",
-      "bytes": 504
-    },
-    {
-      "path": "skills/ru-design-polish/SKILL.md",
-      "sha256": "ee8be14d5e021c7d248426ac6c3df212d22e4560577e138165ef000e3ec81d84",
-      "bytes": 9527
-    },
-    {
-      "path": "skills/ru-directory-submissions/SKILL.md",
-      "sha256": "27633a9ec15490f507883eeab96221aa3c8d525d1e24bd5bd55ce3a4d5225c24",
-      "bytes": 3846
-    },
-    {
-      "path": "skills/ru-docker-deploy/SKILL.md",
-      "sha256": "185b7f274467eb6fa70c67121af5b53ca47d354ba1c2ed2be129464f6aff7bce",
-      "bytes": 2474
-    },
-    {
-      "path": "skills/ru-document-check/SKILL.md",
-      "sha256": "29811dbfe171c48781d4fee493f0689a889336d88624369b610a90de02f92784",
-      "bytes": 2531
-    },
-    {
-      "path": "skills/ru-emails/SKILL.md",
-      "sha256": "03712a6a4f842998e13878ae894f638fe9f75495ffb36b2d6950a1e0ca109a45",
-      "bytes": 3810
-    },
-    {
-      "path": "skills/ru-events/SKILL.md",
-      "sha256": "c0a81956b6cb93f2400422846c9a7d9589499b2c8394d63a58380e4b04b06c8b",
-      "bytes": 3785
-    },
-    {
-      "path": "skills/ru-free-tools/SKILL.md",
-      "sha256": "484d399ec70baf8ec0719cb96109aa3dbc55d9846dbb98b8a212859ebd6faa36",
-      "bytes": 3876
-    },
-    {
-      "path": "skills/ru-frontend-design/LICENSE.txt",
-      "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
-      "bytes": 10175
-    },
-    {
-      "path": "skills/ru-frontend-design/SKILL.md",
-      "sha256": "4b317f6692fa221b6af43da81ad232f1465cd561a940793e75dfdd7bd9b9968e",
-      "bytes": 15287
-    },
-    {
-      "path": "skills/ru-frontend-implementation/SKILL.md",
-      "sha256": "74e0ba1e661cdc6acae4cde4416a9cb79b8dfbade438eab50ecd3cdfceb61398",
-      "bytes": 2688
-    },
-    {
-      "path": "skills/ru-github-workflow/SKILL.md",
-      "sha256": "46ced9a0d223473a70c333235a72422f9b8cf74c761068937ff131416fe51ba1",
-      "bytes": 2513
-    },
-    {
-      "path": "skills/ru-image/SKILL.md",
-      "sha256": "7149f307212b9c621ca78c66ac310f27051d20b90ffd3a42e163ea879cafdd2c",
-      "bytes": 3866
-    },
-    {
-      "path": "skills/ru-image-production/SKILL.md",
-      "sha256": "7c31dc97555a2878a461889f43f36f9c1ab25631528133c95bdf6e0007814c71",
-      "bytes": 2722
-    },
-    {
-      "path": "skills/ru-influencer-marketing/SKILL.md",
-      "sha256": "cfa777ff37f842913103979b7669494189c9043c21f7e2be2f25ca86e9196dcf",
-      "bytes": 3845
-    },
-    {
-      "path": "skills/ru-launch/SKILL.md",
-      "sha256": "3e10d1a4d9f12c1404bb18e1eb49a4e1fe1498ed32ae6a4f29621a427ac53fb4",
-      "bytes": 3785
-    },
-    {
-      "path": "skills/ru-lead-magnets/SKILL.md",
-      "sha256": "15135a4dde8ae0f9ecfcd93290e5c01d8bced0a3abe2ef2f2f7a718f3d248480",
-      "bytes": 3705
-    },
-    {
-      "path": "skills/ru-literature-review/SKILL.md",
-      "sha256": "993f5a7d3536f718465d62c84524e35f9d2662cd65da596fd35d82c949243e7e",
-      "bytes": 2673
-    },
-    {
-      "path": "skills/ru-marketing-council/SKILL.md",
-      "sha256": "bd44bfdb44b7ba31260216d4253c5ddbc9c71d16d244d598ddead897f8018dbe",
-      "bytes": 3963
-    },
-    {
-      "path": "skills/ru-marketing-ideas/SKILL.md",
-      "sha256": "5f83cdac916d00ed974704fd2cdd59f1f34abf9962b7d5a9daf5ee0c45734eac",
-      "bytes": 3838
-    },
-    {
-      "path": "skills/ru-marketing-loops/SKILL.md",
-      "sha256": "0f4153d6757afa994ab58b1ff7183e497880d3ea727c71acc0804859a4bd211a",
-      "bytes": 4253
-    },
-    {
-      "path": "skills/ru-marketing-plan/SKILL.md",
-      "sha256": "5363630411c937138ae0444247c4bf761107c20e215786123a216730a4c7623b",
-      "bytes": 4459
-    },
-    {
-      "path": "skills/ru-marketing-psychology/SKILL.md",
-      "sha256": "a16c1c7ef3bc010e24679eb5af4bc0727a5704731170bb8fe15325c21332f75c",
-      "bytes": 3960
-    },
-    {
-      "path": "skills/ru-media-editing/SKILL.md",
-      "sha256": "70fc1592ddc5d5e45c108c588c5a13bd06a9d644a2ba6f1d576c39a0c3ac7751",
-      "bytes": 2510
-    },
-    {
-      "path": "skills/ru-model-evaluation/SKILL.md",
-      "sha256": "ecc07745f3ae4fe67745ac89fea028b23e072e7e9c3d74f26e0c6fcdcf374156",
-      "bytes": 2426
-    },
-    {
-      "path": "skills/ru-offers/SKILL.md",
-      "sha256": "9544a997f7eeadac308bedaeb6374ef467698135dc71943aec2b16b8f414e761",
-      "bytes": 3843
-    },
-    {
-      "path": "skills/ru-onboarding/SKILL.md",
-      "sha256": "3f57c610c599cb0ad62adba1ee7b5e61498857aca53a075323f9894348cf6957",
-      "bytes": 3858
-    },
-    {
-      "path": "skills/ru-paywalls/SKILL.md",
-      "sha256": "cf077bfda89a502645b86540192e7ae20d0a761a69046640ef398470761897d5",
-      "bytes": 3622
-    },
-    {
-      "path": "skills/ru-popups/SKILL.md",
-      "sha256": "bb877c38bfddc13c91f6a61827afff453684538218af650685e2eaf8218383a8",
-      "bytes": 3586
-    },
-    {
-      "path": "skills/ru-pricing/SKILL.md",
-      "sha256": "29524cf5fbb2258b8ba7b92e14270aa5ec247f9ef23b0deab0b8e0f65add4098",
-      "bytes": 3950
-    },
-    {
-      "path": "skills/ru-probabilistic-review/SKILL.md",
-      "sha256": "41155819b413490c46eb70ba0453c0548182156e74c21b07e76ca90ef6680a1c",
-      "bytes": 2583
-    },
-    {
-      "path": "skills/ru-product-cards/SKILL.md",
-      "sha256": "0b418576eab4240694a953ef1a57fa29b3a9b29c2721ba56d26738ca591655c3",
-      "bytes": 3564
-    },
-    {
-      "path": "skills/ru-product-marketing/SKILL.md",
-      "sha256": "afaa5bc9e7ed3d69e0547fb2efc2b44d16573a9919fa79af387188398fab37c6",
-      "bytes": 4056
-    },
-    {
-      "path": "skills/ru-programmatic-seo/SKILL.md",
-      "sha256": "0567d7d2b0b30679b65d290183076276fa7bb621c4d7c12e25af63135a41f20d",
-      "bytes": 3853
-    },
-    {
-      "path": "skills/ru-prospecting/SKILL.md",
-      "sha256": "01668bca3efa12cda74c8e9f69015d365642b4e6873eb49eada047e6d0cab7d1",
-      "bytes": 3879
-    },
-    {
-      "path": "skills/ru-public-relations/SKILL.md",
-      "sha256": "250024a25f278e1fa0487fbfedb1edb7b84ed525b29974278521e1972db9dc26",
-      "bytes": 4022
-    },
-    {
-      "path": "skills/ru-python-bot/SKILL.md",
-      "sha256": "3b13029cff501b170d52d1ed0a9cf9f02b61624f3dc1cbfd7e0223812560614d",
-      "bytes": 2564
-    },
-    {
-      "path": "skills/ru-referrals/SKILL.md",
-      "sha256": "9ae3e8b606673e038408c35722dcb7d132280961af217be45a8849175c3add78",
-      "bytes": 3695
-    },
-    {
-      "path": "skills/ru-reliable-testing/SKILL.md",
-      "sha256": "5af44e6a3ddcac2030769edb370e98185b50e9f67584a3c983b59f9daed3aa71",
-      "bytes": 2578
-    },
-    {
-      "path": "skills/ru-remotion/SKILL.md",
-      "sha256": "9fbe31690218c9cef4123631103d256eb18f0b9c56f1ef58d114253b5aceee8a",
-      "bytes": 2433
-    },
-    {
-      "path": "skills/ru-revops/SKILL.md",
-      "sha256": "38c00318a4212a6b61f65841596a00a35c334c7675eb4a75b82b25e6e29b67f4",
-      "bytes": 3795
-    },
-    {
-      "path": "skills/ru-sales-enablement/SKILL.md",
-      "sha256": "53e868481b688d6fb9aaabbb87bb2d62de4caddcbc342936b3f0bf07adc367a7",
-      "bytes": 3843
-    },
-    {
-      "path": "skills/ru-schema/SKILL.md",
-      "sha256": "c3f0faac4ab54d8716fff02fdefdcc4cabd6bfa8036d4887bfb798fbe1d249f9",
-      "bytes": 3484
-    },
-    {
-      "path": "skills/ru-security/SKILL.md",
-      "sha256": "0506414e8c7b0413e840b34f20f5d4bfcb802635cb50fc545d152d507c8685ea",
-      "bytes": 2541
-    },
-    {
-      "path": "skills/ru-seo-audit/SKILL.md",
-      "sha256": "669a5159a8bd17ba779f49c7456067aa0d8b5303e4f40e31044677e7eaf13e12",
-      "bytes": 4060
-    },
-    {
-      "path": "skills/ru-signup/SKILL.md",
-      "sha256": "6ea1fdb26000653dc81004f7c280ca813aed89ba1773c29770beaa30027f4014",
-      "bytes": 3722
-    },
-    {
-      "path": "skills/ru-site-architecture/SKILL.md",
-      "sha256": "6f5d2928d86139616cdf0ddd603282a1714ba225c53f4494995037c5331a2809",
-      "bytes": 3792
-    },
-    {
-      "path": "skills/ru-sms/SKILL.md",
-      "sha256": "cc92856a27b6966bb459689b37001d9bfe9a2a830e9135f3ec8b5885e9d91db0",
-      "bytes": 3809
-    },
-    {
-      "path": "skills/ru-social/SKILL.md",
-      "sha256": "81c0200bc9053d3759499c323aa75362c94163d4e514cdd781c03c2bd259eeb8",
-      "bytes": 3860
-    },
-    {
-      "path": "skills/ru-spreadsheet-economics/SKILL.md",
-      "sha256": "953a72400507b2592251bab08e9b009f67062b962dda04ca50184edb260dfd3b",
-      "bytes": 2378
-    },
-    {
-      "path": "skills/ru-storyboard/SKILL.md",
-      "sha256": "550d6b021dc43882a185ed1569a7581810bf578b3fe51b7a5217de79075b930f",
-      "bytes": 2467
-    },
-    {
-      "path": "skills/ru-video/SKILL.md",
-      "sha256": "61215c369521e6f7f7e6f9ed7d008255a62a71a3bbd648b74132d92dfd9e4dd4",
-      "bytes": 3958
-    },
-    {
-      "path": "skills/ru-web-design-audit/LICENSE.txt",
-      "sha256": "77cd4cd8ef5f5618b75c441dca55f2b94b2efa9738ce448b7c24904600e19863",
-      "bytes": 1069
-    },
-    {
-      "path": "skills/ru-web-design-audit/SKILL.md",
-      "sha256": "7781d0c96046469b781112f0177fac9974e5ce23449e47d0105a498e1096c69a",
-      "bytes": 9356
-    },
-    {
-      "path": "skills/ru-webapp-testing/LICENSE.txt",
-      "sha256": "14099b9c79d031b9d4b32c736a4e20f2b941f52dd79500532d62d26dd716110c",
-      "bytes": 11346
-    },
-    {
-      "path": "skills/ru-webapp-testing/SKILL.md",
-      "sha256": "eb7b77ea9cc5862c6d7f9f0ad2c3d6e31365e3755b47d6181f20e0b56bb1ecd9",
-      "bytes": 8721
+      "sha256": "6964547df691caaaddc38e4eac7ec739a20ccf9daf12a4740f4a0e11dad8f305",
+      "bytes": 5095
     }
   ],
   "excluded": [

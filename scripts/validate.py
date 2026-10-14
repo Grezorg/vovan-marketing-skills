@@ -30,7 +30,7 @@ for p in ROOT.rglob('*.md'):
   if not target or re.match(r'^[a-z][a-z0-9+.-]*:',target):continue
   dest=(p.parent/target).resolve()
   check(dest.is_relative_to(ROOT) and dest.exists(),'Нерабочая ссылка '+str(p.relative_to(ROOT))+': '+target)
-active=[ROOT/'SKILL.md',ROOT/'references/pro-v3.md',ROOT/'references/routing.md',*list((ROOT/'skills').glob('*/SKILL.md')),*list((ROOT/'references/core').glob('*.md')),*list((ROOT/'references/guides').glob('*.md'))]
+active=[ROOT/'SKILL.md',ROOT/'references/pro-v3.md',ROOT/'references/routing.md',*list((ROOT/'references/modules').glob('*.md')),*list((ROOT/'references/core').glob('*.md')),*list((ROOT/'references/guides').glob('*.md'))]
 for p in active:
  t=p.read_text();check('upstream/' not in t,'Английская рабочая зависимость '+str(p.relative_to(ROOT)))
  # Prose language, not identifiers, legal texts or code.
@@ -48,7 +48,7 @@ cases={'Сделай 7 карточек товара по фото':'product-car
 for q,expected in cases.items():
  r=mod.route(q);check(r['primary']==expected,'Маршрут '+q+': '+r['primary'])
  for path in r['core_paths']+r['module_paths']:check((ROOT/path).exists(),'Маршрут указывает на отсутствующий файл '+path)
-required=['LICENSE','licenses/ECC-MIT.txt','skills/ru-frontend-design/LICENSE.txt','skills/ru-webapp-testing/LICENSE.txt','skills/ru-design-polish/LICENSE.txt','skills/ru-web-design-audit/LICENSE.txt']
+required=['LICENSE','licenses/ECC-MIT.txt','licenses/ru-frontend-design-LICENSE.txt','licenses/ru-webapp-testing-LICENSE.txt','licenses/ru-design-polish-LICENSE.txt','licenses/ru-web-design-audit-LICENSE.txt']
 for p in required:check((ROOT/p).is_file(),'Нет лицензии '+p)
 if not options.private:check(not (ROOT/'references/state/os-state.json').exists(),'Личная память не должна входить в публичный исходник.')
 if errors:

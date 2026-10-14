@@ -1,7 +1,6 @@
-VOVAN OS v4 — ЕДИНЫЙ РУССКИЙ КОМПЛЕКТ
+VOVAN OS v4.0.1 — ЕДИНЫЙ РУССКИЙ КОМПЛЕКТ
 
-Инструкции сгруппированы ниже по именам файлов. В текстовом чате ссылки обозначают разделы этого файла; отдельные файлы не требуются. Читать только нужное для задачи. Исполнение, публикация и расписание зависят от доступных инструментов.
-
+Ниже размещены разделы единой системы. Читать только нужное для задачи. Файл не устанавливает инструменты и не создаёт фоновых процессов.
 
 
 ===== SKILL.md =====
@@ -29,7 +28,7 @@ description: "Единая русская система Вована для Cha
 | Результат | Маршрут |
 |---|---|
 | Стратегия, оффер, реклама, контент, продажи | [Маркетинг](references/core/marketing.md) и профильные модули каталога |
-| Карточки по фотографии | [Карточки товара](skills/ru-product-cards/SKILL.md) |
+| Карточки по фотографии | [Карточки товара](references/modules/ru-product-cards.md) |
 | Изображения, видео, монтаж | [Медиа](references/core/media.md) и профильный модуль |
 | Сайт или лендинг | [Сайты](references/core/sites.md); маркетинговый маршрут по цели |
 | Документ, таблица, презентация, PDF | [Документы](references/core/documents.md) и навык формата |
@@ -59,6 +58,10 @@ description: "Единая русская система Вована для Cha
 
 Для состояния использовать scripts/state.py show и health; для checkpoint, remember, learn передавать JSON через stdin. Не отправлять личные состояния проектов в публичный GitHub. Память пользователя и исходники системы хранить отдельно.
 
+## Упаковка для ChatGPT
+
+В сборке ровно один SKILL.md. Предметные процедуры хранить как обычные русские страницы в references/modules/. Не создавать из них вложенные самостоятельные навыки. Каталог указывает на эти страницы; читать их выборочно обычными инструментами или через scripts/os.py --read.
+
 ## Состав и происхождение
 
 Прочитать [состав](references/system.json), [решения объединения](references/merge-decisions.md), [авторство](NOTICE.md). Один управляющий навык содержит русские предметные ресурсы. Не выдавать производные методики за написанные с нуля.
@@ -72,32 +75,32 @@ description: "Единая русская система Вована для Cha
 
 | Задача | Основные модули | Дополнительно |
 |---|---|---|
-| Лендинг с нуля | [product-marketing](../skills/ru-product-marketing/SKILL.md), [customer-research](../skills/ru-customer-research/SKILL.md), [offers](../skills/ru-offers/SKILL.md), [copywriting](../skills/ru-copywriting/SKILL.md), [cro](../skills/ru-cro/SKILL.md) | [frontend-design](../skills/ru-frontend-design/SKILL.md) после текстов для дизайна и реализации; analytics и seo-audit — по объёму запроса |
-| Аудит существующего сайта | [cro](../skills/ru-cro/SKILL.md), [analytics](../skills/ru-analytics/SKILL.md) | copy-editing, seo-audit и ab-testing — по найденным проблемам |
-| Позиционирование и предложение | [product-marketing](../skills/ru-product-marketing/SKILL.md), [customer-research](../skills/ru-customer-research/SKILL.md), [competitor-profiling](../skills/ru-competitor-profiling/SKILL.md), [offers](../skills/ru-offers/SKILL.md) | pricing — для цены и комплектации |
-| Запуск или общий план | [marketing-plan](../skills/ru-marketing-plan/SKILL.md), [launch](../skills/ru-launch/SKILL.md) | Подключать только выбранные каналы и analytics |
-| Платная реклама | [ads](../skills/ru-ads/SKILL.md), [ad-creative](../skills/ru-ad-creative/SKILL.md), [cro](../skills/ru-cro/SKILL.md), [analytics](../skills/ru-analytics/SKILL.md) | attribution — при оценке окупаемости |
-| VK/Telegram и контент | [content-strategy](../skills/ru-content-strategy/SKILL.md), [social](../skills/ru-social/SKILL.md) | image, video, community-marketing — по формату |
-| SEO и поиск с ИИ | [seo-audit](../skills/ru-seo-audit/SKILL.md), [site-architecture](../skills/ru-site-architecture/SKILL.md), [content-strategy](../skills/ru-content-strategy/SKILL.md) | schema, ai-seo, programmatic-seo — только по реальной задаче |
-| Локальная услуга | [product-marketing](../skills/ru-product-marketing/SKILL.md), [offers](../skills/ru-offers/SKILL.md), [directory-submissions](../skills/ru-directory-submissions/SKILL.md), [cro](../skills/ru-cro/SKILL.md) | ads — при бюджете, co-marketing — при подходящем партнёре |
-| Карточка товара/маркетплейс | [customer-research](../skills/ru-customer-research/SKILL.md), [competitor-profiling](../skills/ru-competitor-profiling/SKILL.md), [copywriting](../skills/ru-copywriting/SKILL.md), [image](../skills/ru-image/SKILL.md), [pricing](../skills/ru-pricing/SKILL.md) | Применить экономику маркетплейса из ru-context; analytics — по доступным данным |
-| Подписка и приложение | [signup](../skills/ru-signup/SKILL.md), [onboarding](../skills/ru-onboarding/SKILL.md), [paywalls](../skills/ru-paywalls/SKILL.md), [churn-prevention](../skills/ru-churn-prevention/SKILL.md) | aso, pricing, emails — в зависимости от узкого места |
-| B2B-продажи | [prospecting](../skills/ru-prospecting/SKILL.md), [sales-enablement](../skills/ru-sales-enablement/SKILL.md), [revops](../skills/ru-revops/SKILL.md) | cold-email — для разрешённого делового обращения |
-| Письма и повторные покупки | [emails](../skills/ru-emails/SKILL.md), [churn-prevention](../skills/ru-churn-prevention/SKILL.md) | sms, referrals — при подходящем сценарии |
-| Лид-магнит/калькулятор | [lead-magnets](../skills/ru-lead-magnets/SKILL.md), [free-tools](../skills/ru-free-tools/SKILL.md), [cro](../skills/ru-cro/SKILL.md) | emails и analytics — для согласованной выдачи и измерения |
-| Партнёры, медиа, события | [co-marketing](../skills/ru-co-marketing/SKILL.md), [public-relations](../skills/ru-public-relations/SKILL.md), [events](../skills/ru-events/SKILL.md) | influencer-marketing — для работы с авторами |
-| Проверка гипотезы | [ab-testing](../skills/ru-ab-testing/SKILL.md), [analytics](../skills/ru-analytics/SKILL.md) | marketing-council/marketing-psychology — если нужны разные подходы |
-| Регулярная работа | [marketing-loops](../skills/ru-marketing-loops/SKILL.md) | Добавить предметный скилл процесса; расписание создавать только при поручении |
-| Дизайн, вёрстка или редизайн | [frontend-design](../skills/ru-frontend-design/SKILL.md) | Сохранить согласованные оффер и тексты; cro — для проверки пути к действию |
+| Лендинг с нуля | [product-marketing](modules/ru-product-marketing.md), [customer-research](modules/ru-customer-research.md), [offers](modules/ru-offers.md), [copywriting](modules/ru-copywriting.md), [cro](modules/ru-cro.md) | [frontend-design](modules/ru-frontend-design.md) после текстов для дизайна и реализации; analytics и seo-audit — по объёму запроса |
+| Аудит существующего сайта | [cro](modules/ru-cro.md), [analytics](modules/ru-analytics.md) | copy-editing, seo-audit и ab-testing — по найденным проблемам |
+| Позиционирование и предложение | [product-marketing](modules/ru-product-marketing.md), [customer-research](modules/ru-customer-research.md), [competitor-profiling](modules/ru-competitor-profiling.md), [offers](modules/ru-offers.md) | pricing — для цены и комплектации |
+| Запуск или общий план | [marketing-plan](modules/ru-marketing-plan.md), [launch](modules/ru-launch.md) | Подключать только выбранные каналы и analytics |
+| Платная реклама | [ads](modules/ru-ads.md), [ad-creative](modules/ru-ad-creative.md), [cro](modules/ru-cro.md), [analytics](modules/ru-analytics.md) | attribution — при оценке окупаемости |
+| VK/Telegram и контент | [content-strategy](modules/ru-content-strategy.md), [social](modules/ru-social.md) | image, video, community-marketing — по формату |
+| SEO и поиск с ИИ | [seo-audit](modules/ru-seo-audit.md), [site-architecture](modules/ru-site-architecture.md), [content-strategy](modules/ru-content-strategy.md) | schema, ai-seo, programmatic-seo — только по реальной задаче |
+| Локальная услуга | [product-marketing](modules/ru-product-marketing.md), [offers](modules/ru-offers.md), [directory-submissions](modules/ru-directory-submissions.md), [cro](modules/ru-cro.md) | ads — при бюджете, co-marketing — при подходящем партнёре |
+| Карточка товара/маркетплейс | [customer-research](modules/ru-customer-research.md), [competitor-profiling](modules/ru-competitor-profiling.md), [copywriting](modules/ru-copywriting.md), [image](modules/ru-image.md), [pricing](modules/ru-pricing.md) | Применить экономику маркетплейса из ru-context; analytics — по доступным данным |
+| Подписка и приложение | [signup](modules/ru-signup.md), [onboarding](modules/ru-onboarding.md), [paywalls](modules/ru-paywalls.md), [churn-prevention](modules/ru-churn-prevention.md) | aso, pricing, emails — в зависимости от узкого места |
+| B2B-продажи | [prospecting](modules/ru-prospecting.md), [sales-enablement](modules/ru-sales-enablement.md), [revops](modules/ru-revops.md) | cold-email — для разрешённого делового обращения |
+| Письма и повторные покупки | [emails](modules/ru-emails.md), [churn-prevention](modules/ru-churn-prevention.md) | sms, referrals — при подходящем сценарии |
+| Лид-магнит/калькулятор | [lead-magnets](modules/ru-lead-magnets.md), [free-tools](modules/ru-free-tools.md), [cro](modules/ru-cro.md) | emails и analytics — для согласованной выдачи и измерения |
+| Партнёры, медиа, события | [co-marketing](modules/ru-co-marketing.md), [public-relations](modules/ru-public-relations.md), [events](modules/ru-events.md) | influencer-marketing — для работы с авторами |
+| Проверка гипотезы | [ab-testing](modules/ru-ab-testing.md), [analytics](modules/ru-analytics.md) | marketing-council/marketing-psychology — если нужны разные подходы |
+| Регулярная работа | [marketing-loops](modules/ru-marketing-loops.md) | Добавить предметный скилл процесса; расписание создавать только при поручении |
+| Дизайн, вёрстка или редизайн | [frontend-design](modules/ru-frontend-design.md) | Сохранить согласованные оффер и тексты; cro — для проверки пути к действию |
 
 
 ## Проверка реализации
 
 | Задача | Модуль | Граница |
 |---|---|---|
-| Технический аудит UI | [52: web-design-audit](../skills/ru-web-design-audit/SKILL.md) | Находки с доказательствами и приоритетами; CRO — отдельно |
-| Работают ли кнопки и форма | [53: webapp-testing](../skills/ru-webapp-testing/SKILL.md) | Выполнение в браузере либо честно обозначенный план без инструментов |
-| Доработать готовый внешний вид / мобильную версию | [54: design-polish](../skills/ru-design-polish/SKILL.md) | Исправления внутри текущего стиля; новый стиль — модуль 51 |
+| Технический аудит UI | [52: web-design-audit](modules/ru-web-design-audit.md) | Находки с доказательствами и приоритетами; CRO — отдельно |
+| Работают ли кнопки и форма | [53: webapp-testing](modules/ru-webapp-testing.md) | Выполнение в браузере либо честно обозначенный план без инструментов |
+| Доработать готовый внешний вид / мобильную версию | [54: design-polish](modules/ru-design-polish.md) | Исправления внутри текущего стиля; новый стиль — модуль 51 |
 
 Для полного лендинга после реализации: проверить UI → пройти главный сценарий → исправить существенные дефекты → повторить затронутые проверки. Если проверка уже выполнена в модуле 51, использовать её результаты. Только стратегия/тексты не запускают технические процедуры. В Tilda без кода опираться на доступный редактор/страницу и честно ограничивать выводы.
 
@@ -105,16 +108,16 @@ description: "Единая русская система Вована для Cha
 ## Дополнительные результаты
 | Задача | Процедура |
 |---|---|
-| Точная серия по фото | [Карточки товара](../skills/ru-product-cards/SKILL.md) |
-| Правки изображения | [Изображения](../skills/ru-image-production/SKILL.md) |
-| Связанные видеосцены | [Раскадровка](../skills/ru-storyboard/SKILL.md) |
-| Монтаж готовых файлов | [Монтаж](../skills/ru-media-editing/SKILL.md) |
-| Анимация из кода | [Remotion](../skills/ru-remotion/SKILL.md) |
-| Бот или приложение | [Python](../skills/ru-python-bot/SKILL.md), [API](../skills/ru-api-integration/SKILL.md) |
-| Данные и сервер | [База](../skills/ru-database/SKILL.md), [Деплой](../skills/ru-docker-deploy/SKILL.md) |
-| Документ и расчёт | [Документы](../skills/ru-document-check/SKILL.md), [Таблицы](../skills/ru-spreadsheet-economics/SKILL.md) |
-| Сравнить модели или навыки | [Оценка](../skills/ru-model-evaluation/SKILL.md) |
-| Проверить вероятностную модель | [Прогнозы](../skills/ru-probabilistic-review/SKILL.md) |
+| Точная серия по фото | [Карточки товара](modules/ru-product-cards.md) |
+| Правки изображения | [Изображения](modules/ru-image-production.md) |
+| Связанные видеосцены | [Раскадровка](modules/ru-storyboard.md) |
+| Монтаж готовых файлов | [Монтаж](modules/ru-media-editing.md) |
+| Анимация из кода | [Remotion](modules/ru-remotion.md) |
+| Бот или приложение | [Python](modules/ru-python-bot.md), [API](modules/ru-api-integration.md) |
+| Данные и сервер | [База](modules/ru-database.md), [Деплой](modules/ru-docker-deploy.md) |
+| Документ и расчёт | [Документы](modules/ru-document-check.md), [Таблицы](modules/ru-spreadsheet-economics.md) |
+| Сравнить модели или навыки | [Оценка](modules/ru-model-evaluation.md) |
+| Проверить вероятностную модель | [Прогнозы](modules/ru-probabilistic-review.md) |
 
 
 ===== references/ru-context.md =====
@@ -1332,13 +1335,13 @@ UTM:
 
 # 47. Frontend Design — 51-й модуль
 
-Для создания/существенного изменения интерфейса читать skills/ru-frontend-design/SKILL.md. Полная связка: бриф → сегмент → оффер → структура и тексты → предметный визуальный стиль → реализация → визуальная и функциональная проверка → CRO и измерение по задаче.
+Для создания/существенного изменения интерфейса читать references/modules/ru-frontend-design.md. Полная связка: бриф → сегмент → оффер → структура и тексты → предметный визуальный стиль → реализация → визуальная и функциональная проверка → CRO и измерение по задаче.
 Выбирать шрифты с кириллицей, проверять длинные русские тексты и цены на мобильном. Сохранять маркетинговые факты; декоративные решения не заменяют доказательства. Для готового сайта учитывать брендбук, стек и существующие компоненты. Без инструментов реализации не обещать работающий сайт, без браузера не объявлять визуальную проверку выполненной.
 
 
 # 48. Аудит, тестирование и доработка — модули 52–54
 
-Основы дизайна, mobile, доступности и состояний уже описаны выше. Для технического аудита готовой страницы применять skills/ru-web-design-audit/SKILL.md: подтверждённая проблема, место, приоритет и исправление. Для фактической проверки сценария применять skills/ru-webapp-testing/SKILL.md: ожидаемое, наблюдаемое, статус и доказательство. Для исправления композиции, мобильной версии и крайних состояний применять skills/ru-design-polish/SKILL.md. Не повторять аудит между модулями и не менять согласованный оффер ради визуала.
+Основы дизайна, mobile, доступности и состояний уже описаны выше. Для технического аудита готовой страницы применять references/modules/ru-web-design-audit.md: подтверждённая проблема, место, приоритет и исправление. Для фактической проверки сценария применять references/modules/ru-webapp-testing.md: ожидаемое, наблюдаемое, статус и доказательство. Для исправления композиции, мобильной версии и крайних состояний применять references/modules/ru-design-polish.md. Не повторять аудит между модулями и не менять согласованный оффер ради визуала.
 Обычный текстовый чат может применять методику и подготовить сценарии, но выполнение браузерных тестов требует инструментов. Не считать mock подтверждением работы реального приёма заявок. Повторно проверять исправленную часть; завершать после достаточной проверки конкретной задачи.
 
 
@@ -1492,7 +1495,7 @@ UTM:
 ===== references/core/product-cards.md =====
 
 # Карточки товара
-Применять полную процедуру skills/ru-product-cards/SKILL.md. Исходное фото — эталон формы, цвета, крышки, конструкции и этикетки.
+Применять полную процедуру references/modules/ru-product-cards.md. Исходное фото — эталон формы, цвета, крышки, конструкции и этикетки.
 После генерации осмотреть каждую карточку. Не обещать точное совпадение упаковки только на основании промпта. При отклонении исправить карточку; нерешённый дефект назвать прямо.
 Создавать отдельные изображения заданного количества и формата. Свойства брать с упаковки либо из проверенного источника именно этого варианта. Масса не равна объёму. Не дорисовывать применение неизвестной конструкции.
 
@@ -1694,7 +1697,7 @@ Email, SMS и мессенджеры — разные каналы с разны
 
 
 
-===== skills/ru-ab-testing/SKILL.md =====
+===== references/modules/ru-ab-testing.md =====
 
 ---
 name: ru-ab-testing
@@ -1705,7 +1708,7 @@ description: "Планировать A/B-тесты и программу экс
 
 Российская адаптация `ab-testing` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -1730,12 +1733,12 @@ description: "Планировать A/B-тесты и программу экс
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/economics.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/economics.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [analytics](../ru-analytics/SKILL.md), [cro](../ru-cro/SKILL.md), [pricing](../ru-pricing/SKILL.md), [attribution](../ru-attribution/SKILL.md).
+Продолжение по необходимости: [analytics](ru-analytics.md), [cro](ru-cro.md), [pricing](ru-pricing.md), [attribution](ru-attribution.md).
 
 
-===== skills/ru-ad-creative/SKILL.md =====
+===== references/modules/ru-ad-creative.md =====
 
 ---
 name: ru-ad-creative
@@ -1746,7 +1749,7 @@ description: "Создавать и улучшать русские реклам
 
 Российская адаптация `ad-creative` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -1771,12 +1774,12 @@ description: "Создавать и улучшать русские реклам
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [ads](../ru-ads/SKILL.md), [image](../ru-image/SKILL.md), [video](../ru-video/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [ads](ru-ads.md), [image](ru-image.md), [video](ru-video.md), [copywriting](ru-copywriting.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-ads/SKILL.md =====
+===== references/modules/ru-ads.md =====
 
 ---
 name: ru-ads
@@ -1787,7 +1790,7 @@ description: "Планировать, создавать и анализиров
 
 Российская адаптация `ads` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -1812,12 +1815,12 @@ description: "Планировать, создавать и анализиров
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [ad-creative](../ru-ad-creative/SKILL.md), [analytics](../ru-analytics/SKILL.md), [attribution](../ru-attribution/SKILL.md), [cro](../ru-cro/SKILL.md).
+Продолжение по необходимости: [ad-creative](ru-ad-creative.md), [analytics](ru-analytics.md), [attribution](ru-attribution.md), [cro](ru-cro.md).
 
 
-===== skills/ru-ai-seo/SKILL.md =====
+===== references/modules/ru-ai-seo.md =====
 
 ---
 name: ru-ai-seo
@@ -1828,7 +1831,7 @@ description: "Улучшать точность представления ро�
 
 Российская адаптация `ai-seo` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -1853,12 +1856,12 @@ description: "Улучшать точность представления ро�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [seo-audit](../ru-seo-audit/SKILL.md), [schema](../ru-schema/SKILL.md), [content-strategy](../ru-content-strategy/SKILL.md), [directory-submissions](../ru-directory-submissions/SKILL.md).
+Продолжение по необходимости: [seo-audit](ru-seo-audit.md), [schema](ru-schema.md), [content-strategy](ru-content-strategy.md), [directory-submissions](ru-directory-submissions.md).
 
 
-===== skills/ru-analytics/SKILL.md =====
+===== references/modules/ru-analytics.md =====
 
 ---
 name: ru-analytics
@@ -1869,7 +1872,7 @@ description: "Проектировать или проверять измере�
 
 Российская адаптация `analytics` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -1894,12 +1897,12 @@ description: "Проектировать или проверять измере�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/economics.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/economics.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [attribution](../ru-attribution/SKILL.md), [revops](../ru-revops/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md), [cro](../ru-cro/SKILL.md).
+Продолжение по необходимости: [attribution](ru-attribution.md), [revops](ru-revops.md), [ab-testing](ru-ab-testing.md), [cro](ru-cro.md).
 
 
-===== skills/ru-api-integration/SKILL.md =====
+===== references/modules/ru-api-integration.md =====
 
 ---
 name: ru-api-integration
@@ -1924,7 +1927,7 @@ description: "Подключать внешние API, вебхуки, очер�
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-aso/SKILL.md =====
+===== references/modules/ru-aso.md =====
 
 ---
 name: ru-aso
@@ -1935,7 +1938,7 @@ description: "Анализировать и улучшать русскоязы�
 
 Российская адаптация `aso` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -1960,12 +1963,12 @@ description: "Анализировать и улучшать русскоязы�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [copywriting](../ru-copywriting/SKILL.md), [image](../ru-image/SKILL.md), [onboarding](../ru-onboarding/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [copywriting](ru-copywriting.md), [image](ru-image.md), [onboarding](ru-onboarding.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-attribution/SKILL.md =====
+===== references/modules/ru-attribution.md =====
 
 ---
 name: ru-attribution
@@ -1976,7 +1979,7 @@ description: "Сопоставлять рекламу, Метрику, CRM и о
 
 Российская адаптация `attribution` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2001,12 +2004,12 @@ description: "Сопоставлять рекламу, Метрику, CRM и о
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/economics.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/economics.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [analytics](../ru-analytics/SKILL.md), [revops](../ru-revops/SKILL.md), [ads](../ru-ads/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [analytics](ru-analytics.md), [revops](ru-revops.md), [ads](ru-ads.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-brand-voice/SKILL.md =====
+===== references/modules/ru-brand-voice.md =====
 
 ---
 name: ru-brand-voice
@@ -2030,7 +2033,7 @@ description: "Изучать стиль бренда и сохранять пр�
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-churn-prevention/SKILL.md =====
+===== references/modules/ru-churn-prevention.md =====
 
 ---
 name: ru-churn-prevention
@@ -2041,7 +2044,7 @@ description: "Исследовать отток и создавать полез
 
 Российская адаптация `churn-prevention` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2066,12 +2069,12 @@ description: "Исследовать отток и создавать полез
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/economics.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/economics.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [onboarding](../ru-onboarding/SKILL.md), [pricing](../ru-pricing/SKILL.md), [emails](../ru-emails/SKILL.md), [sms](../ru-sms/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [onboarding](ru-onboarding.md), [pricing](ru-pricing.md), [emails](ru-emails.md), [sms](ru-sms.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-co-marketing/SKILL.md =====
+===== references/modules/ru-co-marketing.md =====
 
 ---
 name: ru-co-marketing
@@ -2082,7 +2085,7 @@ description: "Разрабатывать взаимовыгодные марке
 
 Российская адаптация `co-marketing` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2107,12 +2110,12 @@ description: "Разрабатывать взаимовыгодные марке
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [events](../ru-events/SKILL.md), [referrals](../ru-referrals/SKILL.md), [influencer-marketing](../ru-influencer-marketing/SKILL.md), [content-strategy](../ru-content-strategy/SKILL.md).
+Продолжение по необходимости: [events](ru-events.md), [referrals](ru-referrals.md), [influencer-marketing](ru-influencer-marketing.md), [content-strategy](ru-content-strategy.md).
 
 
-===== skills/ru-cold-email/SKILL.md =====
+===== references/modules/ru-cold-email.md =====
 
 ---
 name: ru-cold-email
@@ -2123,7 +2126,7 @@ description: "Готовить персональные русскоязычны
 
 Российская адаптация `cold-email` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2148,12 +2151,12 @@ description: "Готовить персональные русскоязычны
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [prospecting](../ru-prospecting/SKILL.md), [sales-enablement](../ru-sales-enablement/SKILL.md), [copy-editing](../ru-copy-editing/SKILL.md).
+Продолжение по необходимости: [prospecting](ru-prospecting.md), [sales-enablement](ru-sales-enablement.md), [copy-editing](ru-copy-editing.md).
 
 
-===== skills/ru-community-marketing/SKILL.md =====
+===== references/modules/ru-community-marketing.md =====
 
 ---
 name: ru-community-marketing
@@ -2164,7 +2167,7 @@ description: "Создавать и развивать русскоязычны�
 
 Российская адаптация `community-marketing` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2189,12 +2192,12 @@ description: "Создавать и развивать русскоязычны�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/content.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [social](../ru-social/SKILL.md), [events](../ru-events/SKILL.md), [referrals](../ru-referrals/SKILL.md), [churn-prevention](../ru-churn-prevention/SKILL.md).
+Продолжение по необходимости: [social](ru-social.md), [events](ru-events.md), [referrals](ru-referrals.md), [churn-prevention](ru-churn-prevention.md).
 
 
-===== skills/ru-comparative-research/SKILL.md =====
+===== references/modules/ru-comparative-research.md =====
 
 ---
 name: ru-comparative-research
@@ -2218,7 +2221,7 @@ description: "Проводить сравнение товаров, сервис
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-competitor-profiling/SKILL.md =====
+===== references/modules/ru-competitor-profiling.md =====
 
 ---
 name: ru-competitor-profiling
@@ -2229,7 +2232,7 @@ description: "Составлять доказательные профили к�
 
 Российская адаптация `competitor-profiling` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2254,12 +2257,12 @@ description: "Составлять доказательные профили к�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [competitors](../ru-competitors/SKILL.md), [customer-research](../ru-customer-research/SKILL.md), [product-marketing](../ru-product-marketing/SKILL.md), [pricing](../ru-pricing/SKILL.md).
+Продолжение по необходимости: [competitors](ru-competitors.md), [customer-research](ru-customer-research.md), [product-marketing](ru-product-marketing.md), [pricing](ru-pricing.md).
 
 
-===== skills/ru-competitors/SKILL.md =====
+===== references/modules/ru-competitors.md =====
 
 ---
 name: ru-competitors
@@ -2270,7 +2273,7 @@ description: "Создавать страницы сравнения проду�
 
 Российская адаптация `competitors` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2295,12 +2298,12 @@ description: "Создавать страницы сравнения проду�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [competitor-profiling](../ru-competitor-profiling/SKILL.md), [seo-audit](../ru-seo-audit/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [site-architecture](../ru-site-architecture/SKILL.md).
+Продолжение по необходимости: [competitor-profiling](ru-competitor-profiling.md), [seo-audit](ru-seo-audit.md), [copywriting](ru-copywriting.md), [site-architecture](ru-site-architecture.md).
 
 
-===== skills/ru-content-strategy/SKILL.md =====
+===== references/modules/ru-content-strategy.md =====
 
 ---
 name: ru-content-strategy
@@ -2311,7 +2314,7 @@ description: "Планировать русскоязычный контент �
 
 Российская адаптация `content-strategy` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2336,12 +2339,12 @@ description: "Планировать русскоязычный контент �
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/content.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [seo-audit](../ru-seo-audit/SKILL.md), [social](../ru-social/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [video](../ru-video/SKILL.md), [lead-magnets](../ru-lead-magnets/SKILL.md).
+Продолжение по необходимости: [seo-audit](ru-seo-audit.md), [social](ru-social.md), [copywriting](ru-copywriting.md), [video](ru-video.md), [lead-magnets](ru-lead-magnets.md).
 
 
-===== skills/ru-copy-editing/SKILL.md =====
+===== references/modules/ru-copy-editing.md =====
 
 ---
 name: ru-copy-editing
@@ -2352,7 +2355,7 @@ description: "Улучшать уже написанные русские тек
 
 Российская адаптация `copy-editing` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2377,12 +2380,12 @@ description: "Улучшать уже написанные русские тек
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/content.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [copywriting](../ru-copywriting/SKILL.md), [cro](../ru-cro/SKILL.md), [customer-research](../ru-customer-research/SKILL.md).
+Продолжение по необходимости: [copywriting](ru-copywriting.md), [cro](ru-cro.md), [customer-research](ru-customer-research.md).
 
 
-===== skills/ru-copywriting/SKILL.md =====
+===== references/modules/ru-copywriting.md =====
 
 ---
 name: ru-copywriting
@@ -2393,7 +2396,7 @@ description: "Писать новые тексты лендингов, стра�
 
 Российская адаптация `copywriting` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2418,12 +2421,12 @@ description: "Писать новые тексты лендингов, стра�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/content.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [offers](../ru-offers/SKILL.md), [customer-research](../ru-customer-research/SKILL.md), [copy-editing](../ru-copy-editing/SKILL.md), [cro](../ru-cro/SKILL.md).
+Продолжение по необходимости: [offers](ru-offers.md), [customer-research](ru-customer-research.md), [copy-editing](ru-copy-editing.md), [cro](ru-cro.md).
 
 
-===== skills/ru-cro/SKILL.md =====
+===== references/modules/ru-cro.md =====
 
 ---
 name: ru-cro
@@ -2434,7 +2437,7 @@ description: "Диагностировать и улучшать конверс�
 
 Российская адаптация `cro` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2459,12 +2462,12 @@ description: "Диагностировать и улучшать конверс�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [copywriting](../ru-copywriting/SKILL.md), [signup](../ru-signup/SKILL.md), [popups](../ru-popups/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [copywriting](ru-copywriting.md), [signup](ru-signup.md), [popups](ru-popups.md), [ab-testing](ru-ab-testing.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-customer-research/SKILL.md =====
+===== references/modules/ru-customer-research.md =====
 
 ---
 name: ru-customer-research
@@ -2475,7 +2478,7 @@ description: "Исследовать аудиторию, отзывы, инте�
 
 Российская адаптация `customer-research` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2500,12 +2503,12 @@ description: "Исследовать аудиторию, отзывы, инте�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [product-marketing](../ru-product-marketing/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [offers](../ru-offers/SKILL.md), [competitor-profiling](../ru-competitor-profiling/SKILL.md).
+Продолжение по необходимости: [product-marketing](ru-product-marketing.md), [copywriting](ru-copywriting.md), [offers](ru-offers.md), [competitor-profiling](ru-competitor-profiling.md).
 
 
-===== skills/ru-database/SKILL.md =====
+===== references/modules/ru-database.md =====
 
 ---
 name: ru-database
@@ -2529,7 +2532,7 @@ description: "Проектировать хранение данных и без
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-design-polish/SKILL.md =====
+===== references/modules/ru-design-polish.md =====
 
 ---
 name: ru-design-polish
@@ -2578,7 +2581,7 @@ description: Точечно улучшать готовый дизайн — и�
 Отдать готовую правку, 3–5 существенных изменений и краткие свидетельства проверки. Не выдавать собственный балл качества за рост конверсии или пользовательское исследование. После устранения согласованных дефектов завершить работу; переход к полному редизайну должен следовать задаче пользователя.
 
 
-===== skills/ru-directory-submissions/SKILL.md =====
+===== references/modules/ru-directory-submissions.md =====
 
 ---
 name: ru-directory-submissions
@@ -2589,7 +2592,7 @@ description: "Выбирать и готовить размещение росс
 
 Российская адаптация `directory-submissions` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2614,12 +2617,12 @@ description: "Выбирать и готовить размещение росс
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [seo-audit](../ru-seo-audit/SKILL.md), [product-marketing](../ru-product-marketing/SKILL.md), [public-relations](../ru-public-relations/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [seo-audit](ru-seo-audit.md), [product-marketing](ru-product-marketing.md), [public-relations](ru-public-relations.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-docker-deploy/SKILL.md =====
+===== references/modules/ru-docker-deploy.md =====
 
 ---
 name: ru-docker-deploy
@@ -2643,7 +2646,7 @@ description: "Разворачивать проекты на VPS с Docker и п
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-document-check/SKILL.md =====
+===== references/modules/ru-document-check.md =====
 
 ---
 name: ru-document-check
@@ -2667,7 +2670,7 @@ description: "Проверять содержание и оформление д
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-emails/SKILL.md =====
+===== references/modules/ru-emails.md =====
 
 ---
 name: ru-emails
@@ -2678,7 +2681,7 @@ description: "Проектировать и писать русскоязычн�
 
 Российская адаптация `emails` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2703,12 +2706,12 @@ description: "Проектировать и писать русскоязычн�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [onboarding](../ru-onboarding/SKILL.md), [churn-prevention](../ru-churn-prevention/SKILL.md), [lead-magnets](../ru-lead-magnets/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [onboarding](ru-onboarding.md), [churn-prevention](ru-churn-prevention.md), [lead-magnets](ru-lead-magnets.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-events/SKILL.md =====
+===== references/modules/ru-events.md =====
 
 ---
 name: ru-events
@@ -2719,7 +2722,7 @@ description: "Планировать российские мероприятия
 
 Российская адаптация `events` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2744,12 +2747,12 @@ description: "Планировать российские мероприятия
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [co-marketing](../ru-co-marketing/SKILL.md), [emails](../ru-emails/SKILL.md), [content-strategy](../ru-content-strategy/SKILL.md), [sales-enablement](../ru-sales-enablement/SKILL.md).
+Продолжение по необходимости: [co-marketing](ru-co-marketing.md), [emails](ru-emails.md), [content-strategy](ru-content-strategy.md), [sales-enablement](ru-sales-enablement.md).
 
 
-===== skills/ru-free-tools/SKILL.md =====
+===== references/modules/ru-free-tools.md =====
 
 ---
 name: ru-free-tools
@@ -2760,7 +2763,7 @@ description: "Проектировать калькуляторы, подбор�
 
 Российская адаптация `free-tools` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2785,12 +2788,12 @@ description: "Проектировать калькуляторы, подбор�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [lead-magnets](../ru-lead-magnets/SKILL.md), [programmatic-seo](../ru-programmatic-seo/SKILL.md), [cro](../ru-cro/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [lead-magnets](ru-lead-magnets.md), [programmatic-seo](ru-programmatic-seo.md), [cro](ru-cro.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-frontend-design/SKILL.md =====
+===== references/modules/ru-frontend-design.md =====
 
 ---
 name: ru-frontend-design
@@ -2804,7 +2807,7 @@ description: Создавать выразительные и удобные и�
 ## Место в Vovan Marketing OS
 
 Порядок для полного лендинга: бриф → сегмент и задача покупателя → оффер → структура и тексты → этот модуль → реализация → визуальная и функциональная проверка → проверка конверсии и измерения по объёму задания.
-Прочитать [российский контекст](../../references/ru-context.md) и уже принятые решения. Для готового сайта сначала изучить его компоненты, стили и ограничения. Если требуется локальная правка, не переделывать весь бренд и не менять технологический стек без необходимости.
+Прочитать [российский контекст](../ru-context.md) и уже принятые решения. Для готового сайта сначала изучить его компоненты, стили и ограничения. Если требуется локальная правка, не переделывать весь бренд и не менять технологический стек без необходимости.
 Этот модуль отвечает за визуальное решение и интерфейс. Не менять ради красивой композиции согласованные цены, состав услуги, факты, отзывы, сроки, гарантии и главное действие. Если текст не помещается — сначала исправить композицию; смысловую правку предложить как редактуру, не подменять обещание.
 
 ## Входные данные и бриф
@@ -2844,7 +2847,7 @@ description: Создавать выразительные и удобные и�
 
 Называть действие прямо: «Получить расчёт», «Выбрать время», «Сохранить изменения». Сохранять одно название действия по всему пути. «Рассчитать» не должно незаметно означать подписку на звонки.
 Ошибка сообщает, что произошло и как исправить: «Не удалось отправить заявку. Повторите попытку или позвоните». Не показывать успех до подтверждения операции. Пустое состояние предлагает следующий полезный шаг.
-Краткость интерфейса не отменяет маркетинговые аргументы лендинга. Для продающих текстов использовать [copywriting](../ru-copywriting/SKILL.md), для правки — [copy-editing](../ru-copy-editing/SKILL.md). Оговорки, стоимость, период оплаты и ограничения должны оставаться читаемыми.
+Краткость интерфейса не отменяет маркетинговые аргументы лендинга. Для продающих текстов использовать [copywriting](ru-copywriting.md), для правки — [copy-editing](ru-copy-editing.md). Оговорки, стоимость, период оплаты и ограничения должны оставаться читаемыми.
 
 ## 5. Реализация
 
@@ -2856,12 +2859,12 @@ description: Создавать выразительные и удобные и�
 
 ## 6. Проверка готовой страницы
 
-Осмотреть результат и пройти главное действие доступными инструментами. Углублённые процедуры вынесены в [52 — аудит интерфейса](../ru-web-design-audit/SKILL.md), [53 — проверку сайта и форм](../ru-webapp-testing/SKILL.md) и [54 — доработку дизайна](../ru-design-polish/SKILL.md). Выбирать их по объёму задачи, сохранять один список дефектов и не повторять уже выполненные проверки. Исправить существенные проблемы и повторить затронутый путь. Без браузера обозначить отсутствие визуальной/функциональной проверки; не выдавать самооценку за прогноз конверсии.
+Осмотреть результат и пройти главное действие доступными инструментами. Углублённые процедуры вынесены в [52 — аудит интерфейса](ru-web-design-audit.md), [53 — проверку сайта и форм](ru-webapp-testing.md) и [54 — доработку дизайна](ru-design-polish.md). Выбирать их по объёму задачи, сохранять один список дефектов и не повторять уже выполненные проверки. Исправить существенные проблемы и повторить затронутый путь. Без браузера обозначить отсутствие визуальной/функциональной проверки; не выдавать самооценку за прогноз конверсии.
 
 ## Результат
 
 Предоставить по объёму задачи: краткое обоснование направления, дизайн-параметры, макет/код/сайт, созданные ассеты и результаты проверки. Назвать конкретные неподключённые функции, если они остались. Не обещать уровень продаж только по внешнему виду.
-Дополнительные модули: [cro](../ru-cro/SKILL.md), [image](../ru-image/SKILL.md), [analytics](../ru-analytics/SKILL.md), [site-architecture](../ru-site-architecture/SKILL.md).
+Дополнительные модули: [cro](ru-cro.md), [image](ru-image.md), [analytics](ru-analytics.md), [site-architecture](ru-site-architecture.md).
 
 ## Источник и изменения
 
@@ -2869,7 +2872,7 @@ description: Создавать выразительные и удобные и�
 Исходная версия доступна в истории GitHub и в репозитории автора. Apache License 2.0 находится также рядом с этой адаптацией в LICENSE.txt; это не меняет лицензию остальных частей комплекта.
 
 
-===== skills/ru-frontend-implementation/SKILL.md =====
+===== references/modules/ru-frontend-implementation.md =====
 
 ---
 name: ru-frontend-implementation
@@ -2893,7 +2896,7 @@ description: "Реализовывать устойчивые интерфейс
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-github-workflow/SKILL.md =====
+===== references/modules/ru-github-workflow.md =====
 
 ---
 name: ru-github-workflow
@@ -2917,7 +2920,31 @@ description: "Обновлять репозитории с проверкой т
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-image/SKILL.md =====
+===== references/modules/ru-image-production.md =====
+
+---
+name: ru-image-production
+description: "Генерировать и редактировать изображения по эталону и контролировать неизменные детали."
+---
+
+# Создание и точные правки изображений
+
+Прочитать соответствующий модуль references/core/media.md от корня системы, текущие материалы проекта и ограничения пользователя. Использовать только доступные инструменты и профильные навыки.
+
+## Процедура
+
+Определить создание или правку. Осмотреть исходники, назначить роль каждого: эталон личности/товара, объект правки или стиль. Не использовать стилевой пример как источник нового лица.
+Записать неизменяемые детали и допустимые изменения. Для человека сохранять нужные лицо, позу, возраст, одежду и анатомию; для товара — форму и маркировку. Выбрать кадр и разрешение по результату.
+Применить ImageGen. Для прозрачного фона указать реальную прозрачность. У каждой вариации сохранять общие ограничения; менять одну важную задачу.
+Осмотреть изображение по фактическому результату: руки, края, отражения, текст, геометрия, количество объектов, соответствие эталону. При отклонении выполнять конкретную правку.
+Не выдавать сгенерированный результат за документальную фотографию события или доказательство услуги. При нерешённом дефекте назвать его, не обещать точность по статусу генерации.
+
+## Результат и проверка
+
+Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
+
+
+===== references/modules/ru-image.md =====
 
 ---
 name: ru-image
@@ -2928,7 +2955,7 @@ description: "Разрабатывать и создавать маркетин�
 
 Российская адаптация `image` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -2953,36 +2980,12 @@ description: "Разрабатывать и создавать маркетин�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/content.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [ad-creative](../ru-ad-creative/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [social](../ru-social/SKILL.md), [aso](../ru-aso/SKILL.md).
-
-
-===== skills/ru-image-production/SKILL.md =====
-
----
-name: ru-image-production
-description: "Генерировать и редактировать изображения по эталону и контролировать неизменные детали."
----
-
-# Создание и точные правки изображений
-
-Прочитать соответствующий модуль references/core/media.md от корня системы, текущие материалы проекта и ограничения пользователя. Использовать только доступные инструменты и профильные навыки.
-
-## Процедура
-
-Определить создание или правку. Осмотреть исходники, назначить роль каждого: эталон личности/товара, объект правки или стиль. Не использовать стилевой пример как источник нового лица.
-Записать неизменяемые детали и допустимые изменения. Для человека сохранять нужные лицо, позу, возраст, одежду и анатомию; для товара — форму и маркировку. Выбрать кадр и разрешение по результату.
-Применить ImageGen. Для прозрачного фона указать реальную прозрачность. У каждой вариации сохранять общие ограничения; менять одну важную задачу.
-Осмотреть изображение по фактическому результату: руки, края, отражения, текст, геометрия, количество объектов, соответствие эталону. При отклонении выполнять конкретную правку.
-Не выдавать сгенерированный результат за документальную фотографию события или доказательство услуги. При нерешённом дефекте назвать его, не обещать точность по статусу генерации.
-
-## Результат и проверка
-
-Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
+Продолжение по необходимости: [ad-creative](ru-ad-creative.md), [copywriting](ru-copywriting.md), [social](ru-social.md), [aso](ru-aso.md).
 
 
-===== skills/ru-influencer-marketing/SKILL.md =====
+===== references/modules/ru-influencer-marketing.md =====
 
 ---
 name: ru-influencer-marketing
@@ -2993,7 +2996,7 @@ description: "Планировать российские интеграции �
 
 Российская адаптация `influencer-marketing` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3018,12 +3021,12 @@ description: "Планировать российские интеграции �
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [ad-creative](../ru-ad-creative/SKILL.md), [co-marketing](../ru-co-marketing/SKILL.md), [attribution](../ru-attribution/SKILL.md), [public-relations](../ru-public-relations/SKILL.md).
+Продолжение по необходимости: [ad-creative](ru-ad-creative.md), [co-marketing](ru-co-marketing.md), [attribution](ru-attribution.md), [public-relations](ru-public-relations.md).
 
 
-===== skills/ru-launch/SKILL.md =====
+===== references/modules/ru-launch.md =====
 
 ---
 name: ru-launch
@@ -3034,7 +3037,7 @@ description: "Планировать запуск продукта, услуги
 
 Российская адаптация `launch` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3059,12 +3062,12 @@ description: "Планировать запуск продукта, услуги
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [product-marketing](../ru-product-marketing/SKILL.md), [offers](../ru-offers/SKILL.md), [content-strategy](../ru-content-strategy/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [product-marketing](ru-product-marketing.md), [offers](ru-offers.md), [content-strategy](ru-content-strategy.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-lead-magnets/SKILL.md =====
+===== references/modules/ru-lead-magnets.md =====
 
 ---
 name: ru-lead-magnets
@@ -3075,7 +3078,7 @@ description: "Создавать русскоязычные лид-магнит�
 
 Российская адаптация `lead-magnets` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3100,12 +3103,12 @@ description: "Создавать русскоязычные лид-магнит�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [free-tools](../ru-free-tools/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [emails](../ru-emails/SKILL.md), [cro](../ru-cro/SKILL.md).
+Продолжение по необходимости: [free-tools](ru-free-tools.md), [copywriting](ru-copywriting.md), [emails](ru-emails.md), [cro](ru-cro.md).
 
 
-===== skills/ru-literature-review/SKILL.md =====
+===== references/modules/ru-literature-review.md =====
 
 ---
 name: ru-literature-review
@@ -3129,7 +3132,7 @@ description: "Находить первичные исследования и о
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-marketing-council/SKILL.md =====
+===== references/modules/ru-marketing-council.md =====
 
 ---
 name: ru-marketing-council
@@ -3140,7 +3143,7 @@ description: "Разбирать спорную маркетинговую за�
 
 Российская адаптация `marketing-council` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3165,12 +3168,12 @@ description: "Разбирать спорную маркетинговую за�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [product-marketing](../ru-product-marketing/SKILL.md), [offers](../ru-offers/SKILL.md), [marketing-plan](../ru-marketing-plan/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [product-marketing](ru-product-marketing.md), [offers](ru-offers.md), [marketing-plan](ru-marketing-plan.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-marketing-ideas/SKILL.md =====
+===== references/modules/ru-marketing-ideas.md =====
 
 ---
 name: ru-marketing-ideas
@@ -3181,7 +3184,7 @@ description: "Подбирать и ранжировать маркетинго�
 
 Российская адаптация `marketing-ideas` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3206,12 +3209,12 @@ description: "Подбирать и ранжировать маркетинго�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [marketing-plan](../ru-marketing-plan/SKILL.md), [free-tools](../ru-free-tools/SKILL.md), [co-marketing](../ru-co-marketing/SKILL.md), [launch](../ru-launch/SKILL.md).
+Продолжение по необходимости: [marketing-plan](ru-marketing-plan.md), [free-tools](ru-free-tools.md), [co-marketing](ru-co-marketing.md), [launch](ru-launch.md).
 
 
-===== skills/ru-marketing-loops/SKILL.md =====
+===== references/modules/ru-marketing-loops.md =====
 
 ---
 name: ru-marketing-loops
@@ -3222,7 +3225,7 @@ description: "Проектировать и запускать разрешён�
 
 Российская адаптация `marketing-loops` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3247,12 +3250,12 @@ description: "Проектировать и запускать разрешён�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/economics.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/economics.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [analytics](../ru-analytics/SKILL.md), [ads](../ru-ads/SKILL.md), [social](../ru-social/SKILL.md), [churn-prevention](../ru-churn-prevention/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [analytics](ru-analytics.md), [ads](ru-ads.md), [social](ru-social.md), [churn-prevention](ru-churn-prevention.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-marketing-plan/SKILL.md =====
+===== references/modules/ru-marketing-plan.md =====
 
 ---
 name: ru-marketing-plan
@@ -3263,7 +3266,7 @@ description: "Собирать комплексный маркетинговый
 
 Российская адаптация `marketing-plan` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3288,12 +3291,12 @@ description: "Собирать комплексный маркетинговый
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [product-marketing](../ru-product-marketing/SKILL.md), [marketing-ideas](../ru-marketing-ideas/SKILL.md), [analytics](../ru-analytics/SKILL.md), [launch](../ru-launch/SKILL.md).
+Продолжение по необходимости: [product-marketing](ru-product-marketing.md), [marketing-ideas](ru-marketing-ideas.md), [analytics](ru-analytics.md), [launch](ru-launch.md).
 
 
-===== skills/ru-marketing-psychology/SKILL.md =====
+===== references/modules/ru-marketing-psychology.md =====
 
 ---
 name: ru-marketing-psychology
@@ -3304,7 +3307,7 @@ description: "Применять поведенческие принципы к 
 
 Российская адаптация `marketing-psychology` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3329,12 +3332,12 @@ description: "Применять поведенческие принципы к 
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [customer-research](../ru-customer-research/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [cro](../ru-cro/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [customer-research](ru-customer-research.md), [copywriting](ru-copywriting.md), [cro](ru-cro.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-media-editing/SKILL.md =====
+===== references/modules/ru-media-editing.md =====
 
 ---
 name: ru-media-editing
@@ -3358,7 +3361,7 @@ description: "Собирать готовый ролик из имеющихся
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-model-evaluation/SKILL.md =====
+===== references/modules/ru-model-evaluation.md =====
 
 ---
 name: ru-model-evaluation
@@ -3382,7 +3385,7 @@ description: "Сравнивать качество моделей, промпт
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-offers/SKILL.md =====
+===== references/modules/ru-offers.md =====
 
 ---
 name: ru-offers
@@ -3393,7 +3396,7 @@ description: "Разрабатывать или усиливать предло�
 
 Российская адаптация `offers` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3418,12 +3421,12 @@ description: "Разрабатывать или усиливать предло�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [customer-research](../ru-customer-research/SKILL.md), [pricing](../ru-pricing/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [cro](../ru-cro/SKILL.md).
+Продолжение по необходимости: [customer-research](ru-customer-research.md), [pricing](ru-pricing.md), [copywriting](ru-copywriting.md), [cro](ru-cro.md).
 
 
-===== skills/ru-onboarding/SKILL.md =====
+===== references/modules/ru-onboarding.md =====
 
 ---
 name: ru-onboarding
@@ -3434,7 +3437,7 @@ description: "Проектировать первые шаги и активац
 
 Российская адаптация `onboarding` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3459,12 +3462,12 @@ description: "Проектировать первые шаги и активац
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [signup](../ru-signup/SKILL.md), [emails](../ru-emails/SKILL.md), [analytics](../ru-analytics/SKILL.md), [churn-prevention](../ru-churn-prevention/SKILL.md).
+Продолжение по необходимости: [signup](ru-signup.md), [emails](ru-emails.md), [analytics](ru-analytics.md), [churn-prevention](ru-churn-prevention.md).
 
 
-===== skills/ru-paywalls/SKILL.md =====
+===== references/modules/ru-paywalls.md =====
 
 ---
 name: ru-paywalls
@@ -3475,7 +3478,7 @@ description: "Разрабатывать экраны ограничения, п
 
 Российская адаптация `paywalls` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3500,12 +3503,12 @@ description: "Разрабатывать экраны ограничения, п
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [pricing](../ru-pricing/SKILL.md), [onboarding](../ru-onboarding/SKILL.md), [churn-prevention](../ru-churn-prevention/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [pricing](ru-pricing.md), [onboarding](ru-onboarding.md), [churn-prevention](ru-churn-prevention.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-popups/SKILL.md =====
+===== references/modules/ru-popups.md =====
 
 ---
 name: ru-popups
@@ -3516,7 +3519,7 @@ description: "Создавать или улучшать попапы, банн�
 
 Российская адаптация `popups` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3541,12 +3544,12 @@ description: "Создавать или улучшать попапы, банн�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [cro](../ru-cro/SKILL.md), [lead-magnets](../ru-lead-magnets/SKILL.md), [emails](../ru-emails/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [cro](ru-cro.md), [lead-magnets](ru-lead-magnets.md), [emails](ru-emails.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-pricing/SKILL.md =====
+===== references/modules/ru-pricing.md =====
 
 ---
 name: ru-pricing
@@ -3557,7 +3560,7 @@ description: "Проектировать цены и тарифы в рубля�
 
 Российская адаптация `pricing` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3582,12 +3585,12 @@ description: "Проектировать цены и тарифы в рубля�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/economics.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/economics.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [offers](../ru-offers/SKILL.md), [paywalls](../ru-paywalls/SKILL.md), [attribution](../ru-attribution/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [offers](ru-offers.md), [paywalls](ru-paywalls.md), [attribution](ru-attribution.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-probabilistic-review/SKILL.md =====
+===== references/modules/ru-probabilistic-review.md =====
 
 ---
 name: ru-probabilistic-review
@@ -3611,7 +3614,7 @@ description: "Проверять прогнозы и статистику без
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-product-cards/SKILL.md =====
+===== references/modules/ru-product-cards.md =====
 
 ---
 name: ru-product-cards
@@ -3636,7 +3639,7 @@ description: "Создавать и исправлять серии отдель
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-product-marketing/SKILL.md =====
+===== references/modules/ru-product-marketing.md =====
 
 ---
 name: ru-product-marketing
@@ -3647,7 +3650,7 @@ description: "Собирать или обновлять маркетингов�
 
 Российская адаптация `product-marketing` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3672,12 +3675,12 @@ description: "Собирать или обновлять маркетингов�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/research.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/research.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [customer-research](../ru-customer-research/SKILL.md), [competitor-profiling](../ru-competitor-profiling/SKILL.md), [offers](../ru-offers/SKILL.md), [marketing-plan](../ru-marketing-plan/SKILL.md).
+Продолжение по необходимости: [customer-research](ru-customer-research.md), [competitor-profiling](ru-competitor-profiling.md), [offers](ru-offers.md), [marketing-plan](ru-marketing-plan.md).
 
 
-===== skills/ru-programmatic-seo/SKILL.md =====
+===== references/modules/ru-programmatic-seo.md =====
 
 ---
 name: ru-programmatic-seo
@@ -3688,7 +3691,7 @@ description: "Проектировать масштабируемые SEO-стр
 
 Российская адаптация `programmatic-seo` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3713,12 +3716,12 @@ description: "Проектировать масштабируемые SEO-стр
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [site-architecture](../ru-site-architecture/SKILL.md), [seo-audit](../ru-seo-audit/SKILL.md), [schema](../ru-schema/SKILL.md), [free-tools](../ru-free-tools/SKILL.md).
+Продолжение по необходимости: [site-architecture](ru-site-architecture.md), [seo-audit](ru-seo-audit.md), [schema](ru-schema.md), [free-tools](ru-free-tools.md).
 
 
-===== skills/ru-prospecting/SKILL.md =====
+===== references/modules/ru-prospecting.md =====
 
 ---
 name: ru-prospecting
@@ -3729,7 +3732,7 @@ description: "Искать и квалифицировать подходящи�
 
 Российская адаптация `prospecting` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3754,12 +3757,12 @@ description: "Искать и квалифицировать подходящи�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [cold-email](../ru-cold-email/SKILL.md), [co-marketing](../ru-co-marketing/SKILL.md), [sales-enablement](../ru-sales-enablement/SKILL.md), [revops](../ru-revops/SKILL.md).
+Продолжение по необходимости: [cold-email](ru-cold-email.md), [co-marketing](ru-co-marketing.md), [sales-enablement](ru-sales-enablement.md), [revops](ru-revops.md).
 
 
-===== skills/ru-public-relations/SKILL.md =====
+===== references/modules/ru-public-relations.md =====
 
 ---
 name: ru-public-relations
@@ -3770,7 +3773,7 @@ description: "Находить информационный повод и гот
 
 Российская адаптация `public-relations` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3795,12 +3798,12 @@ description: "Находить информационный повод и гот
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [content-strategy](../ru-content-strategy/SKILL.md), [competitor-profiling](../ru-competitor-profiling/SKILL.md), [events](../ru-events/SKILL.md), [co-marketing](../ru-co-marketing/SKILL.md).
+Продолжение по необходимости: [content-strategy](ru-content-strategy.md), [competitor-profiling](ru-competitor-profiling.md), [events](ru-events.md), [co-marketing](ru-co-marketing.md).
 
 
-===== skills/ru-python-bot/SKILL.md =====
+===== references/modules/ru-python-bot.md =====
 
 ---
 name: ru-python-bot
@@ -3824,7 +3827,7 @@ description: "Создавать и исправлять ботов и серв�
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-referrals/SKILL.md =====
+===== references/modules/ru-referrals.md =====
 
 ---
 name: ru-referrals
@@ -3835,7 +3838,7 @@ description: "Проектировать программы рекомендац
 
 Российская адаптация `referrals` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3860,12 +3863,12 @@ description: "Проектировать программы рекомендац
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [co-marketing](../ru-co-marketing/SKILL.md), [pricing](../ru-pricing/SKILL.md), [revops](../ru-revops/SKILL.md), [analytics](../ru-analytics/SKILL.md).
+Продолжение по необходимости: [co-marketing](ru-co-marketing.md), [pricing](ru-pricing.md), [revops](ru-revops.md), [analytics](ru-analytics.md).
 
 
-===== skills/ru-reliable-testing/SKILL.md =====
+===== references/modules/ru-reliable-testing.md =====
 
 ---
 name: ru-reliable-testing
@@ -3889,7 +3892,7 @@ description: "Проверять изменения через значимые 
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-remotion/SKILL.md =====
+===== references/modules/ru-remotion.md =====
 
 ---
 name: ru-remotion
@@ -3913,7 +3916,7 @@ description: "Создавать анимированные рекламные �
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-revops/SKILL.md =====
+===== references/modules/ru-revops.md =====
 
 ---
 name: ru-revops
@@ -3924,7 +3927,7 @@ description: "Настраивать понятные стадии, качест
 
 Российская адаптация `revops` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3949,12 +3952,12 @@ description: "Настраивать понятные стадии, качест
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [analytics](../ru-analytics/SKILL.md), [attribution](../ru-attribution/SKILL.md), [prospecting](../ru-prospecting/SKILL.md), [sales-enablement](../ru-sales-enablement/SKILL.md).
+Продолжение по необходимости: [analytics](ru-analytics.md), [attribution](ru-attribution.md), [prospecting](ru-prospecting.md), [sales-enablement](ru-sales-enablement.md).
 
 
-===== skills/ru-sales-enablement/SKILL.md =====
+===== references/modules/ru-sales-enablement.md =====
 
 ---
 name: ru-sales-enablement
@@ -3965,7 +3968,7 @@ description: "Создавать русские коммерческие пре�
 
 Российская адаптация `sales-enablement` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -3990,12 +3993,12 @@ description: "Создавать русские коммерческие пре�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [offers](../ru-offers/SKILL.md), [pricing](../ru-pricing/SKILL.md), [competitors](../ru-competitors/SKILL.md), [revops](../ru-revops/SKILL.md).
+Продолжение по необходимости: [offers](ru-offers.md), [pricing](ru-pricing.md), [competitors](ru-competitors.md), [revops](ru-revops.md).
 
 
-===== skills/ru-schema/SKILL.md =====
+===== references/modules/ru-schema.md =====
 
 ---
 name: ru-schema
@@ -4006,7 +4009,7 @@ description: "Добавлять и проверять Schema.org для реа�
 
 Российская адаптация `schema` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -4031,12 +4034,12 @@ JSON-LD, место вставки, список использованных д
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [seo-audit](../ru-seo-audit/SKILL.md), [ai-seo](../ru-ai-seo/SKILL.md), [programmatic-seo](../ru-programmatic-seo/SKILL.md).
+Продолжение по необходимости: [seo-audit](ru-seo-audit.md), [ai-seo](ru-ai-seo.md), [programmatic-seo](ru-programmatic-seo.md).
 
 
-===== skills/ru-security/SKILL.md =====
+===== references/modules/ru-security.md =====
 
 ---
 name: ru-security
@@ -4060,7 +4063,7 @@ description: "Проверять секреты, права доступа и о
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-seo-audit/SKILL.md =====
+===== references/modules/ru-seo-audit.md =====
 
 ---
 name: ru-seo-audit
@@ -4071,7 +4074,7 @@ description: "Проверять техническое и содержател�
 
 Российская адаптация `seo-audit` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -4096,12 +4099,12 @@ URL, CMS, регион, целевые страницы, данные Вебма
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [site-architecture](../ru-site-architecture/SKILL.md), [content-strategy](../ru-content-strategy/SKILL.md), [schema](../ru-schema/SKILL.md), [programmatic-seo](../ru-programmatic-seo/SKILL.md), [ai-seo](../ru-ai-seo/SKILL.md).
+Продолжение по необходимости: [site-architecture](ru-site-architecture.md), [content-strategy](ru-content-strategy.md), [schema](ru-schema.md), [programmatic-seo](ru-programmatic-seo.md), [ai-seo](ru-ai-seo.md).
 
 
-===== skills/ru-signup/SKILL.md =====
+===== references/modules/ru-signup.md =====
 
 ---
 name: ru-signup
@@ -4112,7 +4115,7 @@ description: "Улучшать регистрацию, создание акка
 
 Российская адаптация `signup` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -4137,12 +4140,12 @@ description: "Улучшать регистрацию, создание акка
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/conversion.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/conversion.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [onboarding](../ru-onboarding/SKILL.md), [cro](../ru-cro/SKILL.md), [analytics](../ru-analytics/SKILL.md), [ab-testing](../ru-ab-testing/SKILL.md).
+Продолжение по необходимости: [onboarding](ru-onboarding.md), [cro](ru-cro.md), [analytics](ru-analytics.md), [ab-testing](ru-ab-testing.md).
 
 
-===== skills/ru-site-architecture/SKILL.md =====
+===== references/modules/ru-site-architecture.md =====
 
 ---
 name: ru-site-architecture
@@ -4153,7 +4156,7 @@ description: "Проектировать структуру, навигацию,
 
 Российская адаптация `site-architecture` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -4178,12 +4181,12 @@ description: "Проектировать структуру, навигацию,
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/distribution.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/distribution.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [seo-audit](../ru-seo-audit/SKILL.md), [programmatic-seo](../ru-programmatic-seo/SKILL.md), [content-strategy](../ru-content-strategy/SKILL.md), [cro](../ru-cro/SKILL.md).
+Продолжение по необходимости: [seo-audit](ru-seo-audit.md), [programmatic-seo](ru-programmatic-seo.md), [content-strategy](ru-content-strategy.md), [cro](ru-cro.md).
 
 
-===== skills/ru-sms/SKILL.md =====
+===== references/modules/ru-sms.md =====
 
 ---
 name: ru-sms
@@ -4194,7 +4197,7 @@ description: "Проектировать русскоязычные SMS-сцен
 
 Российская адаптация `sms` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -4219,12 +4222,12 @@ description: "Проектировать русскоязычные SMS-сцен
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/sales.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/sales.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [emails](../ru-emails/SKILL.md), [analytics](../ru-analytics/SKILL.md), [onboarding](../ru-onboarding/SKILL.md), [churn-prevention](../ru-churn-prevention/SKILL.md).
+Продолжение по необходимости: [emails](ru-emails.md), [analytics](ru-analytics.md), [onboarding](ru-onboarding.md), [churn-prevention](ru-churn-prevention.md).
 
 
-===== skills/ru-social/SKILL.md =====
+===== references/modules/ru-social.md =====
 
 ---
 name: ru-social
@@ -4235,7 +4238,7 @@ description: "Создавать стратегию, посты и календ�
 
 Российская адаптация `social` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -4260,12 +4263,12 @@ description: "Создавать стратегию, посты и календ�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/content.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [content-strategy](../ru-content-strategy/SKILL.md), [copywriting](../ru-copywriting/SKILL.md), [image](../ru-image/SKILL.md), [video](../ru-video/SKILL.md), [community-marketing](../ru-community-marketing/SKILL.md).
+Продолжение по необходимости: [content-strategy](ru-content-strategy.md), [copywriting](ru-copywriting.md), [image](ru-image.md), [video](ru-video.md), [community-marketing](ru-community-marketing.md).
 
 
-===== skills/ru-spreadsheet-economics/SKILL.md =====
+===== references/modules/ru-spreadsheet-economics.md =====
 
 ---
 name: ru-spreadsheet-economics
@@ -4289,7 +4292,7 @@ description: "Создавать проверяемые таблицы экон�
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-storyboard/SKILL.md =====
+===== references/modules/ru-storyboard.md =====
 
 ---
 name: ru-storyboard
@@ -4313,7 +4316,7 @@ description: "Создавать связанные сцены, раскадро
 Выдать порученный результат и подтверждённые проверки. Обозначить нерешённые дефекты и недоступные проверки. При существенном исправлении сохранить правило в пределах проекта. Происхождение методик — [NOTICE.md](../../NOTICE.md).
 
 
-===== skills/ru-video/SKILL.md =====
+===== references/modules/ru-video.md =====
 
 ---
 name: ru-video
@@ -4324,7 +4327,7 @@ description: "Планировать и создавать русскоязыч�
 
 Российская адаптация `video` из Marketing Skills Кори Хайенса. Версия 3.0.0.
 
-Прочитать [общий российский контекст](../../references/ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
+Прочитать [общий российский контекст](../ru-context.md) и имеющиеся данные этого проекта. Задать только недостающие существенные вопросы по 1–3, с вариантами, возможностью своего ответа и выбора моделью. Если пользователь поручил решить самостоятельно — продолжить с обозначенными гипотезами.
 
 ## Входные данные
 
@@ -4349,12 +4352,12 @@ description: "Планировать и создавать русскоязыч�
 
 ## Углубление и продолжение
 
-Для углубления прочитать [русский справочник](../../references/guides/content.md) и подходящие разделы [PRO-методики](../../references/pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
+Для углубления прочитать [русский справочник](../guides/content.md) и подходящие разделы [PRO-методики](../pro-v3.md). Использовать только нужные процедуры. Авторы и версии указаны в [происхождении](../../NOTICE.md).
 
-Продолжение по необходимости: [ad-creative](../ru-ad-creative/SKILL.md), [social](../ru-social/SKILL.md), [image](../ru-image/SKILL.md), [content-strategy](../ru-content-strategy/SKILL.md).
+Продолжение по необходимости: [ad-creative](ru-ad-creative.md), [social](ru-social.md), [image](ru-image.md), [content-strategy](ru-content-strategy.md).
 
 
-===== skills/ru-web-design-audit/SKILL.md =====
+===== references/modules/ru-web-design-audit.md =====
 
 ---
 name: ru-web-design-audit
@@ -4367,7 +4370,7 @@ description: Проверять готовый интерфейс или его 
 
 ## Вход и границы
 
-Прочитать [российский контекст](../../references/ru-context.md), задачу, URL/код/макет, существующий дизайн и главное действие. Использовать известные устройства и ограничения проекта. При отсутствии объекта проверки запросить ссылку, код или скриншот одним вопросом с вариантами и собственным ответом. По скриншоту оценивать только видимое: работа кнопок, DOM, контраст без точных цветов и скорость остаются непроверенными.
+Прочитать [российский контекст](../ru-context.md), задачу, URL/код/макет, существующий дизайн и главное действие. Использовать известные устройства и ограничения проекта. При отсутствии объекта проверки запросить ссылку, код или скриншот одним вопросом с вариантами и собственным ответом. По скриншоту оценивать только видимое: работа кнопок, DOM, контраст без точных цветов и скорость остаются непроверенными.
 Если поручен только аудит — выдать находки. Если поручены исправления или создание сайта целиком — исправить проверенные дефекты в рамках задачи и проверить затронутый путь; повторное разрешение на обычную правку не запрашивать.
 Базовый дизайн уже описан в модуле 51. Здесь выполнять проверку конкретного результата, не создавать новую палитру и не повторять весь маркетинговый бриф.
 
@@ -4395,10 +4398,10 @@ description: Проверять готовый интерфейс или его 
 P0 — основное действие невозможно или теряются данные; P1 — серьёзное препятствие/существенное введение в заблуждение; P2 — заметное неудобство; P3 — косметика. Учитывать контекст, не назначать всем ошибкам P0.
 Объединять повторы одной причины. В начале — до 3–5 главных проблем; в конце — выполненные проверки и конкретные пробелы. Не выдумывать номера строк, метрики или рост продаж. Успешный автоматический скан не заменяет проверку человеком.
 
-[Модуль 53](../ru-webapp-testing/SKILL.md) проверяет поведение; [модуль 54](../ru-design-polish/SKILL.md) исправляет визуальные и адаптивные дефекты. Общий список находок вести один, без повторного полного аудита на каждом этапе.
+[Модуль 53](ru-webapp-testing.md) проверяет поведение; [модуль 54](ru-design-polish.md) исправляет визуальные и адаптивные дефекты. Общий список находок вести один, без повторного полного аудита на каждом этапе.
 
 
-===== skills/ru-webapp-testing/SKILL.md =====
+===== references/modules/ru-webapp-testing.md =====
 
 ---
 name: ru-webapp-testing
