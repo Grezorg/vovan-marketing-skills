@@ -4,6 +4,11 @@
   "language": "ru",
   "files": [
     {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "d4331855f1056efffc3399e02322094c528d81e010f8afc8539880ae2e72ffef",
+      "bytes": 702
+    },
+    {
       "path": ".gitignore",
       "sha256": "cf7e4623e2e9703733f75d89d5eec2114de4083aafa96a9c52ccb900e2032fb0",
       "bytes": 50
@@ -252,6 +257,11 @@
       "path": "references/validation-results.json",
       "sha256": "6af9a3bda34922b06ef0b13fc20d9bbaf29d34381e17476f64d901a1092ae266",
       "bytes": 1091
+    },
+    {
+      "path": "scripts/check_integrity.py",
+      "sha256": "bdcbf4ca40df7a42a5507f49e24af2349b616a5923661c5f007111b006454e5c",
+      "bytes": 909
     },
     {
       "path": "scripts/os.py",

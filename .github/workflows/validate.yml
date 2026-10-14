@@ -1,0 +1,24 @@
+name: Проверка Vovan OS
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    name: Состав, ссылки, язык и целостность
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v6
+      - name: Подготовить Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Проверить рабочие процедуры
+        run: python3 scripts/validate.py
+      - name: Проверить целостность сборки
+        run: python3 scripts/check_integrity.py
+
