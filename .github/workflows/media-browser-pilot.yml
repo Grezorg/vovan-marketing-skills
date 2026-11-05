@@ -40,7 +40,12 @@ jobs:
           fs.writeFileSync('.playwright/cli.config.json', JSON.stringify({browser:{browserName:'chromium',isolated:true,launchOptions:{executablePath:path.resolve('node_modules/.remotion/chrome-headless-shell/linux64',browser,'chrome-headless-shell'),headless:true,args:['--no-sandbox']}}}));
           fs.writeFileSync('fixture.html','<!doctype html><html lang="ru"><meta charset="utf-8"><title>Вымышленная форма для проверки CLI</title><form onsubmit="event.preventDefault();document.querySelector(\'output\').textContent=\'Проверка завершена\'"><label>Имя<input name="name" required></label><label>Телефон<input name="phone" required pattern="[0-9]{11}"></label><button>Проверить</button><output></output></form>');
           JS
-          npx playwright-cli -s=pilot open "file://$PWD/fixture.html"
+          set -o pipefail
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/pilot-http.log 2>&1 &
+          pilot_http_pid=$!
+          trap 'kill "$pilot_http_pid" 2>/dev/null || true' EXIT
+          for n in $(seq 1 30); do curl -fsS http://127.0.0.1:8765/fixture.html > /dev/null && break || sleep 1; done
+          npx playwright-cli -s=pilot open http://127.0.0.1:8765/fixture.html
           npx playwright-cli -s=pilot run-code "async page => { await page.getByRole('button',{name:'Проверить'}).click(); if(await page.locator('output').innerText()) throw new Error('Empty form accepted'); await page.getByLabel('Имя').fill('Тест'); await page.getByLabel('Телефон').fill('70000000000'); await page.getByRole('button',{name:'Проверить'}).click(); const result=await page.locator('output').innerText(); if(result!=='Проверка завершена') throw new Error(result); await page.screenshot({path:'cli-fixture.png'}); return {emptyFormBlocked:true,fillAndSubmit:true,fixtureOnly:true}; }" | tee cli-result.txt
           npx playwright-cli -s=pilot close
       - name: Сохранить ролик и доказательства
