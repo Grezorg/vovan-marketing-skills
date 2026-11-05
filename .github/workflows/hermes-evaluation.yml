@@ -1,0 +1,125 @@
+name: Проверка Hermes на двух вымышленных диалогах
+on:
+  push:
+    branches: [codex/hermes-evaluation-20261105]
+    paths: [.github/workflows/hermes-evaluation.yml]
+permissions:
+  contents: read
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OLLAMA_NO_CLOUD: '1'
+      OLLAMA_CONTEXT_LENGTH: '16384'
+      OLLAMA_NUM_PARALLEL: '1'
+      HERMES_HOME: ${{ runner.temp }}/hermes-evaluation-home
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - name: Установить Python и uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: '3.14'
+      - name: Установить официальный Hermes v0.22.7
+        run: |
+          git clone --quiet https://github.com/NousResearch/hermes-agent.git "$RUNNER_TEMP/hermes-source"
+          cd "$RUNNER_TEMP/hermes-source"
+          git checkout --quiet b200f5bc60e31588ba2cb60e288029c4a54ba5fa
+          uv sync --no-dev
+          git rev-parse HEAD
+      - name: Запустить локальную модель
+        run: |
+          curl --fail --location --retry 2 https://ollama.com/install.sh -o "$RUNNER_TEMP/ollama-install.sh"
+          sh "$RUNNER_TEMP/ollama-install.sh"
+          ollama serve > "$RUNNER_TEMP/ollama.log" 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:11434/api/tags > /dev/null; then break; fi
+            sleep 1
+          done
+          ollama pull qwen2.5:3b
+          ollama --version
+          ollama list
+      - name: Получить два ответа Hermes
+        timeout-minutes: 14
+        run: |
+          cd "$RUNNER_TEMP/hermes-source"
+          mkdir -p "$RUNNER_TEMP/hermes-results"
+          uv run --no-sync python - <<'PY'
+          import json
+          import os
+          import subprocess
+          import time
+          import urllib.request
+          from pathlib import Path
+          from run_agent import AIAgent
+
+          instruction = (
+              "Составь краткое ТЗ для следующего макета. Укажи, что попросил заказчик, "
+              "что предложил исполнитель и какие детали остаются открытыми. "
+              "Для каждого вывода приведи короткую фразу из переписки и назови её автора. "
+              "Отвечай по-русски."
+          )
+          cases = [
+              ("case-1", (
+                  "Вымышленный диалог. Заказчик пишет исполнителю. "
+                  "«Макет тумбы подходит. Дополнительно покажите снизу регулируемые ножки, "
+                  "чтобы выровнять тумбу на неровном полу. Сверху можно поставить настольную лампу». "
+                  "Затем исполнитель пишет помощнику. "
+                  "«Для примера сделай ножки с шестигранной гайкой и сам выбери лампу». "
+                  "После этого сообщений заказчика нет."
+              )),
+              ("case-2", (
+                  "Вымышленный диалог. Исполнитель пишет заказчику. "
+                  "«Для примера предлагаю регулируемые ножки с шестигранной гайкой и настольную лампу». "
+                  "Заказчик отвечает. «Ножки с шестигранной гайкой оставьте именно такими. "
+                  "Лампу уберите, её в комплекте нет»."
+              )),
+          ]
+          root = Path(os.environ["RUNNER_TEMP"]) / "hermes-results"
+          manifest = {
+              "framework": "NousResearch/hermes-agent",
+              "commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+              "model": "qwen2.5:3b",
+              "fixtures": "synthetic",
+              "results": [],
+          }
+          with urllib.request.urlopen("http://127.0.0.1:11434/api/tags", timeout=15) as response:
+              manifest["local_model_metadata"] = json.load(response)
+
+          for case_id, dialogue in cases:
+              prompt = dialogue + "\n\n" + instruction
+              started = time.monotonic()
+              agent = AIAgent(
+                  model="qwen2.5:3b",
+                  provider="custom",
+                  api_key="ollama",
+                  base_url="http://127.0.0.1:11434/v1",
+                  max_iterations=3,
+                  enabled_toolsets=[],
+                  quiet_mode=True,
+              )
+              result = agent.run_conversation(prompt)
+              record = {
+                  "case": case_id,
+                  "prompt": prompt,
+                  "seconds": round(time.monotonic() - started, 2),
+                  "response": result,
+              }
+              manifest["results"].append(record)
+              (root / (case_id + ".json")).write_text(
+                  json.dumps(record, ensure_ascii=False, indent=2, default=str), encoding="utf-8"
+              )
+              print("\n===== " + case_id + " =====\n", flush=True)
+              print(json.dumps(record, ensure_ascii=False, indent=2, default=str), flush=True)
+          (root / "manifest.json").write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2, default=str), encoding="utf-8"
+          )
+          PY
+      - name: Сохранить ответы и сведения о модели
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hermes-evaluation-results
+          path: ${{ runner.temp }}/hermes-results/
+          retention-days: 3
+          if-no-files-found: warn
