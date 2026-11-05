@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-06",
+  "sources": [
+    {
+      "id": "remotion",
+      "repository": "https://github.com/remotion-dev/skills",
+      "revision": "a2824c67f8b4585c294a8101db9f9f0ad3c643f8",
+      "files": [
+        {
+          "url": "https://github.com/remotion-dev/skills/blob/a2824c67f8b4585c294a8101db9f9f0ad3c643f8/skills/remotion-best-practices/SKILL.md",
+          "blob_sha": "68f3b3c5995a1d1b4a0dfe76c27380c4f598b1f6"
+        },
+        {
+          "url": "https://github.com/remotion-dev/skills/blob/a2824c67f8b4585c294a8101db9f9f0ad3c643f8/skills/remotion-best-practices/remotion-markup/REFERENCE.md",
+          "blob_sha": "b139550a2e06a04d6e19a3dbedea700602a9a72c"
+        },
+        {
+          "url": "https://github.com/remotion-dev/skills/blob/a2824c67f8b4585c294a8101db9f9f0ad3c643f8/skills/remotion-best-practices/remotion-render/REFERENCE.md",
+          "blob_sha": "21276ba5693195ceee6b436e70691c371efd6896"
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "revision": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "files": [
+        {
+          "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
+          "blob_sha": "237988de4a66dd8a71d30a2c24ebe1a86b58d04e"
+        },
+        {
+          "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/rules/async-parallel.md",
+          "blob_sha": "64133f6c31fec81eaaabd712586337d20122e09f"
+        },
+        {
+          "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/rules/rerender-derived-state-no-effect.md",
+          "blob_sha": "3d9fe4050794ea6655add6bee50cfbc104e5dc31"
+        }
+      ]
+    },
+    {
+      "id": "ui_ux",
+      "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "revision": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+      "files": [
+        {
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/b7d5353e0130feb8c5574ef1251f8a1db1873ccb/.claude/skills/ui-ux-pro-max/SKILL.md",
+          "blob_sha": "23cdf0466e10ed460627ca9c0a68984b1a6bf98b"
+        },
+        {
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/b7d5353e0130feb8c5574ef1251f8a1db1873ccb/src/ui-ux-pro-max/data/colors.csv",
+          "blob_sha": "5d2bf7389105f8a824b504b57cc93c00dc1d7e0a"
+        },
+        {
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/b7d5353e0130feb8c5574ef1251f8a1db1873ccb/src/ui-ux-pro-max/data/typography.csv",
+          "blob_sha": "70d107d107de30150863c965767320ec33ef29ad"
+        },
+        {
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/b7d5353e0130feb8c5574ef1251f8a1db1873ccb/LICENSE",
+          "blob_sha": "1e71cbf26660f31903807d099fe902c098fc7e4c"
+        }
+      ]
+    },
+    {
+      "id": "playwright",
+      "repository": "https://github.com/microsoft/playwright-cli",
+      "revision": "2cbc57d186eb8a70e64ebbd6c923741100c69a9e",
+      "files": [
+        {
+          "url": "https://github.com/microsoft/playwright-cli/blob/2cbc57d186eb8a70e64ebbd6c923741100c69a9e/skills/playwright-cli/SKILL.md",
+          "blob_sha": "aa8dea4bba35a00b362fa925b25b8058b9a28fa6"
+        },
+        {
+          "url": "https://github.com/microsoft/playwright-cli/blob/2cbc57d186eb8a70e64ebbd6c923741100c69a9e/LICENSE",
+          "blob_sha": "cefe596afef12e19a8e5e923f1a04c7da3188760"
+        }
+      ]
+    },
+    {
+      "id": "discovery",
+      "repository": "https://github.com/vercel-labs/skills",
+      "revision": "cabe07254cddf16a3a650253f0ba03d543d8a86e",
+      "files": [
+        {
+          "url": "https://github.com/vercel-labs/skills/blob/cabe07254cddf16a3a650253f0ba03d543d8a86e/skills/find-skills/SKILL.md",
+          "blob_sha": "a41bdd074bb587afd861332cf2f473f3154de4d7"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "remotion": "Собственная русская процедура по документированным API; полный управляющий навык не копируется.",
+    "react": "Выборка принципов производительности; полные 70 правил не импортированы.",
+    "ui_ux": "10 палитр и 5 шрифтовых сочетаний из исходных CSV; описания адаптированы по-русски.",
+    "playwright": "Русская процедура исполнения CLI в разрешённой среде; пакет/браузер не встраиваются в навык.",
+    "discovery": "Порядок отбора кандидатов с проверкой дубликатов, зависимостей и результата."
+  },
+  "evidence": {
+    "remotion": {
+      "status": "исполнено",
+      "runtime": "Remotion 4.0.541",
+      "result": "MP4, H.264, 720x1280, 30fps, 6s, 180 прочитанных кадров, без звука",
+      "url": "https://github.com/Grezorg/vovan-marketing-skills/actions/runs/42094772555"
+    },
+    "playwright": {
+      "status": "исполнено на вымышленной форме",
+      "runtime": "@playwright/cli 0.1.23",
+      "result": "Пустая форма блокируется, заполнение и клиентское подтверждение проверены; доставка настоящей заявки не подтверждается.",
+      "url": "https://github.com/Grezorg/vovan-marketing-skills/actions/runs/42094772555"
+    },
+    "react": {
+      "status": "проверены первичные материалы и включение в маршруты",
+      "limit": "Ускорение конкретного проекта не измерялось."
+    },
+    "ui_ux": {
+      "status": "выборка из исходных данных и локальная проверка контраста",
+      "limit": "Шрифтовые файлы и готовая страница требуют проверки на задаче."
+    }
+  }
+}

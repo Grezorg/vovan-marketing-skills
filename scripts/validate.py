@@ -30,9 +30,10 @@ for p in ROOT.rglob('*.md'):
   if not target or re.match(r'^[a-z][a-z0-9+.-]*:',target):continue
   dest=(p.parent/target).resolve()
   check(dest.is_relative_to(ROOT) and dest.exists(),'Нерабочая ссылка '+str(p.relative_to(ROOT))+': '+target)
-active=[ROOT/'SKILL.md',ROOT/'references/pro-v3.md',ROOT/'references/routing.md',*list((ROOT/'references/modules').glob('*.md')),*list((ROOT/'references/core').glob('*.md')),*list((ROOT/'references/guides').glob('*.md'))]
+active=[ROOT/'SKILL.md',ROOT/'references/pro-v3.md',ROOT/'references/routing.md',*list((ROOT/'references/modules').glob('*.md')),*list((ROOT/'references/core').glob('*.md')),*list((ROOT/'references/guides').glob('*.md')),*list((ROOT/'references/extensions').glob('*.md'))]
 for p in active:
  t=p.read_text();check('upstream/' not in t,'Английская рабочая зависимость '+str(p.relative_to(ROOT)))
+ t=re.sub(r'\x60\x60\x60.*?\x60\x60\x60','',t,flags=re.S)
  # Prose language, not identifiers, legal texts or code.
  for line in t.splitlines():
   if line.startswith(('name:','---')):continue
@@ -51,9 +52,28 @@ for q,expected in cases.items():
  r=mod.route(q);check(r['primary']==expected,'Маршрут '+q+': '+r['primary'])
  for path in r['core_paths']+r['module_paths']:check((ROOT/path).exists(),'Маршрут указывает на отсутствующий файл '+path)
 required=['LICENSE','licenses/ECC-MIT.txt','licenses/ru-frontend-design-LICENSE.txt','licenses/ru-webapp-testing-LICENSE.txt','licenses/ru-design-polish-LICENSE.txt','licenses/ru-web-design-audit-LICENSE.txt']
+required+=['licenses/UI-UX-Pro-Max-MIT.txt','licenses/Playwright-CLI-Apache-2.0.txt']
 for p in required:check((ROOT/p).is_file(),'Нет лицензии '+p)
+extension_cases={'Создай рекламный ролик Remotion':'ru-remotion','Ускорь компонент React':'ru-frontend-implementation','Проверь форму через Playwright CLI':'ru-webapp-testing','Проверь форму лендинга, но настоящую заявку не отправляй':'ru-webapp-testing','Проверь форму':'ru-webapp-testing','Выбери палитру и типографику':'ru-frontend-design'}
+for query,name in extension_cases.items():
+ check('references/modules/'+name+'.md' in mod.route(query)['module_paths'],'Не найдено дополнение по задаче '+query)
+library=json.loads((ROOT/'references/extensions/design-library.json').read_text())
+check(len(library['палитры'])==10 and len(library['шрифты'])==5,'Не совпадает состав дизайнерской подборки.')
+def luminance(color):
+ rgb=[int(color[i:i+2],16)/255 for i in (1,3,5)]
+ linear=[v/12.92 if v<=0.04045 else ((v+0.055)/1.055)**2.4 for v in rgb]
+ return sum(a*b for a,b in zip(linear,[0.2126,0.7152,0.0722]))
+for palette in library['палитры']:
+ colors=palette['цвета']
+ for a,b in [('основной','на основном'),('акцент','на акценте'),('фон','текст'),('карточка','на карточке'),('приглушённый фон','вторичный текст')]:
+  values=[colors[a],colors[b]]
+  valid=all(re.fullmatch(r'#[0-9A-Fa-f]{6}',v) for v in values)
+  check(valid,'Некорректный цвет '+palette['задача'])
+  if valid:
+   lo,hi=sorted(map(luminance,values))
+   check((hi+0.05)/(lo+0.05)>=4.5,'Недостаточный контраст '+palette['задача']+': '+a+'/'+b)
 if not options.private:check(not (ROOT/'references/state/os-state.json').exists(),'Личная память не должна входить в публичный исходник.')
 if errors:
  print(json.dumps({'status':'ошибка','errors':errors},ensure_ascii=False,indent=2));raise SystemExit(1)
-print(json.dumps({'status':'пройдено','subject_modules':len(cat),'core_modules':18,'guides':6,'route_cases':len(cases),'checks':['Состав','Русские описания и проза','Локальные ссылки','Синтаксис','Маршруты','Лицензии','Отделение личной памяти']},ensure_ascii=False,indent=2))
+print(json.dumps({'status':'пройдено','subject_modules':len(cat),'core_modules':18,'guides':6,'route_cases':len(cases)+len(extension_cases),'palette_pairs':50,'checks':['Состав','Русские описания и проза','Локальные ссылки','Синтаксис','Маршруты','Контраст подборки','Лицензии','Отделение личной памяти']},ensure_ascii=False,indent=2))
 

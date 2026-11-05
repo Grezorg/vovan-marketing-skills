@@ -1,6 +1,6 @@
 {
-  "version": "4.0.2",
-  "date": "2026-10-14",
+  "version": "4.1.0",
+  "date": "2026-11-06",
   "language": "ru",
   "files": [
     {
@@ -25,8 +25,8 @@
     },
     {
       "path": "NOTICE.md",
-      "sha256": "959e2b7ba17b6ee7193e843c67205271a8da6b9aa1253b9c8342d2d25e081f90",
-      "bytes": 2303
+      "sha256": "7fbb2ce200a64da57a40e988396028b3529c5dd769f2f4936f21417f2531ec0c",
+      "bytes": 4169
     },
     {
       "path": "README.md",
@@ -35,8 +35,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "c9a9b348a7aaddfbf156f436500d8e3739ecb042af6ab8fd9a0e961ce19580a7",
-      "bytes": 9504
+      "sha256": "3272894d80938f6da6359edff1d4a4f0c75746e6230a7ed6a4c850f4969f0aaa",
+      "bytes": 10428
     },
     {
       "path": "SOURCES.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Vovan_Marketing_OS_RU_PHONE.txt",
-      "sha256": "bc222c270772f9b0ff4d2a731192e73d2598d4bcc665aa898e87795af3e52a70",
-      "bytes": 414650
+      "sha256": "09e20b61c55ac6581cc3213085f66642c0fdb2d2bb84e499e5c3a3cfb0e07a49",
+      "bytes": 533548
     },
     {
       "path": "agents/openai.yaml",
@@ -72,6 +72,16 @@
       "path": "licenses/ECC-MIT.txt",
       "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2",
       "bytes": 1071
+    },
+    {
+      "path": "licenses/Playwright-CLI-Apache-2.0.txt",
+      "sha256": "9c6c5f61c287182a4e285dab62add540b087adff2f009a5a07450f1da47cd753",
+      "bytes": 11352
+    },
+    {
+      "path": "licenses/UI-UX-Pro-Max-MIT.txt",
+      "sha256": "0cdf406e8682b67702d9875c3c2fc47fc095908aea184f2b1dc4566780385142",
+      "bytes": 1076
     },
     {
       "path": "licenses/ru-design-polish-LICENSE.txt",
@@ -100,8 +110,8 @@
     },
     {
       "path": "references/catalog.json",
-      "sha256": "5267906b9775e1b4aaf78bebfbdac6b2f949088ff71732fba925fee896c57e28",
-      "bytes": 54362
+      "sha256": "9598e077026acbbee0f7ea829e2d47c03dba1d4c892096bccd4ccacca509eed7",
+      "bytes": 55336
     },
     {
       "path": "references/commands.json",
@@ -135,8 +145,8 @@
     },
     {
       "path": "references/core/integrations.md",
-      "sha256": "1e40959582a737d8bdfd88d5bbf92e24797de5f0b2462c72f66a8764423ec424",
-      "bytes": 1779
+      "sha256": "b3ee6062bf5d06074305ab23564940b85794506290d69fe4d676c56fde4e3873",
+      "bytes": 2129
     },
     {
       "path": "references/core/learning.md",
@@ -190,13 +200,48 @@
     },
     {
       "path": "references/core/skill-management.md",
-      "sha256": "1c60aa9ad77cf09987eede2486b4ca83c161bc92769dadfcae11cf41942ec476",
-      "bytes": 1845
+      "sha256": "5426a3a40304f5efa239a4518dfa665d0d69e05fb21a2996d010acf91b153088",
+      "bytes": 2435
     },
     {
       "path": "references/core/software.md",
       "sha256": "ba770fb843884e726e578870036a5a23907f59b557c86614541497b7fb14e1ee",
       "bytes": 1525
+    },
+    {
+      "path": "references/extensions/design-library.json",
+      "sha256": "92ae75ded9c7b14fca84f0e5fb4d79484a4c5ad4e51d24ca40030cafef55b0ac",
+      "bytes": 8580
+    },
+    {
+      "path": "references/extensions/design-reference.md",
+      "sha256": "ec94caba6c7073c970c9780bdabd98a3ec0360c229d98d8333d7b4798c6afa26",
+      "bytes": 3921
+    },
+    {
+      "path": "references/extensions/playwright-cli.md",
+      "sha256": "688de2b83c9fddc9193f5a8a8c603fb986695f6a53771c1142cfb1fd78b56492",
+      "bytes": 5983
+    },
+    {
+      "path": "references/extensions/react-performance.md",
+      "sha256": "e711c2b861003843c05e617f25d8693acc922c6930e5cc7406988583dc3808b1",
+      "bytes": 6127
+    },
+    {
+      "path": "references/extensions/remotion-production.md",
+      "sha256": "363b1303542142ff81f0592828d5daf5a279163b19b10eaf3c217a0f559c9e9f",
+      "bytes": 6090
+    },
+    {
+      "path": "references/extensions/skill-discovery.md",
+      "sha256": "de9edbf5dbc294f7c1f5452d418b9a1f78e2150ad4fe69c54cd0a8d342a05b1c",
+      "bytes": 3589
+    },
+    {
+      "path": "references/extensions/sources.json",
+      "sha256": "e16b549797254925974d206542bb5598c10855dd567ef454c6f7f1a7a5d41a63",
+      "bytes": 6274
     },
     {
       "path": "references/guides/content.md",
@@ -230,8 +275,8 @@
     },
     {
       "path": "references/merge-decisions.md",
-      "sha256": "27d69d564e210551e9305fbeb6fcdcd340044385cd1506c09fcd4b9653964c58",
-      "bytes": 3010
+      "sha256": "1fcd6d981f202ea1f426face0c3e56e7c5fc6f794b210c555cae733f7503c6ed",
+      "bytes": 4485
     },
     {
       "path": "references/merge-map.json",
@@ -385,13 +430,13 @@
     },
     {
       "path": "references/modules/ru-frontend-design.md",
-      "sha256": "087df817bcf5df3a6ccbbe0b0bbba3397f88b26af48bb97f7ba8269bfb816e27",
-      "bytes": 15192
+      "sha256": "05175976ff59fc03a49d2edb75a1912e19ee922b0bb279481c93c73d193f2339",
+      "bytes": 15571
     },
     {
       "path": "references/modules/ru-frontend-implementation.md",
-      "sha256": "74e0ba1e661cdc6acae4cde4416a9cb79b8dfbade438eab50ecd3cdfceb61398",
-      "bytes": 2688
+      "sha256": "80a46df0a40890f5d3e8ee27613abd8c7ef2c26462f6d784cf1fc685686862ca",
+      "bytes": 3049
     },
     {
       "path": "references/modules/ru-github-workflow.md",
@@ -535,8 +580,8 @@
     },
     {
       "path": "references/modules/ru-remotion.md",
-      "sha256": "9fbe31690218c9cef4123631103d256eb18f0b9c56f1ef58d114253b5aceee8a",
-      "bytes": 2433
+      "sha256": "81881a9550d2c639ff4dff739e2b51d07799aa5b2c4e96e21f30aa7d8d29353e",
+      "bytes": 2888
     },
     {
       "path": "references/modules/ru-revops.md",
@@ -605,8 +650,8 @@
     },
     {
       "path": "references/modules/ru-webapp-testing.md",
-      "sha256": "eb7b77ea9cc5862c6d7f9f0ad2c3d6e31365e3755b47d6181f20e0b56bb1ecd9",
-      "bytes": 8721
+      "sha256": "def7709c8c5335800f44228f17b3e20d466db18af959a373354530ec538b52b5",
+      "bytes": 9127
     },
     {
       "path": "references/pro-v3.md",
@@ -620,8 +665,8 @@
     },
     {
       "path": "references/routing.md",
-      "sha256": "e86f6ce9e9ccac8e987be302e1189789fdf368147017977fdc7f7e4f63c3fbe9",
-      "bytes": 7569
+      "sha256": "3b00d27b46056ca92da9cab111d7c7aa24ea2a7817785dc97deea6c120eb7389",
+      "bytes": 8476
     },
     {
       "path": "references/ru-context.md",
@@ -645,8 +690,8 @@
     },
     {
       "path": "references/system.json",
-      "sha256": "e0a6f187577fe23def221222c4616b553eb9af70544474fb12091599458c6488",
-      "bytes": 1047
+      "sha256": "b5b8b13cd52676db3953f2d953b054055d14b93abe0beb1f9da185b5892c7a51",
+      "bytes": 1433
     },
     {
       "path": "references/validation-results.json",
@@ -660,8 +705,8 @@
     },
     {
       "path": "scripts/os.py",
-      "sha256": "af0c992aace47dc023cf41c7edade2243f064db662898d79bf05a9c7f42b9ad0",
-      "bytes": 10525
+      "sha256": "20140a54d50cd107a52d5a6a9d501edf6f84bc893eacff85930468bfdeeeada6",
+      "bytes": 10848
     },
     {
       "path": "scripts/state.py",
@@ -670,12 +715,8 @@
     },
     {
       "path": "scripts/validate.py",
-      "sha256": "1f91e9a57f88ac3901c4357b77a2f87df73916b87454f5de14b3175162d2af2e",
-      "bytes": 5406
+      "sha256": "0b9b488cf08c059ceb88f9f11cfd663c1b9d4ef148ef5af5c2ca5db5e89eb2e8",
+      "bytes": 7445
     }
-  ],
-  "excluded": [
-    "references/state/os-state.json"
-  ],
-  "note": "Хеши файлов рабочей сборки; сам манифест исключён из своего списка."
+  ]
 }
