@@ -1,0 +1,56 @@
+name: Проверка Remotion и Playwright CLI
+on:
+  push:
+    branches: [codex/media-browser-pilot-20261106]
+    paths: [.github/workflows/media-browser-pilot.yml]
+permissions:
+  contents: read
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Установить инструменты
+        working-directory: experiments/media-browser-pilot
+        run: |
+          npm init -y
+          npm install --save-exact remotion@4.0.541 @remotion/cli@4.0.541 @playwright/cli react react-dom
+          npx remotion browser ensure
+      - name: Получить MP4
+        working-directory: experiments/media-browser-pilot
+        run: |
+          npx remotion render index.tsx VovanPromo vovan-os-pilot.mp4 --codec=h264 --concurrency=2
+          ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height,r_frame_rate -of json vovan-os-pilot.mp4 > video-probe.json
+          ffmpeg -v error -ss 1 -i vovan-os-pilot.mp4 -frames:v 1 -y frame-1.png
+          ffmpeg -v error -ss 3 -i vovan-os-pilot.mp4 -frames:v 1 -y frame-3.png
+          ffmpeg -v error -ss 5 -i vovan-os-pilot.mp4 -frames:v 1 -y frame-5.png
+          cat video-probe.json
+      - name: Проверить CLI на вымышленной форме
+        working-directory: experiments/media-browser-pilot
+        run: |
+          node - <<'JS'
+          const fs=require('fs'),path=require('path');
+          const browser=fs.readdirSync('node_modules/.remotion/chrome-headless-shell/linux64').find(x=>x.startsWith('chrome-headless-shell-'));
+          fs.mkdirSync('.playwright',{recursive:true});
+          fs.writeFileSync('.playwright/cli.config.json', JSON.stringify({browser:{browserName:'chromium',isolated:true,launchOptions:{executablePath:path.resolve('node_modules/.remotion/chrome-headless-shell/linux64',browser,'chrome-headless-shell'),headless:true,args:['--no-sandbox']}}}));
+          fs.writeFileSync('fixture.html','<!doctype html><html lang="ru"><meta charset="utf-8"><title>Вымышленная форма для проверки CLI</title><form onsubmit="event.preventDefault();document.querySelector(\'output\').textContent=\'Проверка завершена\'"><label>Имя<input name="name" required></label><label>Телефон<input name="phone" required pattern="[0-9]{11}"></label><button>Проверить</button><output></output></form>');
+          JS
+          npx playwright-cli -s=pilot open "file://$PWD/fixture.html"
+          npx playwright-cli -s=pilot run-code "async page => { await page.getByRole('button',{name:'Проверить'}).click(); if(await page.locator('output').innerText()) throw new Error('Empty form accepted'); await page.getByLabel('Имя').fill('Тест'); await page.getByLabel('Телефон').fill('70000000000'); await page.getByRole('button',{name:'Проверить'}).click(); const result=await page.locator('output').innerText(); if(result!=='Проверка завершена') throw new Error(result); await page.screenshot({path:'cli-fixture.png'}); return {emptyFormBlocked:true,fillAndSubmit:true,fixtureOnly:true}; }" | tee cli-result.txt
+          npx playwright-cli -s=pilot close
+      - name: Сохранить ролик и доказательства
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-browser-pilot
+          path: |
+            experiments/media-browser-pilot/*.mp4
+            experiments/media-browser-pilot/frame-*.png
+            experiments/media-browser-pilot/video-probe.json
+            experiments/media-browser-pilot/cli-result.txt
+            experiments/media-browser-pilot/cli-fixture.png
+          retention-days: 3
