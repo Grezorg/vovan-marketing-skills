@@ -20,6 +20,7 @@ jobs:
           npm init -y
           npm install --save-exact remotion@4.0.541 @remotion/cli@4.0.541 @playwright/cli react react-dom
           npx remotion browser ensure
+          echo "$PWD/$(dirname "$(find node_modules/@remotion -type f -name ffprobe -print -quit)")" >> "$GITHUB_PATH"
       - name: Получить MP4
         working-directory: experiments/media-browser-pilot
         run: |
