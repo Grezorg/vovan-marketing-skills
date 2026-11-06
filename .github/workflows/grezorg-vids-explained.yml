@@ -19,7 +19,7 @@ jobs:
         run: |
           import asyncio,json,pathlib,edge_tts
           p=pathlib.Path('voice');p.mkdir()
-          text='Три сцены одним запросом. Это Google Vids. Задал студию, город на столе и полёт между небоскрёбами. Вот результат. Промпт — в описании.'
+          text='Три сцены одним запросом. Это Гугл Видс. Задал студию, город на столе и полёт между небоскрёбами. Вот результат. Промпт — в описании.'
           async def main():
               words=[]
               c=edge_tts.Communicate(text,'ru-RU-DmitryNeural',rate='+0%',boundary='WordBoundary')
