@@ -1,0 +1,37 @@
+name: Grezorg Vids explained voice
+on:
+  push:
+    branches: [codex/grezorg-original-series-20261106]
+    paths: [.github/workflows/grezorg-vids-explained.yml]
+permissions:
+  contents: read
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install edge-tts==7.3.1
+      - name: Generate Dmitry
+        shell: python
+        run: |
+          import asyncio,json,pathlib,edge_tts
+          p=pathlib.Path('voice');p.mkdir()
+          text='Три сцены одним запросом. Это Google Vids. Задал студию, город на столе и полёт между небоскрёбами. Вот результат. Промпт — в описании.'
+          async def main():
+              words=[]
+              c=edge_tts.Communicate(text,'ru-RU-DmitryNeural',rate='+0%',boundary='WordBoundary')
+              with (p/'narration.mp3').open('wb') as f:
+                  async for x in c.stream():
+                      if x['type']=='audio': f.write(x['data'])
+                      elif x['type']=='WordBoundary': words.append(x)
+              (p/'words.json').write_text(json.dumps(words,ensure_ascii=False),encoding='utf-8')
+              (p/'script.txt').write_text(text,encoding='utf-8')
+          asyncio.run(asyncio.wait_for(main(),timeout=60))
+      - uses: actions/upload-artifact@v4
+        with:
+          name: grezorg-vids-explained-voice
+          path: voice/
+          retention-days: 7
