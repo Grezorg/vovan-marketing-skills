@@ -1,0 +1,41 @@
+name: Сборка короткого ролика для Grezorg
+on:
+  push:
+    branches: [codex/youtube-reel-20261106]
+    paths: [experiments/youtube-reel-20261106/**, .github/workflows/youtube-reel.yml]
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: experiments/youtube-reel-20261106
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Подготовить Remotion
+        run: |
+          npm init -y
+          npm install --save-exact remotion@4.0.541 @remotion/cli@4.0.541 react react-dom
+          npx remotion browser ensure
+          echo "$PWD/$(dirname "$(find node_modules/@remotion -type f -name ffprobe -print -quit)")" >> "$GITHUB_PATH"
+      - name: Собрать ролик и оригинальное сопровождение
+        run: |
+          python3 soundtrack.py
+          npx remotion render index.tsx SkillRealityCheck silent.mp4 --codec=h264 --concurrency=2
+          ffmpeg -v error -i silent.mp4 -i soundtrack.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 160k -shortest -movflags +faststart grezorg-ai-check.mp4
+          ffprobe -v error -count_frames -show_entries format=duration,size:stream=codec_name,width,height,r_frame_rate,nb_read_frames -of json grezorg-ai-check.mp4 > media-probe.json
+          for second in 0 1 4 7 11 14 18 22 25; do ffmpeg -v error -ss "$second" -i grezorg-ai-check.mp4 -frames:v 1 -y "frame-$second.png"; done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: grezorg-ai-check
+          path: |
+            experiments/youtube-reel-20261106/grezorg-ai-check.mp4
+            experiments/youtube-reel-20261106/frame-*.png
+            experiments/youtube-reel-20261106/media-probe.json
+          retention-days: 7
