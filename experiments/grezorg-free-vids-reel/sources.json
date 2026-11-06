@@ -1,0 +1,12 @@
+{
+  "free_quota_source": "https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/",
+  "announced": "2026-11-05",
+  "quota": "up to 3 generations per month, each up to 15 seconds",
+  "examples_source": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+  "examples": "official Google demonstration excerpts, not generated through our free Vids account",
+  "free_account_generation_tested": false,
+  "availability_in_russia_tested": false,
+  "voice": "ru-RU-DmitryNeural +0%",
+  "paid_generations_used": false,
+  "published": false
+}
