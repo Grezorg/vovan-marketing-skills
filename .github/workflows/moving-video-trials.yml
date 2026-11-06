@@ -1,0 +1,24 @@
+name: Пробы роликов с движением
+on:
+  push:
+    branches: [codex/moving-video-trials-20261106]
+    paths: [.github/workflows/moving-video-trials.yml, experiments/moving-video-trials/**]
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install edge-tts==7.3.1
+      - run: python experiments/moving-video-trials/prepare.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: moving-video-materials
+          path: experiments/moving-video-trials/output/
+          retention-days: 7
