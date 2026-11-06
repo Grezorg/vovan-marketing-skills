@@ -1,0 +1,38 @@
+name: Рилс Grezorg про Gemini Omni
+on:
+  push:
+    branches: [codex/grezorg-ai-news-reel-20261106]
+    paths: [.github/workflows/grezorg-ai-news-reel.yml]
+permissions:
+  contents: read
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install edge-tts==7.3.1
+      - run: |
+          mkdir -p voice
+          python - <<'PY'
+          import asyncio,json,pathlib
+          import edge_tts
+          text="Поменяй фон, а героя оставь. Теперь так можно редактировать ролики. Гугл представил новую версию Джемини Омни. Ролики до пятнадцати секунд и правки обычными фразами. На экране — официальные примеры: смена одежды, окружения и движение камеры. Генерация платная, а качество на своих задачах ещё предстоит проверить. Какую сцену ты бы создал первым?"
+          async def main():
+              words=[]
+              c=edge_tts.Communicate(text,"ru-RU-DmitryNeural",rate="+0%",boundary="WordBoundary")
+              with open("voice/narration.mp3","wb") as f:
+                  async for x in c.stream():
+                      if x["type"]=="audio":f.write(x["data"])
+                      elif x["type"]=="WordBoundary":words.append(x)
+              pathlib.Path("voice/words.json").write_text(json.dumps(words,ensure_ascii=False,indent=2),encoding="utf-8")
+              pathlib.Path("voice/script.txt").write_text(text,encoding="utf-8")
+          asyncio.run(asyncio.wait_for(main(),timeout=80))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: grezorg-ai-news-voice
+          path: voice/
+          retention-days: 7
