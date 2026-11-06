@@ -1,0 +1,26 @@
+name: Проба бесплатной русской озвучки
+on:
+  push:
+    branches: [codex/free-russian-voice-test-20261106]
+    paths: [.github/workflows/free-russian-voice.yml, experiments/free-russian-voice/**]
+permissions:
+  contents: read
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Установить открытый клиент
+        run: pip install edge-tts==7.3.1
+      - name: Получить два образца
+        run: python experiments/free-russian-voice/test_voices.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: russian-voice-samples
+          path: experiments/free-russian-voice/output/
+          retention-days: 7
