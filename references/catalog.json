@@ -812,5 +812,16 @@
     "domain": "sites",
     "path": "references/modules/ru-webapp-testing.md",
     "language": "ru"
+  },
+  {
+    "id": "ru-youtube-growth",
+    "kind": "skills",
+    "name": "ru-youtube-growth",
+    "title": "YouTube: темы, упаковка и короткие ролики",
+    "description": "Исследовать YouTube-канал, выбирать темы и самостоятельные Shorts, проверять русские заголовки и анализировать удержание по данным.",
+    "keywords": "youtube ютуб shorts рилс reels канал обложка заголовок удержание вирусный ролик",
+    "domain": "media",
+    "path": "references/modules/ru-youtube-growth.md",
+    "language": "ru"
   }
 ]

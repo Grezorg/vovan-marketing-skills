@@ -11,7 +11,7 @@ ROUTES=[
 ('skill-management',['наши навыки','нашу систему','навык','скилл','объедини систему']),
 ('marketing',['маркет','реклам','оффер','конверси','тариф','цены','продвиж','контент','пост','аналитик','покупател']),
 ('research',['найди','сравни','исслед','отзыв','проанализ','прогноз']),
-('media',['видео','изображ','фото','картин','монтаж','клип','remotion']),
+('media',['видео','изображ','фото','картин','монтаж','клип','remotion','youtube','ютуб','shorts','рилс','reels','удержание зрителей']),
 ('sites',['сайт','лендинг','интерфейс','веб','ui','react','next.js','playwright','палитр','типограф','проверь форм','проверка форм']),
 ('documents',['документ','презентац','таблиц','pdf','docx','xlsx','pptx']),
 ('software',['бот','сервер','vps','код','программ','api','docker','python','приложен','репозитор']),
@@ -35,6 +35,7 @@ MODULE_RULES={
 'ru-storyboard':['видео','сцен','раскадров'],
 'ru-media-editing':['монтаж','склей','обрежь видео'],
 'ru-remotion':['remotion'],
+'ru-youtube-growth':['youtube','ютуб','shorts','рилс','reels','удержание зрителей','обложка ролика'],
 'ru-python-bot':['бот','python'],
 'ru-api-integration':['api','вебхук'],
 'ru-docker-deploy':['vps','docker','деплой','сервер'],
@@ -82,6 +83,7 @@ def route(query):
  ('skill-management',any(w in q for w in ['создай навык','объедини навыки','улучши наши навыки'])),
  ('product-cards','карточк' in q and any(w in q for w in ['товар','ozon','wildberries','фото','маркетплейс'])),
  ('software','бот' in q and any(w in q for w in ['создай','сделай','исправь','запуст','собери'])),
+ ('media',any(w in q for w in ['youtube','ютуб','shorts','рилс','reels'])),
  ('sites',any(w in q for w in ['сайт','лендинг']) and any(w in q for w in ['создай','собери','проверь','исправь','аудит'])),
  ('documents',any(w in q for w in ['docx','xlsx','pptx','таблиц','презентац']))]
  for domain,condition in priority:

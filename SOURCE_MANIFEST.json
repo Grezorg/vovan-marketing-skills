@@ -1,12 +1,12 @@
 {
-  "version": "4.1.0",
+  "version": "4.2.0",
   "date": "2026-11-06",
   "language": "ru",
   "files": [
     {
       "path": ".github/workflows/validate.yml",
-      "sha256": "d4331855f1056efffc3399e02322094c528d81e010f8afc8539880ae2e72ffef",
-      "bytes": 702
+      "sha256": "194d9857b0f226e0426aab9b4c281db303c6058b69b499f52769bc6c91c57cae",
+      "bytes": 826
     },
     {
       "path": ".gitignore",
@@ -15,8 +15,8 @@
     },
     {
       "path": "CATALOG_RU.md",
-      "sha256": "1853b09483488208d0fb670166ce5392fc61fc04472b27946db6c51217c07d6b",
-      "bytes": 9974
+      "sha256": "530e771e6abe9c39a0a05171db58b84fbe2db4befb67cfa72cb9aad1b1464116",
+      "bytes": 10111
     },
     {
       "path": "LICENSE",
@@ -25,8 +25,8 @@
     },
     {
       "path": "NOTICE.md",
-      "sha256": "7fbb2ce200a64da57a40e988396028b3529c5dd769f2f4936f21417f2531ec0c",
-      "bytes": 4169
+      "sha256": "983b39f97414373a72dd7ffd04eaf7b713d35d3f2961242d38b5256c1c1dcca8",
+      "bytes": 4797
     },
     {
       "path": "README.md",
@@ -35,8 +35,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "3272894d80938f6da6359edff1d4a4f0c75746e6230a7ed6a4c850f4969f0aaa",
-      "bytes": 10428
+      "sha256": "c0eb8f386051d52bffe590bcca7946333e303f7fc8bab86bda0cf45a4671c447",
+      "bytes": 10557
     },
     {
       "path": "SOURCES.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Vovan_Marketing_OS_RU_PHONE.txt",
-      "sha256": "09e20b61c55ac6581cc3213085f66642c0fdb2d2bb84e499e5c3a3cfb0e07a49",
-      "bytes": 533548
+      "sha256": "aecf21c7b7a9ad917f6ed5171cdc2b9377780a4b1a860d805e1d12b42f2b5f54",
+      "bytes": 547352
     },
     {
       "path": "agents/openai.yaml",
@@ -84,6 +84,11 @@
       "bytes": 1076
     },
     {
+      "path": "licenses/YouTube-Agent-Skill-MIT.txt",
+      "sha256": "2c803dc2abf787b7da2569b67606b849a3c94728fd86cb4f6b6a8889acac9b45",
+      "bytes": 1074
+    },
+    {
       "path": "licenses/ru-design-polish-LICENSE.txt",
       "sha256": "72bdc6c2866074f26236c6313f44acb6e26dd58e605aa7aa8158f4ab7ef9b069",
       "bytes": 10767
@@ -110,8 +115,8 @@
     },
     {
       "path": "references/catalog.json",
-      "sha256": "9598e077026acbbee0f7ea829e2d47c03dba1d4c892096bccd4ccacca509eed7",
-      "bytes": 55336
+      "sha256": "15fc33627a6d81dc5159b8a2dc5cb82fa00e63e1d88823cab6a6ce7a411441be",
+      "bytes": 56019
     },
     {
       "path": "references/commands.json",
@@ -244,6 +249,11 @@
       "bytes": 6274
     },
     {
+      "path": "references/extensions/youtube-sources.json",
+      "sha256": "127bc0cf10730366c10055743174d3ad4fcde6d469b7c210e199148a73d6d37e",
+      "bytes": 1379
+    },
+    {
       "path": "references/guides/content.md",
       "sha256": "82b3271fcabf0563d2cd622acc58821cecc80d000093570d257160e7d25b265a",
       "bytes": 3505
@@ -275,8 +285,8 @@
     },
     {
       "path": "references/merge-decisions.md",
-      "sha256": "1fcd6d981f202ea1f426face0c3e56e7c5fc6f794b210c555cae733f7503c6ed",
-      "bytes": 4485
+      "sha256": "54d032dde2afd7a76f32e485aef8234c4b389e5d6cfab544d84f1913e6a83f00",
+      "bytes": 5099
     },
     {
       "path": "references/merge-map.json",
@@ -654,6 +664,11 @@
       "bytes": 9127
     },
     {
+      "path": "references/modules/ru-youtube-growth.md",
+      "sha256": "d86ec75c7abfe5c4b3d2568ec3f56849bbbb0f2571beefb59ccc30746f9b4257",
+      "bytes": 9436
+    },
+    {
       "path": "references/pro-v3.md",
       "sha256": "1b1bb0b8556611a4bad9a7de9758fda06139e76a80073f0e31248ec40faad2d4",
       "bytes": 38243
@@ -665,8 +680,8 @@
     },
     {
       "path": "references/routing.md",
-      "sha256": "3b00d27b46056ca92da9cab111d7c7aa24ea2a7817785dc97deea6c120eb7389",
-      "bytes": 8476
+      "sha256": "00e2cfdf0481582b9853b7c37319222c872a49496f1f64f435be5553ca1c25f6",
+      "bytes": 8730
     },
     {
       "path": "references/ru-context.md",
@@ -690,8 +705,8 @@
     },
     {
       "path": "references/system.json",
-      "sha256": "b5b8b13cd52676db3953f2d953b054055d14b93abe0beb1f9da185b5892c7a51",
-      "bytes": 1433
+      "sha256": "bb2765a3fe62df62b0edb7c4c66184554824dc832fb58753c30ee0b93f1f2ab3",
+      "bytes": 1489
     },
     {
       "path": "references/validation-results.json",
@@ -705,8 +720,8 @@
     },
     {
       "path": "scripts/os.py",
-      "sha256": "20140a54d50cd107a52d5a6a9d501edf6f84bc893eacff85930468bfdeeeada6",
-      "bytes": 10848
+      "sha256": "5e964ab74fe7ca8278f99a95ded0fdf1664163936ea46177e71dccc675d8d292",
+      "bytes": 11159
     },
     {
       "path": "scripts/state.py",
@@ -714,9 +729,19 @@
       "bytes": 6442
     },
     {
+      "path": "scripts/test_youtube.py",
+      "sha256": "89c9fc448f76516d3f2236debb69d427f611309c574ac872bc5d768e11e855be",
+      "bytes": 4079
+    },
+    {
       "path": "scripts/validate.py",
-      "sha256": "0b9b488cf08c059ceb88f9f11cfd663c1b9d4ef148ef5af5c2ca5db5e89eb2e8",
-      "bytes": 7445
+      "sha256": "a9b9c7c4a20b4f0c295869ba1ee611670fb3dfedceddccdf406b5aca8b7569c4",
+      "bytes": 7686
+    },
+    {
+      "path": "scripts/youtube.py",
+      "sha256": "c7ba926de9da1c51f444a845a723f139dd39e81d4347193b0dae4346c8e9dc6f",
+      "bytes": 11418
     }
   ]
 }

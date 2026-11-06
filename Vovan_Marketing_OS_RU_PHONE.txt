@@ -1,4 +1,4 @@
-VOVAN OS v4.1.0 — ЕДИНЫЙ РУССКИЙ КОМПЛЕКТ
+VOVAN OS v4.2.0 — ЕДИНЫЙ РУССКИЙ КОМПЛЕКТ
 
 Ниже размещены разделы единой системы. Читать только нужное для задачи. Файл не устанавливает инструменты и не создаёт фоновых процессов.
 
@@ -12,13 +12,13 @@ description: "Единая русская система Вована для Cha
 
 # Vovan OS — единая русская система
 
-Версия сборки: `4.1.0`.
+Версия сборки: `4.2.0`.
 
 Выбирать методику по конечному результату. Работать по-русски. Выполнять поручение до проверяемого результата. Сохранять исправления пользователя и границы разрешения. Названия Vovan ChatGPT OS и Vovan Marketing OS считать обращениями к этой системе.
 
 ## Проверка версии при запуске
 
-При первом применении в сессии и после обновления прочитать [состав системы](references/system.json). При файловом исполнении запустить `scripts/os.py --version --expected-version 4.1.0`: проверить версию, целостность ключевых файлов и каталог. Версию в описании навыка или старом сообщении не считать доказательством актуальности.
+При первом применении в сессии и после обновления прочитать [состав системы](references/system.json). При файловом исполнении запустить `scripts/os.py --version --expected-version 4.2.0`: проверить версию, целостность ключевых файлов и каталог. Версию в описании навыка или старом сообщении не считать доказательством актуальности.
 
 При расхождении версии заново прочитать текущий SKILL.md, каталог и нужные модули непосредственно из установленной папки; без файлового исполнения запросить эти ресурсы через поставщика навыков. Следовать согласованной текущей сборке. При повреждении или недоступности файлов не смешивать версии и не подтверждать обновление: обозначить предел и продолжить независимую часть задачи. Повторять проверку только после обновления или нового расхождения. Не утверждать, что кэш платформы очищен: проверка контролирует используемые ресурсы.
 
@@ -48,7 +48,7 @@ description: "Единая русская система Вована для Cha
 
 ## Прикладные дополнения
 
-Читать выборочно для подходящего результата: [ролики Remotion](references/extensions/remotion-production.md), [производительность React](references/extensions/react-performance.md), [исполнение Playwright CLI](references/extensions/playwright-cli.md), [палитры и типографика](references/extensions/design-reference.md). Они усиливают существующие модули, сохраняя единый каталог из 74 процедур. Для поиска следующего усиления читать [отбор навыков](references/extensions/skill-discovery.md). Источники, границы переноса и подтверждённые проверки — [сведения о дополнениях](references/extensions/sources.json).
+Читать выборочно для подходящего результата: [ролики Remotion](references/extensions/remotion-production.md), [производительность React](references/extensions/react-performance.md), [исполнение Playwright CLI](references/extensions/playwright-cli.md), [палитры и типографика](references/extensions/design-reference.md). Они усиливают существующие модули, сохраняя единый каталог. Для YouTube-канала, Shorts, упаковки ролика и удержания читать [YouTube](references/modules/ru-youtube-growth.md). Для поиска следующего усиления читать [отбор навыков](references/extensions/skill-discovery.md). Источники, границы переноса и подтверждённые проверки — [сведения о дополнениях](references/extensions/sources.json).
 
 ## Бриф и подробность
 
@@ -133,6 +133,8 @@ description: "Единая русская система Вована для Cha
 | Документ и расчёт | [Документы](modules/ru-document-check.md), [Таблицы](modules/ru-spreadsheet-economics.md) |
 | Сравнить модели или навыки | [Оценка](modules/ru-model-evaluation.md) |
 | Проверить вероятностную модель | [Прогнозы](modules/ru-probabilistic-review.md) |
+
+| YouTube-канал, Shorts или рилс | [YouTube](modules/ru-youtube-growth.md) | Темы, русская упаковка, законченные фрагменты и удержание; создание файла — Remotion/монтаж |
 
 
 ===== references/ru-context.md =====
@@ -4487,14 +4489,14 @@ description: Проверять пользовательские сценари�
 
 {
   "name": "Vovan OS",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "language": "ru",
   "updated_at": "2026-11-06",
   "repository": "https://github.com/Grezorg/vovan-marketing-skills",
   "counts": {
-    "subject_modules": 74,
+    "subject_modules": 75,
     "retained_marketing_design_modules": 54,
-    "new_consolidated_modules": 20,
+    "new_consolidated_modules": 21,
     "core_modules": 18,
     "russian_guides": 6,
     "commands": 18
@@ -4511,14 +4513,15 @@ description: Проверять пользовательские сценари�
     "marketing": "dc82ebac49e3686838e95c9346f1b5469fc19331",
     "ecc": "b92f181b3b748d1abbc2afd94af6aa7d8c8fca29"
   },
-  "packaging": "Один SKILL.md; 74 русские предметные страницы в references/modules/.",
+  "packaging": "Один SKILL.md; 75 русских предметных страниц в references/modules/.",
   "extensions": {
     "remotion": "references/extensions/remotion-production.md",
     "react": "references/extensions/react-performance.md",
     "playwright_cli": "references/extensions/playwright-cli.md",
     "design": "references/extensions/design-reference.md",
     "discovery": "references/extensions/skill-discovery.md",
-    "provenance": "references/extensions/sources.json"
+    "provenance": "references/extensions/sources.json",
+    "youtube": "references/modules/ru-youtube-growth.md"
   }
 }
 
@@ -5339,6 +5342,17 @@ description: Проверять пользовательские сценари�
     "domain": "sites",
     "path": "references/modules/ru-webapp-testing.md",
     "language": "ru"
+  },
+  {
+    "id": "ru-youtube-growth",
+    "kind": "skills",
+    "name": "ru-youtube-growth",
+    "title": "YouTube: темы, упаковка и короткие ролики",
+    "description": "Исследовать YouTube-канал, выбирать темы и самостоятельные Shorts, проверять русские заголовки и анализировать удержание по данным.",
+    "keywords": "youtube ютуб shorts рилс reels канал обложка заголовок удержание вирусный ролик",
+    "domain": "media",
+    "path": "references/modules/ru-youtube-growth.md",
+    "language": "ru"
   }
 ]
 
@@ -5359,6 +5373,8 @@ Impeccable: Paul Bakaus, https://github.com/pbakaus/impeccable, выборочн
 Выборка 10 палитр и 5 шрифтовых сочетаний UI UX Pro Max: Next Level Builder, https://github.com/nextlevelbuilder/ui-ux-pro-max-skill. Названия задач и инструкции адаптированы на русский; значения цветов и пары шрифтов сохранены из указанных строк CSV. MIT — licenses/UI-UX-Pro-Max-MIT.txt. Это частичная подборка, не официальный перевод всей базы.
 Playwright CLI: Microsoft Corporation, https://github.com/microsoft/playwright-cli. Русская адаптация порядка исполнения; исходный навык целиком и браузер не включены. Apache-2.0 — licenses/Playwright-CLI-Apache-2.0.txt.
 Поиск дополнений опирается на подход Find Skills из https://github.com/vercel-labs/skills; инструкция переписана для существующей системы ChatGPT, без исходного установщика. Зафиксированные ревизии, файлы, объём переноса и пределы испытаний — references/extensions/sources.json.
+
+YouTube Agent Skill: Jake Schincariol, https://github.com/Jakeschincariol/youtube-agent-skill, revision a2feb2104981a375ffd4f87ee04f4f5344ac43c6. Выборочная русская адаптация исследования тем, заголовка/обложки, удержания и Shorts. Новый локальный помощник написан для Unicode, явной временной оси, десятичной запятой и сопоставимых выборок; английские эвристические баллы не перенесены. MIT — licenses/YouTube-Agent-Skill-MIT.txt.
 
 
 ===== references/extensions/design-library.json =====
@@ -6127,5 +6143,119 @@ SOFTWARE.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+
+
+===== references/modules/ru-youtube-growth.md =====
+
+---
+name: ru-youtube-growth
+description: "Исследовать YouTube-канал, выбирать темы и самостоятельные Shorts, проверять русские заголовки и анализировать удержание по данным."
+---
+
+# YouTube: темы, упаковка и короткие ролики
+
+Русская выборочная адаптация YouTube Agent Skill, Jake Schincariol. [Исходник](https://github.com/Jakeschincariol/youtube-agent-skill/tree/a2feb2104981a375ffd4f87ee04f4f5344ac43c6), [MIT](../../licenses/YouTube-Agent-Skill-MIT.txt), [происхождение и границы](../extensions/youtube-sources.json). Работать через реальные доступные инструменты; модуль не подключает аккаунт и не публикует автоматически.
+
+## Установить контекст
+
+Найти точный канал, цель и аудиторию по известным данным. Проверить текущие публичные ролики, не брать старые просмотры из памяти за актуальные. Отделять Shorts от длинных видео. Сохранить известный голос автора; при нехватке материалов использовать обозначенную редакционную гипотезу, не сочинять его биографию и результаты.
+
+## Выбрать тему по данным
+
+Собрать небольшую подходящую выборку: тема, канал, URL, дата выхода, формат, просмотры и дата наблюдения. Сравнивать похожий возраст и формат; медиану вычислять внутри канала. При менее четырёх сопоставимых роликах не объявлять базу надёжной. Такой порог — рабочая эвристика, не статистическое доказательство.
+
+Локальный помощник `scripts/youtube.py outliers` требует JSON-массив с полями channel, title, views, published_at (дата), format и url/video_id, а также явную дату --as-of. Без даты и формата ролик не попадает в расчёт. Если источник показывает только округлённые счётчики без дат, привести наблюдения описательно; не выдумывать точные значения ради запуска скрипта.
+
+Отобрать до пяти кандидатов и предложить выполнимую тему с конкретным доказательством/развязкой. Успешный ролик может зависеть от распространения, возраста, темы и других факторов; формулу заголовка не выдавать за установленную причину успеха. Сохранять собственную идею и материалы, не переснимать чужой ролик покадрово.
+
+## Упаковать обещание
+
+Собрать 3–5 вариантов сильного начала, заголовок и обложку как одну связку. Заголовок даёт понятную причину смотреть, обложка добавляет информацию. Числа, результаты и слова «проверил» подтверждать реальным опытом. Не обещать гарантированную вирусность, бесплатный сервис или автономность без соответствующих оснований.
+
+Проверить русский текст командой `python3 scripts/youtube.py package --title "Заголовок" --thumbnail "Текст обложки"`. Это Unicode-проверка буквальных совпадений; она не понимает весь смысл и не предсказывает CTR. Проверить смысловой повтор вручную, а изображение — в уменьшенном виде и с интерфейсными перекрытиями площадки. Ограничения видимой длины зависят от реального отображения, фиксированное число символов не гарантирует отсутствие обрезки.
+
+## Собрать самостоятельный Short
+
+Для длинного исходника прочитать расшифровку с таймкодами. Выбрать законченный фрагмент: понятное начало, развитие/поворот и завершение. Предложить до пяти интервалов с новой первой фразой и объяснением, почему фрагмент работает отдельно. Не придумывать таймкоды по тексту без времени.
+
+Для нового короткого ролика использовать схему: вопрос или конкретный конфликт → показ действия → наблюдаемый результат → один следующий шаг. Длину выбирать по содержанию, а не считать диапазон из чужой инструкции обязательным правилом платформы. Крупные читаемые титры и основной предмет держать в безопасной области вертикального кадра.
+
+Создать реальный видеофайл через [Remotion](ru-remotion.md) или [монтаж](ru-media-editing.md) и доступные инструменты. Список склеек, сценарий и статичную обложку не выдавать за смонтированный ролик. Проверить весь файл, звук, титры и стыки. При недоступной озвучке обозначить версию без голоса; сохранить текст диктора.
+
+## Разобрать удержание
+
+Использовать настоящую выгрузку пользователя. Подготовить CSV с именованными колонками position и retention (или позиция и удержание). Поддерживаются ; и запятая как разделители, десятичная запятая должна быть в кавычках при разделителе-запятой. Неоднозначные числа не угадывать.
+
+Запустить `python3 scripts/youtube.py retention retention.csv --axis seconds --duration 30` либо явно указать --axis percent и фактическую длительность. Ось не угадывать по величине максимума: короткое видео тоже может иметь ось в секундах меньше 100. Для процентной оси без длительности расчёт блокируется.
+
+Найти интервал падения и сопоставить с содержанием/монтажом. Удержание выше 100% может отражать повторы; не обрезать его автоматически. Не приписывать точную секунду ухода при редкой сетке точек. Дать одну проверяемую гипотезу изменения; универсальный порог «здорового» удержания не использовать для всех форматов и длин.
+
+## Результат и границы
+
+Выдать выбранную тему и основания, начало, заголовок, обложку, сценарий/таймкоды, готовый файл при доступном исполнении, подпись и одну гипотезу проверки после выпуска. Измерять по реальным показателям платформы: досмотры, средний просмотр, пролистывания/показы и целевое действие по доступности. Без частной аналитики не подтверждать удержание.
+
+Публикацию, ответы и закрепление комментариев выполнять только через доступный сервис в рамках данного поручения; подготовку материалов отделять от факта публикации. Личные выгрузки и доступы хранить в частном проекте. Стратегию канала вести совместно с [контент-стратегией](ru-content-strategy.md), не создавать конкурирующую общую систему маркетинга.
+
+
+===== references/extensions/youtube-sources.json =====
+
+{
+  "source": "https://github.com/Jakeschincariol/youtube-agent-skill",
+  "revision": "a2feb2104981a375ffd4f87ee04f4f5344ac43c6",
+  "license": "MIT",
+  "date": "2026-11-06",
+  "selected": [
+    "yt-viral",
+    "yt-package",
+    "yt-retention",
+    "yt-shorts"
+  ],
+  "implementation": "Собственная русская процедура и локальный помощник; не полный исходный набор.",
+  "omitted": [
+    "Числовой английский hookscore",
+    "Автоматическая публикация",
+    "Шаблонные обязательные вопросы на каждом запуске",
+    "Причинные выводы из одного графика удержания"
+  ],
+  "verified": [
+    "Unicode-повторы русского текста",
+    "Ё/Е и регистр",
+    "CSV с десятичной запятой",
+    "Явная ось и длительность удержания",
+    "Тонкие выборки, нулевая медиана, возраст и формат ролика",
+    "Пропуск дублей и округлённых просмотров"
+  ],
+  "not_verified": [
+    "CTR и вирусность будущих роликов",
+    "Доставка публикации",
+    "Частная аналитика без выгрузки"
+  ]
+}
+
+
+===== licenses/YouTube-Agent-Skill-MIT.txt =====
+
+MIT License
+
+Copyright (c) 2026 Jake Schincariol
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 

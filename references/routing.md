@@ -50,3 +50,5 @@
 | Документ и расчёт | [Документы](modules/ru-document-check.md), [Таблицы](modules/ru-spreadsheet-economics.md) |
 | Сравнить модели или навыки | [Оценка](modules/ru-model-evaluation.md) |
 | Проверить вероятностную модель | [Прогнозы](modules/ru-probabilistic-review.md) |
+
+| YouTube-канал, Shorts или рилс | [YouTube](modules/ru-youtube-growth.md) | Темы, русская упаковка, законченные фрагменты и удержание; создание файла — Remotion/монтаж |

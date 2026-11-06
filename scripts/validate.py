@@ -52,9 +52,9 @@ for q,expected in cases.items():
  r=mod.route(q);check(r['primary']==expected,'Маршрут '+q+': '+r['primary'])
  for path in r['core_paths']+r['module_paths']:check((ROOT/path).exists(),'Маршрут указывает на отсутствующий файл '+path)
 required=['LICENSE','licenses/ECC-MIT.txt','licenses/ru-frontend-design-LICENSE.txt','licenses/ru-webapp-testing-LICENSE.txt','licenses/ru-design-polish-LICENSE.txt','licenses/ru-web-design-audit-LICENSE.txt']
-required+=['licenses/UI-UX-Pro-Max-MIT.txt','licenses/Playwright-CLI-Apache-2.0.txt']
+required+=['licenses/UI-UX-Pro-Max-MIT.txt','licenses/Playwright-CLI-Apache-2.0.txt','licenses/YouTube-Agent-Skill-MIT.txt']
 for p in required:check((ROOT/p).is_file(),'Нет лицензии '+p)
-extension_cases={'Создай рекламный ролик Remotion':'ru-remotion','Ускорь компонент React':'ru-frontend-implementation','Проверь форму через Playwright CLI':'ru-webapp-testing','Проверь форму лендинга, но настоящую заявку не отправляй':'ru-webapp-testing','Проверь форму':'ru-webapp-testing','Выбери палитру и типографику':'ru-frontend-design'}
+extension_cases={'Создай рекламный ролик Remotion':'ru-remotion','Ускорь компонент React':'ru-frontend-implementation','Проверь форму через Playwright CLI':'ru-webapp-testing','Проверь форму лендинга, но настоящую заявку не отправляй':'ru-webapp-testing','Проверь форму':'ru-webapp-testing','Выбери палитру и типографику':'ru-frontend-design','Сделай рилс для YouTube':'ru-youtube-growth','Проанализируй удержание зрителей':'ru-youtube-growth','Выбери тему для Shorts':'ru-youtube-growth'}
 for query,name in extension_cases.items():
  check('references/modules/'+name+'.md' in mod.route(query)['module_paths'],'Не найдено дополнение по задаче '+query)
 library=json.loads((ROOT/'references/extensions/design-library.json').read_text())

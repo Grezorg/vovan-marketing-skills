@@ -19,6 +19,8 @@ jobs:
           python-version: '3.12'
       - name: Проверить рабочие процедуры
         run: python3 scripts/validate.py
+      - name: Проверить русские YouTube-инструменты
+        run: python3 scripts/test_youtube.py
       - name: Проверить целостность сборки
         run: python3 scripts/check_integrity.py
 
