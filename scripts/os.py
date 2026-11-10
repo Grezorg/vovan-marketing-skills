@@ -97,6 +97,8 @@ def route(query):
  mods=[entries[n]['path'] for score,n in selected if score and entries[n]['domain'] in eligible][:6]
  if primary=='product-cards':
   mods=['references/modules/ru-product-cards.md']+[p for p in mods if p!='references/modules/ru-product-cards.md']
+ if re.match(r'^\s*(?:(?:включи|запусти|примени)\s+)?[«"]?арен[ау]\s+3\b',q):
+  mods=['references/extensions/arena-3.md',*mods]
  cores=list(dict.fromkeys([primary,*supporting,'events','quality']))
  return {'primary':primary,'supporting':supporting,'core_paths':['references/core/'+d+'.md' for d in cores],'module_paths':mods,'note':'Маршрут рекомендательный: читать только материалы, необходимые для результата.'}
 def main():

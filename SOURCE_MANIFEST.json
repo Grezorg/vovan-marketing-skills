@@ -1,6 +1,6 @@
 {
-  "version": "4.2.0",
-  "date": "2026-11-06",
+  "version": "4.2.1",
+  "date": "2026-11-10",
   "language": "ru",
   "files": [
     {
@@ -35,8 +35,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "c0eb8f386051d52bffe590bcca7946333e303f7fc8bab86bda0cf45a4671c447",
-      "bytes": 10557
+      "sha256": "1df887f9d8f13e1f8e83f0e967c5ea7959f6bcc695199d874439d206023af2ac",
+      "bytes": 10803
     },
     {
       "path": "SOURCES.md",
@@ -120,8 +120,8 @@
     },
     {
       "path": "references/commands.json",
-      "sha256": "6e2550808f1540e8b8e300d0b8466ee65ee630d575e4561600adf1c92b5db3be",
-      "bytes": 1727
+      "sha256": "ddf747c1ae9f5efc8e1c5636a52879b721baf39493c3d96c15ec82ff49514b80",
+      "bytes": 1879
     },
     {
       "path": "references/core/automations.md",
@@ -212,6 +212,11 @@
       "path": "references/core/software.md",
       "sha256": "ba770fb843884e726e578870036a5a23907f59b557c86614541497b7fb14e1ee",
       "bytes": 1525
+    },
+    {
+      "path": "references/extensions/arena-3.md",
+      "sha256": "6098d87213771a95d53a9a3747fb2cb9aadff92bcf60456b86a3dc257e696a08",
+      "bytes": 2511
     },
     {
       "path": "references/extensions/design-library.json",
@@ -705,8 +710,8 @@
     },
     {
       "path": "references/system.json",
-      "sha256": "bb2765a3fe62df62b0edb7c4c66184554824dc832fb58753c30ee0b93f1f2ab3",
-      "bytes": 1489
+      "sha256": "f5fd07743d7d6a843958ea63243dfa39ea035de45296a69aecbaa632d9981ba5",
+      "bytes": 1540
     },
     {
       "path": "references/validation-results.json",
@@ -720,8 +725,8 @@
     },
     {
       "path": "scripts/os.py",
-      "sha256": "5e964ab74fe7ca8278f99a95ded0fdf1664163936ea46177e71dccc675d8d292",
-      "bytes": 11159
+      "sha256": "386aa746dd50f1ba4be187803875c278b89e0ef174338eb3276138a203ab8fd0",
+      "bytes": 11314
     },
     {
       "path": "scripts/state.py",

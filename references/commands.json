@@ -71,6 +71,11 @@
     {
       "say": "Покажи фактические затраты",
       "core": "context-budget"
+    },
+    {
+      "say": "Арена 3: сравни три подхода",
+      "core": "quality",
+      "path": "references/extensions/arena-3.md"
     }
   ]
 }
