@@ -1,6 +1,6 @@
 {
-  "version": "4.2.1",
-  "date": "2026-11-10",
+  "version": "4.2.2",
+  "date": "2026-11-15",
   "language": "ru",
   "files": [
     {
@@ -35,8 +35,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "1df887f9d8f13e1f8e83f0e967c5ea7959f6bcc695199d874439d206023af2ac",
-      "bytes": 10803
+      "sha256": "dd8347218e4ec58a9b10dec26b485cd43d72cd623322a218883e7ee98c9a5cbd",
+      "bytes": 11117
     },
     {
       "path": "SOURCES.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Vovan_Marketing_OS_RU_PHONE.txt",
-      "sha256": "aecf21c7b7a9ad917f6ed5171cdc2b9377780a4b1a860d805e1d12b42f2b5f54",
-      "bytes": 547352
+      "sha256": "cfb3f0238ac2226494b11d13c9738d322d87be0bca5623e76e76369a9db23a79",
+      "bytes": 561495
     },
     {
       "path": "agents/openai.yaml",
@@ -114,14 +114,19 @@
       "bytes": 11346
     },
     {
+      "path": "references/action-record-template.md",
+      "sha256": "173da1eecf5ed56d74b116781056470f5b1245c950c3df6dfd9311b7c84d9a09",
+      "bytes": 1806
+    },
+    {
       "path": "references/catalog.json",
       "sha256": "15fc33627a6d81dc5159b8a2dc5cb82fa00e63e1d88823cab6a6ce7a411441be",
       "bytes": 56019
     },
     {
       "path": "references/commands.json",
-      "sha256": "ddf747c1ae9f5efc8e1c5636a52879b721baf39493c3d96c15ec82ff49514b80",
-      "bytes": 1879
+      "sha256": "30df863fd01f5f40c386352b812bf1e6390d7290c9faa33248e9ae5fbfc5fc03",
+      "bytes": 2213
     },
     {
       "path": "references/core/automations.md",
@@ -130,8 +135,8 @@
     },
     {
       "path": "references/core/context-budget.md",
-      "sha256": "c8cdd0cc0d28d843abc42d0596fccc932d0d13b40c11ab621ad34bf9e2c74b97",
-      "bytes": 1461
+      "sha256": "7b4c744d999bcf3034be41914e9ebe0b8d1210d35c79279f8e36a13a6a822e4f",
+      "bytes": 2569
     },
     {
       "path": "references/core/dispatcher.md",
@@ -170,13 +175,13 @@
     },
     {
       "path": "references/core/memory.md",
-      "sha256": "4bec973f7d703c10673506d67cd6be4cbc28bcc297bf8baa8ae1d34dd8d96b25",
-      "bytes": 1883
+      "sha256": "fbcb8728013528af64368962ffb6ad950cd2b704c8cb2d8461f93d67544feee3",
+      "bytes": 5008
     },
     {
       "path": "references/core/planning.md",
-      "sha256": "3cd388c3cdec7ad7ec9b9380a04e4f2b4ccd822867efe02d6e2ed52841417336",
-      "bytes": 1393
+      "sha256": "ad090e1dc2fd905223d2ad25653e36edf4d94c34472af2510e71becf6f023267",
+      "bytes": 1876
     },
     {
       "path": "references/core/portability.md",
@@ -190,8 +195,8 @@
     },
     {
       "path": "references/core/quality.md",
-      "sha256": "6a46915423067e63df52bc8fb226a51bb7e798fd75ba764abaff10b251f6c968",
-      "bytes": 1539
+      "sha256": "f9eb0a46796596b8136aef6ef122ddd1a97e86bb956942bb073309d9d0508295",
+      "bytes": 2382
     },
     {
       "path": "references/core/research.md",
@@ -680,8 +685,13 @@
     },
     {
       "path": "references/project-context-template.md",
-      "sha256": "8217593032ac0f257906293ac1994ea25dba3d7b12df558599ce0a8152fd15d9",
-      "bytes": 1291
+      "sha256": "3332744878b86c5d6c6ffccd3301c7ba064182be2d53dff9abed5c9d08318a3f",
+      "bytes": 2937
+    },
+    {
+      "path": "references/project-transfer-template.md",
+      "sha256": "64cab816ec3a9fb815d903a0eb37c9d7941f877a8fa6cd79d49ef9911ebf43c3",
+      "bytes": 2021
     },
     {
       "path": "references/routing.md",
@@ -710,7 +720,7 @@
     },
     {
       "path": "references/system.json",
-      "sha256": "f5fd07743d7d6a843958ea63243dfa39ea035de45296a69aecbaa632d9981ba5",
+      "sha256": "53a77f1b40de6c90626d1e5ee6e0f7c747bea88a5f5af28da65b149bb78e83a9",
       "bytes": 1540
     },
     {
@@ -725,8 +735,8 @@
     },
     {
       "path": "scripts/os.py",
-      "sha256": "386aa746dd50f1ba4be187803875c278b89e0ef174338eb3276138a203ab8fd0",
-      "bytes": 11314
+      "sha256": "4e19de2344a10cb6cd4e5b4dd8d684529ab9b4cafd98d25b42776add6085ab20",
+      "bytes": 11506
     },
     {
       "path": "scripts/state.py",

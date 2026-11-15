@@ -1,8 +1,8 @@
 {
   "name": "Vovan OS",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "language": "ru",
-  "updated_at": "2026-11-10",
+  "updated_at": "2026-11-15",
   "repository": "https://github.com/Grezorg/vovan-marketing-skills",
   "counts": {
     "subject_modules": 75,
@@ -10,7 +10,7 @@
     "new_consolidated_modules": 21,
     "core_modules": 18,
     "russian_guides": 6,
-    "commands": 19
+    "commands": 21
   },
   "runtime": {
     "automatic_hooks": false,

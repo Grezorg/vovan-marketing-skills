@@ -76,6 +76,16 @@
       "say": "Арена 3: сравни три подхода",
       "core": "quality",
       "path": "references/extensions/arena-3.md"
+    },
+    {
+      "say": "Создай паспорт проекта",
+      "core": "memory",
+      "path": "references/project-context-template.md"
+    },
+    {
+      "say": "Подготовь передачу проекта в другой чат",
+      "core": "memory",
+      "path": "references/project-transfer-template.md"
     }
   ]
 }
