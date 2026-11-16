@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Проверка памяти на временных обезличенных данных."""
-import importlib.util,json,os,subprocess,sys,tempfile,unittest
+import importlib.util,json,os,subprocess,sys,tempfile,time,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
 spec=importlib.util.spec_from_file_location('state',ROOT/'scripts/state.py')
@@ -49,16 +49,57 @@ class StateChecks(unittest.TestCase):
         second=json.loads(self.call('learn',{**payload,'evidence':'two'}).stdout)
         self.assertEqual(second['record']['status'],'active')
     def test_concurrent_writes(self):
-        processes=[]
-        for i in range(5):
-            p=subprocess.Popen([sys.executable,str(ROOT/'scripts/state.py'),'remember','--file',str(self.path)],
-                stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',env={**os.environ,'PYTHONUTF8':'1'})
-            p.stdin.write(json.dumps({'project':'A','kind':'fact','text':str(i),'source':'demo'}));p.stdin.close();p.stdin=None
-            processes.append(p)
-        for p in processes:
-            _,err=p.communicate(timeout=30);self.assertEqual(p.returncode,0,err)
+        for batch in range(5):
+            processes=[]
+            try:
+                # Сначала запустить всех, затем одновременно разрешить чтение входов.
+                for i in range(5):
+                    processes.append(subprocess.Popen([sys.executable,str(ROOT/'scripts/state.py'),'remember','--file',str(self.path)],
+                        stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',env={**os.environ,'PYTHONUTF8':'1'}))
+                for i,p in enumerate(processes):
+                    p.stdin.write(json.dumps({'project':'A','kind':'fact','text':str(batch*5+i),'source':'demo'}));p.stdin.close();p.stdin=None
+                failures=[]
+                for p in processes:
+                    _,err=p.communicate(timeout=30)
+                    if p.returncode:failures.append(err)
+                self.assertEqual(failures,[])
+            finally:
+                for p in processes:
+                    if p.poll() is None:p.kill()
+                    p.communicate()
         result=state.load(self.path)
-        self.assertEqual(result['revision'],5);self.assertEqual(len(result['records']),5)
+        self.assertEqual(result['revision'],25);self.assertEqual(len(result['records']),25)
+    @unittest.skipUnless(os.name=='nt','Проверка блокировки пустого файла Windows')
+    def test_windows_waits_for_empty_file_lock(self):
+        import msvcrt
+        lock_dir=Path(tempfile.gettempdir())/'vovan-os-state-locks'
+        lock_dir.mkdir(exist_ok=True)
+        lock_name=state.hashlib.sha256(os.path.normcase(str(self.path.resolve())).encode()).hexdigest()+'.lock'
+        lock_path=lock_dir/lock_name
+        worker='''import sys
+sys.path.insert(0,sys.argv[1])
+from pathlib import Path
+from state import state_lock
+print("ready",flush=True)
+with state_lock(Path(sys.argv[2])):
+    print("acquired",flush=True)
+'''
+        with lock_path.open('w+b') as owner:
+            msvcrt.locking(owner.fileno(),msvcrt.LK_LOCK,1)
+            p=None
+            try:
+                p=subprocess.Popen([sys.executable,'-c',worker,str(ROOT/'scripts'),str(self.path)],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8')
+                self.assertEqual(p.stdout.readline().strip(),'ready')
+                time.sleep(0.25)
+                self.assertIsNone(p.poll(),'Ожидающий процесс не должен писать в уже заблокированный пустой файл')
+            finally:
+                owner.seek(0);msvcrt.locking(owner.fileno(),msvcrt.LK_UNLCK,1)
+                if p is not None:
+                    try:out,err=p.communicate(timeout=30)
+                    finally:
+                        if p.poll() is None:p.kill();p.communicate()
+        self.assertEqual(p.returncode,0,err)
+        self.assertEqual(out.strip(),'acquired')
     def test_bad_state_is_not_overwritten(self):
         self.path.write_text('{broken',encoding='utf-8')
         result=self.call('checkpoint',{'project':'A','goal':'G','source':'demo'})

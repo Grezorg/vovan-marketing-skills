@@ -37,12 +37,13 @@ def state_lock(path):
     """Блокировка одного файла состояния на Windows, Linux и macOS."""
     lock_dir=Path(tempfile.gettempdir())/'vovan-os-state-locks'
     lock_dir.mkdir(exist_ok=True)
-    lock_name=hashlib.sha256(str(path.resolve()).encode()).hexdigest()+'.lock'
+    lock_name=hashlib.sha256(os.path.normcase(str(path.resolve())).encode()).hexdigest()+'.lock'
     with (lock_dir/lock_name).open('a+b') as lock:
         if os.name=='nt':
             import msvcrt
-            if lock.seek(0,os.SEEK_END)==0:
-                lock.write(b'\0');lock.flush()
+            # Windows разрешает блокировать байт за концом пустого файла.
+            # Запись «начального» байта до блокировки создаёт гонку между процессами.
+            # https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/locking
             lock.seek(0)
             msvcrt.locking(lock.fileno(),msvcrt.LK_LOCK,1)
         else:
