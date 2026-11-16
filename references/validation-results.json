@@ -1,7 +1,7 @@
 {
   "status": "пройдено",
   "version": "4.3.0",
-  "checked_at": "2026-11-16T10:12:28.733884+00:00",
+  "checked_at": "2026-11-16T15:44:32.257841+00:00",
   "platform": "Linux",
   "python": "3.12.14",
   "source_sha256": {
@@ -21,24 +21,24 @@
       "command": "python scripts/test_router.py",
       "exit_code": 0,
       "stdout": "",
-      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.040s\n\nOK"
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.039s\n\nOK"
     },
     {
       "command": "python scripts/test_state.py",
       "exit_code": 0,
       "stdout": "",
-      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.629s\n\nOK"
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.610s\n\nOK"
     },
     {
       "command": "python scripts/test_youtube.py",
       "exit_code": 0,
       "stdout": "",
-      "stderr": "test_channel_relative_outlier (__main__.YouTubeChecks.test_channel_relative_outlier) ... ok\ntest_explicit_seconds_for_short_video (__main__.YouTubeChecks.test_explicit_seconds_for_short_video) ... ok\ntest_increasing_axis (__main__.YouTubeChecks.test_increasing_axis) ... ok\ntest_malformed_csv (__main__.YouTubeChecks.test_malformed_csv) ... ok\ntest_missing_dates_formats_and_duplicates (__main__.YouTubeChecks.test_missing_dates_formats_and_duplicates) ... ok\ntest_no_ctr_score (__main__.YouTubeChecks.test_no_ctr_score) ... ok\ntest_nonfinite_values (__main__.YouTubeChecks.test_nonfinite_values) ... ok\ntest_pair_without_duplicate (__main__.YouTubeChecks.test_pair_without_duplicate) ... ok\ntest_percent_axis_needs_duration (__main__.YouTubeChecks.test_percent_axis_needs_duration) ... ok\ntest_quoted_decimal_comma (__main__.YouTubeChecks.test_quoted_decimal_comma) ... ok\ntest_rewatch_and_partial_curve (__main__.YouTubeChecks.test_rewatch_and_partial_curve) ... ok\ntest_russian_duplicate (__main__.YouTubeChecks.test_russian_duplicate) ... ok\ntest_semicolon_decimal_comma (__main__.YouTubeChecks.test_semicolon_decimal_comma) ... ok\ntest_thin_zero_and_rounded_counts (__main__.YouTubeChecks.test_thin_zero_and_rounded_counts) ... ok\ntest_yo_case_and_unicode (__main__.YouTubeChecks.test_yo_case_and_unicode) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.002s\n\nOK"
+      "stderr": "test_channel_relative_outlier (__main__.YouTubeChecks.test_channel_relative_outlier) ... ok\ntest_explicit_seconds_for_short_video (__main__.YouTubeChecks.test_explicit_seconds_for_short_video) ... ok\ntest_increasing_axis (__main__.YouTubeChecks.test_increasing_axis) ... ok\ntest_malformed_csv (__main__.YouTubeChecks.test_malformed_csv) ... ok\ntest_missing_dates_formats_and_duplicates (__main__.YouTubeChecks.test_missing_dates_formats_and_duplicates) ... ok\ntest_no_ctr_score (__main__.YouTubeChecks.test_no_ctr_score) ... ok\ntest_nonfinite_values (__main__.YouTubeChecks.test_nonfinite_values) ... ok\ntest_pair_without_duplicate (__main__.YouTubeChecks.test_pair_without_duplicate) ... ok\ntest_percent_axis_needs_duration (__main__.YouTubeChecks.test_percent_axis_needs_duration) ... ok\ntest_quoted_decimal_comma (__main__.YouTubeChecks.test_quoted_decimal_comma) ... ok\ntest_rewatch_and_partial_curve (__main__.YouTubeChecks.test_rewatch_and_partial_curve) ... ok\ntest_russian_duplicate (__main__.YouTubeChecks.test_russian_duplicate) ... ok\ntest_semicolon_decimal_comma (__main__.YouTubeChecks.test_semicolon_decimal_comma) ... ok\ntest_thin_zero_and_rounded_counts (__main__.YouTubeChecks.test_thin_zero_and_rounded_counts) ... ok\ntest_yo_case_and_unicode (__main__.YouTubeChecks.test_yo_case_and_unicode) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.004s\n\nOK"
     },
     {
       "command": "python scripts/check_integrity.py",
       "exit_code": 0,
-      "stdout": "{\"status\": \"пройдено\", \"verified_files\": 178}",
+      "stdout": "{\"status\": \"пройдено\", \"verified_files\": 184}",
       "stderr": ""
     }
   ],

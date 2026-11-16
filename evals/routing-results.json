@@ -1,0 +1,154 @@
+{
+  "scope": "24 целевых запроса из аудита; не оценка точности всей системы",
+  "before_version": "4.2.2",
+  "after_version": "4.3.0",
+  "before_matched": 16,
+  "after_matched": 24,
+  "total": 24,
+  "results": [
+    {
+      "query": "Сделай пост для Telegram о бесплатных нейросетях",
+      "expected": "marketing",
+      "before": "marketing",
+      "after": "marketing"
+    },
+    {
+      "query": "Создай рекламное видео для клининга",
+      "expected": "media",
+      "before": "marketing",
+      "after": "media"
+    },
+    {
+      "query": "Сделай сайт для продажи товаров",
+      "expected": "sites",
+      "before": "product-cards",
+      "after": "sites"
+    },
+    {
+      "query": "Нарисуй логотип для кофейни",
+      "expected": "media",
+      "before": "dispatcher",
+      "after": "media"
+    },
+    {
+      "query": "Сделай баннер акции",
+      "expected": "media",
+      "before": "dispatcher",
+      "after": "media"
+    },
+    {
+      "query": "Подготовь договор в Word",
+      "expected": "documents",
+      "before": "dispatcher",
+      "after": "documents"
+    },
+    {
+      "query": "Сократи текст объявления",
+      "expected": "marketing",
+      "before": "dispatcher",
+      "after": "marketing"
+    },
+    {
+      "query": "Автоматизация не нужна, просто напиши текст поста",
+      "expected": "marketing",
+      "before": "automations",
+      "after": "marketing"
+    },
+    {
+      "query": "Подготовь передачу проекта в другой чат",
+      "expected": "memory",
+      "before": "memory",
+      "after": "memory"
+    },
+    {
+      "query": "Перенеси состояние проекта в новый чат",
+      "expected": "memory",
+      "before": "dispatcher",
+      "after": "memory"
+    },
+    {
+      "query": "Создай Telegram-бота для записи клиентов",
+      "expected": "software",
+      "before": "software",
+      "after": "software"
+    },
+    {
+      "query": "Найди бесплатный сервис для создания видео",
+      "expected": "research",
+      "before": "research",
+      "after": "research"
+    },
+    {
+      "query": "Собери таблицу бюджета в XLSX",
+      "expected": "documents",
+      "before": "documents",
+      "after": "documents"
+    },
+    {
+      "query": "Проверь нашу систему и предложи улучшения",
+      "expected": "skill-management",
+      "before": "skill-management",
+      "after": "skill-management"
+    },
+    {
+      "query": "Проверь сайт на телефоне и исправь ошибки",
+      "expected": "sites",
+      "before": "sites",
+      "after": "sites"
+    },
+    {
+      "query": "Создай паспорт проекта",
+      "expected": "memory",
+      "before": "memory",
+      "after": "memory"
+    },
+    {
+      "query": "Напомни завтра проверить заявки",
+      "expected": "automations",
+      "before": "automations",
+      "after": "automations"
+    },
+    {
+      "query": "Сделай 7 карточек товара для Ozon",
+      "expected": "product-cards",
+      "before": "product-cards",
+      "after": "product-cards"
+    },
+    {
+      "query": "Исправь код бота записи",
+      "expected": "software",
+      "before": "software",
+      "after": "software"
+    },
+    {
+      "query": "Сравни конкурентов по ценам",
+      "expected": "research",
+      "before": "research",
+      "after": "research"
+    },
+    {
+      "query": "Создай презентацию для клиента",
+      "expected": "documents",
+      "before": "documents",
+      "after": "documents"
+    },
+    {
+      "query": "Смонтируй видео из трёх сцен",
+      "expected": "media",
+      "before": "media",
+      "after": "media"
+    },
+    {
+      "query": "Ускорь сайт на React",
+      "expected": "sites",
+      "before": "sites",
+      "after": "sites"
+    },
+    {
+      "query": "Арена 3: придумай три оффера для услуги",
+      "expected": "marketing",
+      "before": "marketing",
+      "after": "marketing"
+    }
+  ]
+}

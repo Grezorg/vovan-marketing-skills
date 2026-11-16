@@ -75,8 +75,8 @@
     },
     {
       "path": "Vovan_Marketing_OS_RU_PHONE.txt",
-      "sha256": "c956998b1fd60b42b62eb51f2e91506edd701cc4832627fcd0d1175661ab18f4",
-      "bytes": 475925
+      "sha256": "1758b14e2065fbc9b3ae5ca6b450ae2a9a987b08a1ffbe664c07d3990707b3ad",
+      "bytes": 476714
     },
     {
       "path": "Vovan_OS_START_RU.txt",
@@ -100,8 +100,8 @@
     },
     {
       "path": "evals/RESULTS.md",
-      "sha256": "0aa178d3bac3549a4f3050765a1fa5d8761f89be8768e78a235da5e3864992ec",
-      "bytes": 235
+      "sha256": "afa824f7b778c04a2eb1953da4a97428876d25711c1387f252d8eafd28469c7d",
+      "bytes": 5171
     },
     {
       "path": "evals/pilot.md",
@@ -109,9 +109,34 @@
       "bytes": 2017
     },
     {
+      "path": "evals/ratings.json",
+      "sha256": "7bfaa7515222aac6c1fcd947bfd241defef2fbc4100763d183def6f6b663434c",
+      "bytes": 26404
+    },
+    {
+      "path": "evals/response-audit-followup.json",
+      "sha256": "e157f3b77be9c69905e1c61eb2b21f9fd6e886e55a980e3e33335aa35e9def2d",
+      "bytes": 5234
+    },
+    {
+      "path": "evals/responses-plain.json",
+      "sha256": "ff298e9f035aac26340acdccfae63c25b9c02abeee009a54ca829e440adda46d",
+      "bytes": 16108
+    },
+    {
+      "path": "evals/responses-vovan-initial.json",
+      "sha256": "db3aa44af8251c76a00838060e8be206cc5941ebcc908b326ebdbe817c760708",
+      "bytes": 17586
+    },
+    {
       "path": "evals/routing-audit.json",
       "sha256": "2bc4567aa4101254c97f913afa98fecc720d0d08780d314f7558e69f4a42bb0f",
       "bytes": 2697
+    },
+    {
+      "path": "evals/routing-results.json",
+      "sha256": "2477c5679b0d36b630b24558f9ac7339e47f16866163f00f6bfd6642b5166c66",
+      "bytes": 4494
     },
     {
       "path": "evals/rubric.json",
@@ -150,8 +175,8 @@
     },
     {
       "path": "examples/service-launch/checks.json",
-      "sha256": "8ca3a16ff67ad04d109874a5f2d6980b9d931afec0b4601c9ec22042885af5df",
-      "bytes": 363
+      "sha256": "cc7da4f9f5a8f9a313d89fda7d70878540d9e9fd578ffe067ad8d8f0d99e2ff4",
+      "bytes": 1125
     },
     {
       "path": "examples/service-launch/content.md",
@@ -295,8 +320,8 @@
     },
     {
       "path": "references/core/quality.md",
-      "sha256": "f9eb0a46796596b8136aef6ef122ddd1a97e86bb956942bb073309d9d0508295",
-      "bytes": 2382
+      "sha256": "4e872a14c9bb0ed12dadc18d82cf716573caca5d325dcd3f6d1f574d8373ae0a",
+      "bytes": 3171
     },
     {
       "path": "references/core/research.md",
@@ -830,7 +855,7 @@
     },
     {
       "path": "references/validation-results.json",
-      "sha256": "f1bb33c612b9645fe0a77bbb01e6ae22afe6c2c04a6e8063649d687cfa3dc70f",
+      "sha256": "93d6e80f9b65fa3c5a67219e482b72042414d1b533dcdd31d2fc61b6d1347d93",
       "bytes": 3847
     },
     {

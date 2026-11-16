@@ -1,12 +1,40 @@
 {
-  "status": "ожидает CI",
-  "local_browser": "Запуск Chromium запрещён ограничением среды socket(). Проверка интерфейса локально не выполнена.",
-  "planned_viewports": [
-    1366,
-    390,
-    320
+  "status": "пройдено",
+  "checked_at": "2026-11-16T10:18:51.532747+00:00",
+  "browser": "Chromium через Playwright",
+  "checks": [
+    {
+      "viewport": 1366,
+      "horizontal_overflow": false,
+      "anchor": true,
+      "empty_rejected": true,
+      "valid_demo": true,
+      "invalid_area_rejected": true
+    },
+    {
+      "viewport": 390,
+      "horizontal_overflow": false,
+      "anchor": true,
+      "empty_rejected": true,
+      "valid_demo": true,
+      "invalid_area_rejected": true
+    },
+    {
+      "viewport": 320,
+      "horizontal_overflow": false,
+      "anchor": true,
+      "empty_rejected": true,
+      "valid_demo": true,
+      "invalid_area_rejected": true
+    }
   ],
+  "console_errors": [],
+  "external_requests": [],
   "limits": [
-    "Внешняя доставка не подключена"
-  ]
+    "Учебные данные",
+    "Внешняя доставка не подключена и не проверена",
+    "Другие браузеры не проверены"
+  ],
+  "source_run": "https://github.com/Grezorg/vovan-marketing-skills/actions/runs/43847589535",
+  "source_commit": "fb14aa4d8db482446e538ef9adef6b7f630ca19a"
 }
