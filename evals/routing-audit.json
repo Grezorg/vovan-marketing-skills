@@ -1,0 +1,98 @@
+[
+  {
+    "query": "Сделай пост для Telegram о бесплатных нейросетях",
+    "expected": "marketing"
+  },
+  {
+    "query": "Создай рекламное видео для клининга",
+    "expected": "media"
+  },
+  {
+    "query": "Сделай сайт для продажи товаров",
+    "expected": "sites"
+  },
+  {
+    "query": "Нарисуй логотип для кофейни",
+    "expected": "media"
+  },
+  {
+    "query": "Сделай баннер акции",
+    "expected": "media"
+  },
+  {
+    "query": "Подготовь договор в Word",
+    "expected": "documents"
+  },
+  {
+    "query": "Сократи текст объявления",
+    "expected": "marketing"
+  },
+  {
+    "query": "Автоматизация не нужна, просто напиши текст поста",
+    "expected": "marketing"
+  },
+  {
+    "query": "Подготовь передачу проекта в другой чат",
+    "expected": "memory"
+  },
+  {
+    "query": "Перенеси состояние проекта в новый чат",
+    "expected": "memory"
+  },
+  {
+    "query": "Создай Telegram-бота для записи клиентов",
+    "expected": "software"
+  },
+  {
+    "query": "Найди бесплатный сервис для создания видео",
+    "expected": "research"
+  },
+  {
+    "query": "Собери таблицу бюджета в XLSX",
+    "expected": "documents"
+  },
+  {
+    "query": "Проверь нашу систему и предложи улучшения",
+    "expected": "skill-management"
+  },
+  {
+    "query": "Проверь сайт на телефоне и исправь ошибки",
+    "expected": "sites"
+  },
+  {
+    "query": "Создай паспорт проекта",
+    "expected": "memory"
+  },
+  {
+    "query": "Напомни завтра проверить заявки",
+    "expected": "automations"
+  },
+  {
+    "query": "Сделай 7 карточек товара для Ozon",
+    "expected": "product-cards"
+  },
+  {
+    "query": "Исправь код бота записи",
+    "expected": "software"
+  },
+  {
+    "query": "Сравни конкурентов по ценам",
+    "expected": "research"
+  },
+  {
+    "query": "Создай презентацию для клиента",
+    "expected": "documents"
+  },
+  {
+    "query": "Смонтируй видео из трёх сцен",
+    "expected": "media"
+  },
+  {
+    "query": "Ускорь сайт на React",
+    "expected": "sites"
+  },
+  {
+    "query": "Арена 3: придумай три оффера для услуги",
+    "expected": "marketing"
+  }
+]

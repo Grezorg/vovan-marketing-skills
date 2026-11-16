@@ -1,0 +1,18 @@
+name: Предложить рабочий сценарий
+description: Какая законченная работа вам нужна
+title: "[Сценарий] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Что вы хотите получить и как проверите результат
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Что мешает выполнить это сейчас
+  - type: input
+    id: frequency
+    attributes:
+      label: Как часто возникает задача

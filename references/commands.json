@@ -86,6 +86,20 @@
       "say": "Подготовь передачу проекта в другой чат",
       "core": "memory",
       "path": "references/project-transfer-template.md"
+    },
+    {
+      "say": "Покажи мои проекты",
+      "core": "memory"
+    },
+    {
+      "say": "Быстрый старт",
+      "core": "dispatcher",
+      "path": "references/quick-start.md"
+    },
+    {
+      "say": "Проверь подключения",
+      "core": "integrations",
+      "path": "references/capability-check.md"
     }
   ]
 }

@@ -6,7 +6,7 @@ import json
 import os
 import re
 import tempfile
-import fcntl
+from contextlib import contextmanager
 from datetime import datetime,timezone
 from pathlib import Path
 
@@ -17,7 +17,7 @@ SENSITIVE=re.compile(r'\b(?:sk-[A-Za-z0-9_-]{12,}|ghp_[A-Za-z0-9]{20,}|\d{7,12}:
 def now():return datetime.now(timezone.utc).isoformat()
 def blank():return {'schema_version':1,'revision':0,'updated_at':None,'projects':{},'records':[],'lessons':[]}
 def load(path):
-    state=json.loads(path.read_text()) if path.exists() else blank()
+    state=json.loads(path.read_text(encoding='utf-8')) if path.exists() else blank()
     if state.get('schema_version')!=1:raise ValueError('Неподдерживаемая схема состояния')
     return state
 def save(path,state):
@@ -25,12 +25,45 @@ def save(path,state):
     state['revision']+=1;state['updated_at']=now()
     fd,tmp=tempfile.mkstemp(prefix='.state-',dir=path.parent)
     try:
-        with os.fdopen(fd,'w') as handle:
+        with os.fdopen(fd,'w',encoding='utf-8') as handle:
             json.dump(state,handle,ensure_ascii=False,indent=2);handle.write('\n')
             handle.flush();os.fsync(handle.fileno())
         os.replace(tmp,path)
     finally:
         if os.path.exists(tmp):os.unlink(tmp)
+
+@contextmanager
+def state_lock(path):
+    """Блокировка одного файла состояния на Windows, Linux и macOS."""
+    lock_dir=Path(tempfile.gettempdir())/'vovan-os-state-locks'
+    lock_dir.mkdir(exist_ok=True)
+    lock_name=hashlib.sha256(str(path.resolve()).encode()).hexdigest()+'.lock'
+    with (lock_dir/lock_name).open('a+b') as lock:
+        if os.name=='nt':
+            import msvcrt
+            if lock.seek(0,os.SEEK_END)==0:
+                lock.write(b'\0');lock.flush()
+            lock.seek(0)
+            msvcrt.locking(lock.fileno(),msvcrt.LK_LOCK,1)
+        else:
+            import fcntl
+            fcntl.flock(lock,fcntl.LOCK_EX)
+        try:yield
+        finally:
+            if os.name=='nt':
+                lock.seek(0);msvcrt.locking(lock.fileno(),msvcrt.LK_UNLCK,1)
+            else:fcntl.flock(lock,fcntl.LOCK_UN)
+
+def project_index(state):
+    """Показывать сохраненные контрольные точки, не выдавая их за живую проверку."""
+    return {'projects':[{
+        'project':name,'goal':p.get('goal'),'source':p.get('source'),
+        'updated_at':p.get('updated_at'),'next':p.get('next',[]),
+        'blocked':p.get('blocked',[]),'verified':p.get('verified',[]),
+        'status':'blocked' if p.get('blocked') else 'recorded',
+        'freshness':'Прочитать актуальный паспорт перед продолжением'
+    } for name,p in sorted(state['projects'].items())],
+    'note':'Индекс этого хранилища; не полный список проектов аккаунта и не проверка ссылок.'}
 def required(payload,*keys):
     for key in keys:
         if not isinstance(payload.get(key),str) or not payload[key].strip():raise ValueError(f'Обязательное непустое поле: {key}')
@@ -71,18 +104,14 @@ def apply(state,action,payload):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('action',choices=['show','health','checkpoint','remember','learn','export'])
+    p.add_argument('action',choices=['show','health','projects','checkpoint','remember','learn','export'])
     p.add_argument('--file',type=Path,default=ROOT/'references/state/os-state.json')
     p.add_argument('--project')
     args=p.parse_args()
     try:
         if args.action in ['checkpoint','remember','learn']:
             payload=json.load(__import__('sys').stdin)
-            lock_dir=Path(tempfile.gettempdir())/'vovan-os-state-locks'
-            lock_dir.mkdir(exist_ok=True)
-            lock_name=hashlib.sha256(str(args.file.resolve()).encode()).hexdigest()+'.lock'
-            with (lock_dir/lock_name).open('a') as lock:
-                fcntl.flock(lock,fcntl.LOCK_EX)
+            with state_lock(args.file):
                 state=load(args.file)
                 if 'expected_revision' in payload and payload['expected_revision']!=state['revision']:
                     raise ValueError('Состояние изменилось; прочитать его перед повтором')
@@ -94,6 +123,7 @@ def main():
             output=state
             if args.action=='health':
                 output={'schema_version':state['schema_version'],'revision':state['revision'],'projects':len(state['projects']),'records':len(state['records']),'lessons':len(state['lessons']),'active_lessons':sum(e['status']=='active' for e in state['lessons'])}
+            elif args.action=='projects':output=project_index(state)
             elif args.project:
                 output={**state,'projects':{k:v for k,v in state['projects'].items() if k==args.project},'records':[r for r in state['records'] if r['project']==args.project],'lessons':[r for r in state['lessons'] if r['project']==args.project]}
         print(json.dumps(output,ensure_ascii=False,indent=2))

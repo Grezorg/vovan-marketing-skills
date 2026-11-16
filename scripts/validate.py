@@ -9,8 +9,8 @@ options=parser.parse_args()
 errors=[]
 def check(ok,msg):
  if not ok:errors.append(msg)
-cat=json.loads((ROOT/'references/catalog.json').read_text())
-sys=json.loads((ROOT/'references/system.json').read_text())
+cat=json.loads((ROOT/'references/catalog.json').read_text(encoding='utf-8'))
+sys=json.loads((ROOT/'references/system.json').read_text(encoding='utf-8'))
 check(len(cat)==sys['counts']['subject_modules'],'Количество процедур не совпадает.')
 check(len({e['name'] for e in cat})==len(cat),'Повторяющийся идентификатор.')
 check(len(list((ROOT/'references/core').glob('*.md')))==sys['counts']['core_modules'],'Количество модулей ядра не совпадает.')
@@ -18,12 +18,12 @@ check(len(list((ROOT/'references/guides').glob('*.md')))==sys['counts']['russian
 for e in cat:
  p=ROOT/e['path'];check(p.is_file(),'Нет файла '+e['path'])
  if p.is_file():
-  t=p.read_text();check(re.match(r'^---\nname: '+re.escape(e['name'])+r'\n',t) is not None,'Имя модуля не совпадает '+e['path'])
+  t=p.read_text(encoding='utf-8');check(re.match(r'^---\nname: '+re.escape(e['name'])+r'\n',t) is not None,'Имя модуля не совпадает '+e['path'])
   check(e.get('language')=='ru','Не русский модуль '+e['name'])
  for field in ['title','description']:
   check(bool(re.search('[А-Яа-яЁё]',e[field])),'Нет русского описания '+e['name'])
 for p in ROOT.rglob('*.md'):
- text=p.read_text()
+ text=p.read_text(encoding='utf-8')
  text=re.sub(r'\x60\x60\x60.*?\x60\x60\x60','',text,flags=re.S)
  for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)',text):
   target=target.split('#',1)[0].strip()
@@ -32,7 +32,7 @@ for p in ROOT.rglob('*.md'):
   check(dest.is_relative_to(ROOT) and dest.exists(),'Нерабочая ссылка '+str(p.relative_to(ROOT))+': '+target)
 active=[ROOT/'SKILL.md',ROOT/'references/pro-v3.md',ROOT/'references/routing.md',*list((ROOT/'references/modules').glob('*.md')),*list((ROOT/'references/core').glob('*.md')),*list((ROOT/'references/guides').glob('*.md')),*list((ROOT/'references/extensions').glob('*.md'))]
 for p in active:
- t=p.read_text();check('upstream/' not in t,'Английская рабочая зависимость '+str(p.relative_to(ROOT)))
+ t=p.read_text(encoding='utf-8');check('upstream/' not in t,'Английская рабочая зависимость '+str(p.relative_to(ROOT)))
  t=re.sub(r'\x60\x60\x60.*?\x60\x60\x60','',t,flags=re.S)
  # Prose language, not identifiers, legal texts or code.
  for line in t.splitlines():
@@ -41,7 +41,7 @@ for p in active:
   latin=len(re.findall('[A-Za-z]',clean));ru=len(re.findall('[А-Яа-яЁё]',clean))
   check(not(latin>90 and ru<latin/3),'Английская проза '+str(p.relative_to(ROOT))+': '+line[:90])
 for p in (ROOT/'scripts').glob('*.py'):
- try:ast.parse(p.read_text())
+ try:ast.parse(p.read_text(encoding='utf-8'))
  except SyntaxError as e:errors.append('Синтаксис '+p.name+': '+str(e))
 spec=importlib.util.spec_from_file_location('vovan_router',ROOT/'scripts/os.py')
 mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
@@ -57,7 +57,7 @@ for p in required:check((ROOT/p).is_file(),'Нет лицензии '+p)
 extension_cases={'Создай рекламный ролик Remotion':'ru-remotion','Ускорь компонент React':'ru-frontend-implementation','Проверь форму через Playwright CLI':'ru-webapp-testing','Проверь форму лендинга, но настоящую заявку не отправляй':'ru-webapp-testing','Проверь форму':'ru-webapp-testing','Выбери палитру и типографику':'ru-frontend-design','Сделай рилс для YouTube':'ru-youtube-growth','Проанализируй удержание зрителей':'ru-youtube-growth','Выбери тему для Shorts':'ru-youtube-growth'}
 for query,name in extension_cases.items():
  check('references/modules/'+name+'.md' in mod.route(query)['module_paths'],'Не найдено дополнение по задаче '+query)
-library=json.loads((ROOT/'references/extensions/design-library.json').read_text())
+library=json.loads((ROOT/'references/extensions/design-library.json').read_text(encoding='utf-8'))
 check(len(library['палитры'])==10 and len(library['шрифты'])==5,'Не совпадает состав дизайнерской подборки.')
 def luminance(color):
  rgb=[int(color[i:i+2],16)/255 for i in (1,3,5)]

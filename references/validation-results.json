@@ -1,19 +1,51 @@
 {
   "status": "пройдено",
-  "date": "2026-10-14",
+  "version": "4.3.0",
+  "checked_at": "2026-11-16T10:12:28.733884+00:00",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "source_sha256": {
+    "scripts/os.py": "4f64f17d6d05ca6add9ef4dd6dbb48981a11a7ce3b2312acc796df5a46f76205",
+    "scripts/state.py": "ad5d411734ccd0011916906b08bcfd595b35b772bc08c65c038819232d0f55f2",
+    "scripts/validate.py": "e5b908ef942b3b3ac68f7f81d21c688e90181e0ec02d5c1b08327df5ea9ee97a",
+    "evals/routing-audit.json": "2bc4567aa4101254c97f913afa98fecc720d0d08780d314f7558e69f4a42bb0f"
+  },
   "checks": [
-    "Состав 74 процедур, 18 модулей ядра, 6 справочников",
-    "Локальные ссылки и русский язык рабочих текстов",
-    "11 основных маршрутов",
-    "Синтаксис Python и метаданные навыка",
-    "Запись, дедупликация, конфликт версии, подтверждение урока, блокировка секретов",
-    "Независимое применение к статическому аудиту лендинга",
-    "Независимое применение к предложению услуги без выдуманных цен и отзывов",
-    "Версия при запуске: согласованная сборка, старый контекст, повреждение и недоступность ключевых файлов"
+    {
+      "command": "python scripts/validate.py --private",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"пройдено\",\n  \"subject_modules\": 75,\n  \"core_modules\": 18,\n  \"guides\": 6,\n  \"route_cases\": 20,\n  \"palette_pairs\": 50,\n  \"checks\": [\n    \"Состав\",\n    \"Русские описания и проза\",\n    \"Локальные ссылки\",\n    \"Синтаксис\",\n    \"Маршруты\",\n    \"Контраст подборки\",\n    \"Лицензии\",\n    \"Отделение личной памяти\"\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "command": "python scripts/test_router.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.040s\n\nOK"
+    },
+    {
+      "command": "python scripts/test_state.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.629s\n\nOK"
+    },
+    {
+      "command": "python scripts/test_youtube.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_channel_relative_outlier (__main__.YouTubeChecks.test_channel_relative_outlier) ... ok\ntest_explicit_seconds_for_short_video (__main__.YouTubeChecks.test_explicit_seconds_for_short_video) ... ok\ntest_increasing_axis (__main__.YouTubeChecks.test_increasing_axis) ... ok\ntest_malformed_csv (__main__.YouTubeChecks.test_malformed_csv) ... ok\ntest_missing_dates_formats_and_duplicates (__main__.YouTubeChecks.test_missing_dates_formats_and_duplicates) ... ok\ntest_no_ctr_score (__main__.YouTubeChecks.test_no_ctr_score) ... ok\ntest_nonfinite_values (__main__.YouTubeChecks.test_nonfinite_values) ... ok\ntest_pair_without_duplicate (__main__.YouTubeChecks.test_pair_without_duplicate) ... ok\ntest_percent_axis_needs_duration (__main__.YouTubeChecks.test_percent_axis_needs_duration) ... ok\ntest_quoted_decimal_comma (__main__.YouTubeChecks.test_quoted_decimal_comma) ... ok\ntest_rewatch_and_partial_curve (__main__.YouTubeChecks.test_rewatch_and_partial_curve) ... ok\ntest_russian_duplicate (__main__.YouTubeChecks.test_russian_duplicate) ... ok\ntest_semicolon_decimal_comma (__main__.YouTubeChecks.test_semicolon_decimal_comma) ... ok\ntest_thin_zero_and_rounded_counts (__main__.YouTubeChecks.test_thin_zero_and_rounded_counts) ... ok\ntest_yo_case_and_unicode (__main__.YouTubeChecks.test_yo_case_and_unicode) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.002s\n\nOK"
+    },
+    {
+      "command": "python scripts/check_integrity.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"пройдено\", \"verified_files\": 178}",
+      "stderr": ""
+    }
   ],
   "limits": [
-    "Браузерный тест сайта не выполнялся",
-    "Генератор изображений не гарантирует точность этикетки",
-    "VPS через SentinelX отключён; на сервере изменений нет"
+    "Результаты только перечисленных проверок",
+    "Браузерный пример проверяется отдельным test_demo.py",
+    "Сценарные ответы и пользовательский пилот оцениваются отдельно",
+    "Нет измерения роста продаж, популярности или расхода токенов"
   ]
 }

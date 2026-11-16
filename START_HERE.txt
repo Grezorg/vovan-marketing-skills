@@ -1,1 +1,9 @@
-Начать со SKILL.md. Для телефона прикрепить Vovan_Marketing_OS_RU_PHONE.txt. Каталог — CATALOG_RU.md. Проверка — python3 scripts/validate.py.
+Vovan OS 4.3.0
+
+Уже установлена? Напишите свою задачу.
+Первый запуск: references/quick-start.md.
+С телефона в обычном чате: прикрепите Vovan_OS_START_RU.txt.
+Начните с аудита сайта, лендинга услуги или контента из одной темы.
+Примеры готовых материалов: examples/service-launch/README.md.
+Локальная диагностика: python scripts/doctor.py.
+Не вводите ключи API в общедоступные файлы.

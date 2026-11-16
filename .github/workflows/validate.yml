@@ -7,20 +7,62 @@ permissions:
   contents: read
 jobs:
   validate:
-    name: Состав, ссылки, язык и целостность
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
+    name: Проверки ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      PYTHONUTF8: "1"
     steps:
-      - name: Получить исходники
-        uses: actions/checkout@v6
-      - name: Подготовить Python
-        uses: actions/setup-python@v6
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Проверить рабочие процедуры
-        run: python3 scripts/validate.py
-      - name: Проверить русские YouTube-инструменты
-        run: python3 scripts/test_youtube.py
-      - name: Проверить целостность сборки
-        run: python3 scripts/check_integrity.py
-
+      - name: Проверить процедуры, память и целостность
+        run: python scripts/run_checks.py
+  demo:
+    name: Учебная страница в Chromium
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Установить браузер проверки
+        run: |
+          python -m pip install playwright==1.62.0
+          python -m playwright install --with-deps chromium
+      - name: Проверить мобильную страницу и форму
+        run: python scripts/test_demo.py --write-report
+      - uses: actions/upload-artifact@v4
+        with:
+          name: demo-browser-checks
+          path: examples/service-launch/checks.json
+  release:
+    name: Выпуск проверенной версии
+    if: github.event_name == 'push'
+    needs: [validate, demo]
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Создать выпуск один раз
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test -f evals/ratings.json || exit 0
+          VERSION="$(python -c "import json; print(json.load(open('references/system.json'))['version'])")"
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            echo "Выпуск v$VERSION уже существует"
+          else
+            gh release create "v$VERSION" --target "$GITHUB_SHA" --title "Vovan OS $VERSION" --notes-file RELEASES.md
+          fi

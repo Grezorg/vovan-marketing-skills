@@ -3,7 +3,7 @@
 from pathlib import Path
 import hashlib,json
 ROOT=Path(__file__).resolve().parent.parent
-manifest=json.loads((ROOT/'SOURCE_MANIFEST.json').read_text())
+manifest=json.loads((ROOT/'SOURCE_MANIFEST.json').read_text(encoding='utf-8'))
 errors=[]
 for entry in manifest['files']:
  path=(ROOT/entry['path']).resolve()
